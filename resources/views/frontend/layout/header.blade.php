@@ -45,6 +45,7 @@
             <a href="{{ route('front.contact') }}" type="button" class="tifn_btn">
                 Connect With Us <span><i class="fas fa-arrow-right ms-2"></i></span>
             </a>
+
         </div>
     </div>
 </nav>

@@ -103,6 +103,8 @@
         </div>
     </div>
 </section>
+@include('frontend.partials.why-choose')
+@include('frontend.partials.meal-plans')
 <section class="section-padding">
     <div class="container">
         <div class="text-center wow fadeInUp">

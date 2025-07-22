@@ -13,7 +13,11 @@ class LoginController extends Controller
         if (auth()->guard('admin')->check()) {
             return redirect()->route('admin.dashboard');
         }
-        return view('backend.auth.login', ['page_title' => 'Admin Login']);
+        else{
+            return view('backend.auth.login', ['page_title' => 'Admin Login']);
+        }
+
+
     }
 
     public function login(Request $request)
