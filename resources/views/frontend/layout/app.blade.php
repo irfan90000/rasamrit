@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>@yield('title')</title>
     <meta content="@yield('description')" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta content="" name="keywords"> --}}
 
     <link href="{{ asset('storage/website_setup/' . websiteSetupValue('favicon')) }}" rel="icon">
@@ -67,6 +68,8 @@
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script>
         $(document).ready(function() {
+
+         
             var $videoSrc;
 
             $('.btn-play').click(function() {

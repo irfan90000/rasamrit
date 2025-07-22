@@ -4,7 +4,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div class="card">
+            <div class="
+            ">
                 <div class="card-header">
                     <h3 class="card-title">Edit Product: {{ $product->name }}</h3>
                     <div class="card-tools">

@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft">
-                    <h5 class="fw-bold mb-0">Our Program Pricing</h5>
+                    <h5 class="fw-bold mb-0">Our Program Pricing </h5>
                 </div>
                 <div class="col-lg-7 wow fadeInUp">
                     <div class="card filter_card">

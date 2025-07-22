@@ -6,22 +6,42 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Products</h3>
-                    <div class="card-tools">
-                        <a href="{{ route('admin.products.create') }}" class="btn btn-primary">
-                            Add New Product
-                        </a>
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center text-dark py-2">
+                                <i class="bx bx-food-menu fs-4 me-1"></i>
+                                <h6 class="mb-0 text-dark ">
+                                    Products
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <a href="{{ route('admin.products.create') }}" class="btn btn-danger btn-sm">
+                                <i class='bx bxs-plus-square fs-5 me-1'></i>Add
+                            </a>
+                        </div>
                     </div>
                 </div>
+{{--                <div class="card-header">--}}
+{{--                    <h3 class="card-title">Products--}}
+{{--                    </h3>--}}
+{{--                    <div class="card-tools">--}}
+{{--                        <a href="{{ route('admin.products.create') }}" class="btn btn-primary">--}}
+{{--                            Add New Product--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
                 <div class="card-body">
+                    <div class="table-responsive">
                     @if(session('success'))
                         <div class="alert alert-success">
                             {{ session('success') }}
                         </div>
                     @endif
 
-                    <table class="table table-bordered">
-                        <thead>
+                    <table class="table mb-0">
+                        <thead class="table-light">
                             <tr>
                                 <th>ID</th>
                                 <th>Image</th>
@@ -72,6 +92,7 @@
                         {{ $products->links() }}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

@@ -78,99 +78,100 @@
     @endif
 </div>
 
-@push('scripts')
-<script>
-document.querySelectorAll('.cart-item').forEach(item => {
-    const id = item.dataset.id;
-    const quantityInput = item.querySelector('.quantity-input');
-    const decreaseBtn = item.querySelector('.decrease-quantity');
-    const increaseBtn = item.querySelector('.increase-quantity');
-    const removeBtn = item.querySelector('.remove-item');
-    const itemTotal = item.querySelector('.item-total');
-    const maxQuantity = parseInt(quantityInput.max);
 
-    // Update quantity
-    const updateQuantity = (newQuantity) => {
-        fetch(`/cart/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-            body: JSON.stringify({ quantity: newQuantity })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                itemTotal.textContent = `$${data.total}`;
-                document.querySelectorAll('.cart-total').forEach(el => {
-                    el.textContent = `$${data.cartTotal}`;
-                });
-            } else {
-                alert(data.message);
-                quantityInput.value = parseInt(quantityInput.value) - 1;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to update cart.');
-        });
-    };
-
-    decreaseBtn.addEventListener('click', () => {
-        const currentValue = parseInt(quantityInput.value);
-        if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-            updateQuantity(currentValue - 1);
-        }
-    });
-
-    increaseBtn.addEventListener('click', () => {
-        const currentValue = parseInt(quantityInput.value);
-        if (currentValue < maxQuantity) {
-            quantityInput.value = currentValue + 1;
-            updateQuantity(currentValue + 1);
-        }
-    });
-
-    quantityInput.addEventListener('change', () => {
-        let value = parseInt(quantityInput.value);
-        if (value < 1) value = 1;
-        if (value > maxQuantity) value = maxQuantity;
-        quantityInput.value = value;
-        updateQuantity(value);
-    });
-
-    // Remove item
-    removeBtn.addEventListener('click', () => {
-        if (confirm('Are you sure you want to remove this item?')) {
-            fetch(`/cart/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                    'Accept': 'application/json',
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    item.remove();
-                    document.querySelector('.cart-count').textContent = data.cartCount;
-                    
-                    // If cart is empty, reload the page
-                    if (data.cartCount === 0) {
-                        window.location.reload();
-                    }
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Failed to remove item from cart.');
-            });
-        }
-    });
-});
-</script>
-@endpush
 @endsection 
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.cart-item').forEach(item => {
+            const id = item.dataset.id;
+            const quantityInput = item.querySelector('.quantity-input');
+            const decreaseBtn = item.querySelector('.decrease-quantity');
+            const increaseBtn = item.querySelector('.increase-quantity');
+            const removeBtn = item.querySelector('.remove-item');
+            const itemTotal = item.querySelector('.item-total');
+            const maxQuantity = parseInt(quantityInput.max);
+    
+            const updateQuantity = (newQuantity) => {
+                fetch(`/cart/${id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({ quantity: newQuantity })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        itemTotal.textContent = `$${data.total}`;
+                        document.querySelectorAll('.cart-total').forEach(el => {
+                            el.textContent = `$${data.cartTotal}`;
+                        });
+                    } else {
+                        alert(data.message || 'Update failed.');
+                        quantityInput.value = Math.max(1, parseInt(quantityInput.value) - 1);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to update cart.');
+                });
+            };
+    
+            decreaseBtn.addEventListener('click', () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                    updateQuantity(currentValue - 1);
+                }
+            });
+    
+            increaseBtn.addEventListener('click', () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue < maxQuantity) {
+                    quantityInput.value = currentValue + 1;
+                    updateQuantity(currentValue + 1);
+                }
+            });
+    
+            quantityInput.addEventListener('change', () => {
+                let value = parseInt(quantityInput.value);
+                if (value < 1) value = 1;
+                if (value > maxQuantity) value = maxQuantity;
+                quantityInput.value = value;
+                updateQuantity(value);
+            });
+    
+            removeBtn.addEventListener('click', () => {
+                if (confirm('Are you sure you want to remove this item?')) {
+                    fetch(`/cart/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                            'Accept': 'application/json',
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            item.remove();
+                            document.querySelector('.cart-count').textContent = data.cartCount;
+    
+                            if (data.cartCount === 0) {
+                                window.location.reload();
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Failed to remove item from cart.');
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    

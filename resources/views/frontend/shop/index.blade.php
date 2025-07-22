@@ -101,33 +101,30 @@
     </div>
 </div>
 
-@push('scripts')
+@endsection 
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', function() {
-        const productId = this.dataset.productId;
-        // We'll implement this AJAX call later
-        fetch(`/cart/add/${productId}`, {
-            method: 'POST',
+$(document).ready(function() {
+    alert('test');
+    $('.add-to-cart').on('click', function() {
+        const productId = $(this).data('product-id');
+        $.ajax({
+            url: `/cart/add/${productId}`,
+            type: 'POST',
             headers: {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                'Accept': 'application/json',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                if (data.success) {
+                    $('.cart-count').text(data.cartCount);
+                    alert('Product added to cart!');
+                }
+            },
+            error: function(xhr) {
+                alert('Failed to add product to cart.');
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Update cart count
-                document.querySelector('.cart-count').textContent = data.cartCount;
-                alert('Product added to cart!');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to add product to cart.');
         });
     });
 });
 </script>
-@endpush
-@endsection 

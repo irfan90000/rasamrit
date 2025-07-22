@@ -16,8 +16,8 @@
                     @endif
 
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
+                        <table class="table ">
+                            <thead class="table-light">
                                 <tr>
                                     <th>Order #</th>
                                     <th>Customer</th>
