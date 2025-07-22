@@ -3,12 +3,13 @@
 @section('title', $page_title)
 @section('description', $description)
 <section class="hero-header"
-    style="background: url({{ asset('storage/website_setup/' . websiteSetupValue('banner')) }});
+    style="background: url({{ asset('storage/website_setup/1736344839220.jpg' . websiteSetupValue('banner')) }});
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;">
     <div class="container">
         <div class="row align-items-center">
+
             <div class="col-lg-6 text-center text-lg-start">
                 <h4 class="hero_title animated slideInLeft">
                     {{ websiteSetupValue('title') }}
@@ -25,7 +26,12 @@
             </div>
         </div>
     </div>
+
+
+
 </section>
+@include('frontend.partials.section-one')
+
 <section class="section-padding bg-white">
     <div class="container">
         <div class="row gx-4 gy-5 align-items-center">
