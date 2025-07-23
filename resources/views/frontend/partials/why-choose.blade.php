@@ -1,7 +1,7 @@
 <div style="background-color: #fffbf4;">
 <div class="container py-5">
     <div class="text-center mb-5">
-        <h2 class="fw-bold text-dark">Why Choose Rasamrit?</h2>
+        <h2 class="fw-bold text-success">Why Choose Rasamrit?</h2>
         <h5 class="text-muted">How We’re Different — And Better</h5>
         <p class="mt-3 text-secondary fs-6 w-75 mx-auto">
             Rasamrit isn’t just a meal plan, it’s a lifestyle upgrade. We believe healthy eating should be affordable for everyone, without compromising on quality, freshness, or results.
@@ -73,17 +73,6 @@
     </div>
 </div>
 </div>
-<style>
-    table thead th {
-        border-color: #fff !important;
-    }
-    table td, table th {
-        padding: 1rem !important;
-        font-size: 0.95rem;
-        font-weight: 500;
-    }
-    table td:first-child {
-        font-weight: 600;
-        color: #333;
-    }
-</style>
+
+
+
