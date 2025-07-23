@@ -23,6 +23,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('food-program', App\Http\Controllers\Backend\FoodProgramController::class);
         Route::resource('food-pricing', App\Http\Controllers\Backend\FoodPricingController::class);
         Route::resource('food-subscription', App\Http\Controllers\Backend\FoodSubscriptionController::class);
+        Route::resource('Program-subscription', App\Http\Controllers\Backend\ProgramSubscriptionController::class);
         Route::resource('query', App\Http\Controllers\Backend\QueryController::class);
         Route::resource('testimonial', App\Http\Controllers\Backend\TestimonialController::class);
         Route::resource('faq', App\Http\Controllers\Backend\FaqController::class);

@@ -75,6 +75,14 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('admin.Program-subscription.index') }}">
+                <div class="parent-icon">
+                    <i class='bx bx-cycling'></i>
+                </div>
+                <div class="menu-title">Program Subscription</div>
+            </a>
+        </li>
+        <li>
             <a href="{{ route('admin.query.index') }}">
                 <div class="parent-icon">
                     <i class='bx bx-info-square'></i>

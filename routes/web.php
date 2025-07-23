@@ -34,6 +34,7 @@ Route::group(['as'=>'front.'], function () {
         Route::get('food-program', ProgramLivewire::class)->name('program');
         Route::get('food-pricing', PricingLivewire::class)->name('pricing');
         Route::get('food-subscription', SubscriptionLivewire::class)->name('subscription');
+        Route::get('Program-subscription', SubscriptionLivewire::class)->name('Program_subscription');
         Route::get('connect-with-us', ContactLivewire::class)->name('contact');
     });
 });

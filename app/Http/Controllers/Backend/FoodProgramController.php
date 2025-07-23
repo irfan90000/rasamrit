@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Foodprogram;
 use App\Models\Goal;
 use App\Models\FoodPlan;
 use App\Models\FoodPricing;
@@ -15,7 +16,7 @@ class FoodProgramController extends Controller
      */
     public function index()
     {
-        $pricing_list = FoodPricing::with(['getPlan', 'getGoal'])->latest()->get();
+        $pricing_list = FoodProgram::with(['getPlan', 'getGoal'])->latest()->get();
         return view('backend.food_program.index',compact('pricing_list'), ['page_title' => 'Food Pricing']);
     }
 
@@ -39,7 +40,7 @@ class FoodProgramController extends Controller
             'goal'      => 'required',
         ]);
 
-        $pricing = FoodPricing::where('plan', $request->plan)->where('goal', $request->goal)->first();
+        $pricing = FoodProgram::where('plan', $request->plan)->where('goal', $request->goal)->first();
         if($pricing){
             return redirect()->back()->with('error', 'This pricing already exists.');
         }
@@ -63,7 +64,7 @@ class FoodProgramController extends Controller
             'dinner'   => $request->dinner[3]['price'],
         ];
 
-        $foodPricing = new FoodPricing;
+        $foodPricing = new FoodProgram;
         $foodPricing->plan = $request->plan;
         $foodPricing->goal = $request->goal;
         $foodPricing->vegetarian = $vegetarian;
@@ -87,7 +88,7 @@ class FoodProgramController extends Controller
      */
     public function edit(string $id)
     {
-        $data = FoodPricing::findOrFail($id);
+        $data = FoodProgram::findOrFail($id);
         $data[1] = $data->vegetarian;
         $data[2] = $data->nonvegetarian;
         $data[3] = $data->eggetarian;

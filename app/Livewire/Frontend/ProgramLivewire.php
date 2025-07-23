@@ -5,7 +5,7 @@ namespace App\Livewire\Frontend;
 use App\Models\Goal;
 use Livewire\Component;
 use App\Models\FoodPlan;
-use App\Models\FoodPricing;
+use App\Models\FoodProgram;
 
 class ProgramLivewire extends Component
 {
@@ -18,10 +18,10 @@ class ProgramLivewire extends Component
 
     public function mount()
     {
-        $goal_ids = FoodPricing::pluck('goal')->unique()->toArray();
+        $goal_ids = FoodProgram::pluck('goal')->unique()->toArray();
         $this->goal_list = Goal::whereIn('id', $goal_ids)->latest()->get();
         $this->goal = $goal_ids[0] ?? 0;
-        $plan_ids = FoodPricing::where('goal', $this->goal)->pluck('plan')->unique()->toArray();
+        $plan_ids = FoodProgram::where('goal', $this->goal)->pluck('plan')->unique()->toArray();
         $this->plan_list = FoodPlan::whereIn('id', $plan_ids)->get();
         $this->mealpref = ['breakfast'];
         $this->dietary = 'veg';
@@ -42,8 +42,8 @@ class ProgramLivewire extends Component
         if(empty($this->mealpref)){
             $this->mealpref = ['breakfast'];
         }
-        $plan_ids = FoodPricing::where('goal', $this->goal)->pluck('plan')->unique()->toArray();
-        $food_pricing = FoodPricing::where('goal', $this->goal)->get();
+        $plan_ids = FoodProgram::where('goal', $this->goal)->pluck('plan')->unique()->toArray();
+        $food_pricing = FoodProgram::where('goal', $this->goal)->get();
         $this->plan_list = FoodPlan::whereIn('id', $plan_ids)->get();
 
         foreach ($food_pricing as $key => $pricing) {

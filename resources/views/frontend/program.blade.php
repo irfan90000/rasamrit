@@ -40,12 +40,12 @@
                                             <input type="checkbox" value="snack" id="snack" wire:model="mealpref"
                                                    hidden wire:change="updatePrice()">
                                         </div>
-{{--                                        <div class="col-lg-3 col-6">--}}
-{{--                                            <label class="chip {{ in_array('dinner', $mealpref) ? 'active' : '' }}"--}}
-{{--                                                   for="dinner">Dinner</label>--}}
-{{--                                            <input type="checkbox" value="dinner" id="dinner" wire:model="mealpref"--}}
-{{--                                                   hidden wire:change="updatePrice()">--}}
-{{--                                        </div>--}}
+                                        <div class="col-lg-3 col-6">
+                                            <label class="chip {{ in_array('dinner', $mealpref) ? 'active' : '' }}"
+                                                   for="dinner">Dinner</label>
+                                            <input type="checkbox" value="dinner" id="dinner" wire:model="mealpref"
+                                                   hidden wire:change="updatePrice()">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
@@ -124,7 +124,7 @@
                                                 <span class="meal">{{ $totalmeal[$plan->id] }} meals</span>
                                             </div>
                                             <div class="col-lg-12">
-                                                <a href="{{ route('front.subscription') }}" type="button"
+                                                <a href="{{ route('front.Program_subscription') }}" type="button"
                                                    class="subs_btn">
                                                     Subscribe Now <span><i class="fas fa-arrow-right"></i></span>
                                                 </a>

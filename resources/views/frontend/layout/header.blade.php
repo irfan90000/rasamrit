@@ -20,6 +20,10 @@
                     class="{{ Route::is('front.subscription') ? 'active' : '' }} nav-item nav-link">
                     Food Subscription
                 </a>
+                <a href="{{ route('front.Program_subscription') }}"
+                   class="{{ Route::is('front.Program_subscription') ? 'active' : '' }} nav-item nav-link">
+                    program Subscription
+                </a>
                 <a href="{{ route('front.foodmenu') }}"
                     class="{{ Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">
                     Food Menu
