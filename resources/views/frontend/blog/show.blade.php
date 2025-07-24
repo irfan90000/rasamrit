@@ -2,12 +2,12 @@
 @section('content')
 
     <div class="container py-5">
-        <div class="card border-success shadow-sm">
-            <div class="card-body">
+        <div class="">
+            <div class="">
                 <h2 class="text-success fw-bold">{{ $post->title }}</h2>
 
                 @if($post->thumbnail)
-                    <img src="{{ asset('storage/' . $post->thumbnail) }}" class="img-fluid rounded my-3" style="max-width:400px;">
+                    <img src="{{ asset('storage/' . $post->thumbnail) }}" class="img-fluid rounded my-3" style="max-height: 300px; min-width: 100%;">
                 @endif
 
                 <div class="mb-2 text-muted small">
@@ -45,7 +45,7 @@
                 <form action="{{ route('blog.comment', $post->slug) }}" method="POST" class="mb-3">
                     @csrf
                     <textarea name="body" class="form-control" rows="3" placeholder="Add a comment..." required></textarea>
-                    <button class="btn btn-primary btn-sm mt-2">Comment</button>
+                    <button class="btn btn-success btn-sm mt-2">Comment</button>
                 </form>
             @endauth
 

@@ -1,6 +1,6 @@
 @extends('backend.layout.app')
 @section('content')
-    <div class="container">
+    <div class="page-content">
         <h1>Blog Posts</h1>
         <a href="{{ route('admin.blog-posts.create') }}" class="btn btn-primary mb-2">Create New Post</a>
         @if (session('success'))
