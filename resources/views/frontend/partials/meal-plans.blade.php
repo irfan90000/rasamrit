@@ -1,6 +1,6 @@
 <div class="container py-5">
     <div class="text-center mb-5">
-        <h2 class="fw-bold text-dark">A Day at Rasamrit – Your Daily Nutrition, Fully Managed</h2>
+        <h2 class="fw-bold text-success">A Day at Rasamrit – Your Daily Nutrition, Fully Managed</h2>
         <p class="lead text-muted">From morning detox to dinner done right, we take care of everything.</p>
     </div>
 
@@ -17,7 +17,7 @@
             <!-- Right Text -->
             <div class="col-md-6 bg-light p-3 d-flex flex-column justify-content-center"
                  style="height: 100px; border-top-right-radius: .5rem; border-bottom-right-radius: .5rem;">
-                <h2 class="fw-bold text-success mb-1">Our Meal Plans</h2>
+                <h3 class="fw-bold text-success mb-1">Our Meal Plans</h3>
                 <p class="text-muted mb-0 fs-6 fw-semibold">Choose what fits your body best with our food dietitians</p>
 
             </div>
@@ -65,7 +65,7 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card h-100 shadow-sm border border-gray rounded-3 p-4 text-center">
                     <div class="mb-3 display-4">{{ $plan['icon'] }}</div>
-                    <h5 class="fw-bold text-dark">{{ $plan['title'] }}</h5>
+                    <h5 class="fw-bold text-success">{{ $plan['title'] }}</h5>
                     <p class="text-muted">{{ $plan['desc'] }}</p>
                 </div>
             </div>
@@ -81,9 +81,4 @@
     </div>
 </div>
 
-<style>
-    .object-fit-cover {
-        object-fit: cover;
-        height: 100%;
-    }
-</style>
+

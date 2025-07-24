@@ -2,6 +2,98 @@
 @section('content')
 @section('title', $page_title)
 @section('description', $description)
+@section('styles')
+    <style>
+
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease-in-out;
+        }
+        .circle-number {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+        }
+
+        .border-gray {
+            border: 1px solid #ccc !important;
+        }
+
+        @media (max-width: 576px) {
+            .circle-number {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+        }
+        .object-fit-cover {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .custom-five-cols {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .custom-col {
+            flex: 0 0 calc(20% - 12px); /* 5 cards per row with spacing */
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 992px) {
+            .custom-col {
+                flex: 0 0 calc(50% - 12px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-col {
+                flex: 0 0 100%;
+            }
+        }
+
+        .trust-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            border-top: 1px solid #dee2e6;
+        }
+
+        .border-gray {
+            border: 1px solid #ccc !important;
+        }
+        table thead th {
+            border-color: #fff !important;
+        }
+        table td, table th {
+            padding: 1rem !important;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        table td:first-child {
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+@endsection
 <section class="hero-header"
     style="background: url({{ asset('storage/website_setup/1736344839220.jpg' . websiteSetupValue('banner')) }});
         background-position: center center;
@@ -55,26 +147,72 @@
                     </div>
                 </div>
             </div>
+{{--            <div class="col-lg-6 ps-lg-5">--}}
+{{--                <span class="badge_title">About Us</span>--}}
+{{--                <h3 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h3>--}}
+{{--                <p class="mb-2">--}}
+{{--                    At {{ config('app.name') }}, we believe that health is the greatest wealth. We’re here to simplify--}}
+{{--                    your journey toward a healthier, more fulfilling lifestyle. Inspired by how celebrities transform--}}
+{{--                    their health through personalized diet plans and expert guidance, {{ config('app.name') }} brings--}}
+{{--                    the same level of--}}
+{{--                    dedication and care to everyone.--}}
+{{--                </p>--}}
+{{--                <p class="mb-2">--}}
+{{--                    We specialize in freshly prepared, diet-tailored meals, cold-pressed juices, exotic fruit bowls,--}}
+{{--                    salads, and more, all delivered right to your doorstep. Our team of certified dieticians,--}}
+{{--                    nutritionists, gym, and yoga trainers work tirelessly to ensure your health goals are met with ease--}}
+{{--                    and precision.--}}
+{{--                </p>--}}
+{{--                <p class="mb-4">--}}
+{{--                    Whether you aim to lose weight, detox, or simply adopt a healthier routine,--}}
+{{--                    {{ config('app.name') }}--}}
+{{--                    is your one-stop solution for all health goals.--}}
+{{--                </p>--}}
+{{--                <div class="row g-4 mb-4">--}}
+{{--                    <div class="col-sm-6">--}}
+{{--                        <div class="d-flex align-items-center border-start border-3 border-primary px-3">--}}
+{{--                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">15</h2>--}}
+{{--                            <div class="ps-4">--}}
+{{--                                <p class="mb-0">Years of</p>--}}
+{{--                                <h6 class="text-uppercase mb-0">Experience</h6>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-6">--}}
+{{--                        <div class="d-flex align-items-center border-start border-3 border-primary px-3">--}}
+{{--                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">50</h2>--}}
+{{--                            <div class="ps-4">--}}
+{{--                                <p class="mb-0">Popular</p>--}}
+{{--                                <h6 class="text-uppercase mb-0">Food Options</h6>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <a href="{{ route('front.about') }}" type="button" class="subs_btn animated slideInLeft">--}}
+{{--                    Know More About Us <span><i class="fas fa-arrow-right"></i></span>--}}
+{{--                </a>--}}
+{{--            </div>--}}
             <div class="col-lg-6 ps-lg-5">
-                <span class="badge_title">About Us</span>
-                <h3 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h3>
+                <span class="badge_title">About Rasamrit:</span>
+                <h2 class="mb-3 fw-bold text-success">A Trusted Food Darzee Alternative That’s Affordable for Everyone</h2>
                 <p class="mb-2">
-                    At {{ config('app.name') }}, we believe that health is the greatest wealth. We’re here to simplify
-                    your journey toward a healthier, more fulfilling lifestyle. Inspired by how celebrities transform
-                    their health through personalized diet plans and expert guidance, {{ config('app.name') }} brings
-                    the same level of
-                    dedication and care to everyone.
+                    We are not a food factory. We are your partner in wellness.
                 </p>
                 <p class="mb-2">
-                    We specialize in freshly prepared, diet-tailored meals, cold-pressed juices, exotic fruit bowls,
-                    salads, and more, all delivered right to your doorstep. Our team of certified dieticians,
-                    nutritionists, gym, and yoga trainers work tirelessly to ensure your health goals are met with ease
-                    and precision.
+                    At Rasamrit, we help people transform like celebrities, without the celebrity price tag.
+                    Just like movie stars prepping for a role, you’ll get access to tailored diet meals, personal coaching,
+                    fitness plans, and daily support from a dedicated nutritionist and trainer.
                 </p>
                 <p class="mb-4">
-                    Whether you aim to lose weight, detox, or simply adopt a healthier routine,
-                    {{ config('app.name') }}
-                    is your one-stop solution for all health goals.
+                    Every meal is freshly cooked with premium ingredients, backed by expert guidance,
+                    and built around your specific health goals,
+                    whether it’s weight loss, muscle gain, or simply eating clean.
+                </p>
+                <p class="mb-4">
+                    We’re not here to sell food. We’re here to deliver results.
+                    With 5,000+ happy customers, an in-house team of nutritionists,
+                    and the city’s most diverse 28-day rotating meal plan, Rasamrit is Bangalore’s trusted healthy
+                    food delivery service and the perfect Food Darzee alternative that doesn’t break the bank.
                 </p>
                 <div class="row g-4 mb-4">
                     <div class="col-sm-6">
@@ -105,6 +243,7 @@
 </section>
 @include('frontend.partials.why-choose')
 @include('frontend.partials.meal-plans')
+@include('frontend.partials.how-work')
 <section class="section-padding">
     <div class="container">
         <div class="text-center wow fadeInUp">
@@ -280,54 +419,57 @@
         </div>
     </div>
 </section>
-<section class="section-padding bg-white">
-    <div class="container">
-        <div class="text-center wow fadeInUp">
-            <h1 class="section-intro-title">#FAQ's</h1>
-            <h5 class="section-title">Got Questions? We Have the Answers</h5>
-        </div>
-        <div class="row g-4 align-items-center">
-            <div class="col-lg-5">
-                <div class="row g-3">
-                    <div class="col-6 text-start">
-                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
-                             alt="" src="{{ asset('frontend/img/about-1.jpg') }}">
-                    </div>
-                    <div class="col-6 text-start">
-                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"
-                             alt="" src="{{ asset('frontend/img/about-2.jpg') }}" style="margin-top: 25%;">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="faq-info wow fadeInUp">
-                    <div class="accordion" id="faq-details">
-                        @foreach ($faq_list as $faq)
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading_{{ $faq->id }}">
-                                    <a href="javascript:void(0);" class="accordion-button collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse_{{ $faq->id }}"
-                                        aria-expanded="false" aria-controls="collapse_{{ $faq->id }}">
-                                        {{ $faq->title }}
-                                    </a>
-                                </h2>
-                                <div id="collapse_{{ $faq->id }}" class="accordion-collapse collapse"
-                                    aria-labelledby="{{ $faq->id }}" data-bs-parent="#faq-details"
-                                    style="">
-                                    <div class="accordion-body">
-                                        <div class="accordion-content">
-                                            <p>
-                                                {{ $faq->description }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+@include('frontend.partials.pricing-plan')
+@include('frontend.partials.faq')
+{{--<section class="section-padding bg-white">--}}
+{{--    <div class="container">--}}
+{{--        <div class="text-center wow fadeInUp">--}}
+{{--            <h1 class="section-intro-title">#FAQ's</h1>--}}
+{{--            <h5 class="section-title">Got Questions? We Have the Answers</h5>--}}
+{{--        </div>--}}
+{{--        <div class="row g-4 align-items-center">--}}
+{{--            <div class="col-lg-5">--}}
+{{--                <div class="row g-3">--}}
+{{--                    <div class="col-6 text-start">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"--}}
+{{--                             alt="" src="{{ asset('frontend/img/about-1.jpg') }}">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-6 text-start">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"--}}
+{{--                             alt="" src="{{ asset('frontend/img/about-2.jpg') }}" style="margin-top: 25%;">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-7">--}}
+{{--                <div class="faq-info wow fadeInUp">--}}
+{{--                    <div class="accordion" id="faq-details">--}}
+{{--                        @foreach ($faq_list as $faq)--}}
+{{--                            <div class="accordion-item">--}}
+{{--                                <h2 class="accordion-header" id="heading_{{ $faq->id }}">--}}
+{{--                                    <a href="javascript:void(0);" class="accordion-button collapsed"--}}
+{{--                                        data-bs-toggle="collapse" data-bs-target="#collapse_{{ $faq->id }}"--}}
+{{--                                        aria-expanded="false" aria-controls="collapse_{{ $faq->id }}">--}}
+{{--                                        {{ $faq->title }}--}}
+{{--                                    </a>--}}
+{{--                                </h2>--}}
+{{--                                <div id="collapse_{{ $faq->id }}" class="accordion-collapse collapse"--}}
+{{--                                    aria-labelledby="{{ $faq->id }}" data-bs-parent="#faq-details"--}}
+{{--                                    style="">--}}
+{{--                                    <div class="accordion-body">--}}
+{{--                                        <div class="accordion-content">--}}
+{{--                                            <p>--}}
+{{--                                                {{ $faq->description }}--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 @endsection
