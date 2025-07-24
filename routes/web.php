@@ -10,6 +10,7 @@ use App\Livewire\Frontend\ProgramLivewire;
 use App\Livewire\Frontend\SubscriptionLivewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 require __DIR__.'/admin.php';
 
@@ -58,3 +59,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
 });
+
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{blogPost:slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::post('/blog/{blogPost:slug}/comment', [BlogController::class, 'comment'])->middleware('auth')->name('blog.comment');
+Route::post('/blog/like', [BlogController::class, 'like'])->middleware('auth')->name('blog.like');

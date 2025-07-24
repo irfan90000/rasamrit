@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Backend\BlogPostController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -37,5 +39,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('orders/{order}', [OrderController::class, 'adminShow'])->name('orders.show');
         Route::patch('orders/{order}/status', [OrderController::class, 'updateStatus'])->name('orders.update-status');
         Route::patch('orders/{order}/payment', [OrderController::class, 'updatePaymentStatus'])->name('orders.update-payment');
+
+        //blog-posts
+
+        Route::resource('blog-posts', \App\Http\Controllers\Backend\BlogPostController::class);
+
     });
 });
