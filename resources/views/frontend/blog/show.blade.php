@@ -1,61 +1,64 @@
 @extends('frontend.layout.app')
 @section('content')
 
-    <div class="container">
-        <h1>{{ $post->title }}</h1>
-        @if($post->thumbnail)
-            <img src="{{ asset('storage/' . $post->thumbnail) }}" style="max-width:400px;">
-        @endif
-        <div class="mb-2">
-            <strong>By:</strong> {{ $post->author->name ?? 'Unknown' }}
-            | <strong>Date:</strong> {{ $post->created_at->format('d-m-Y') }}
+    <div class="container py-5">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
+                <h2 class="text-success fw-bold">{{ $post->title }}</h2>
+
+                @if($post->thumbnail)
+                    <img src="{{ asset('storage/' . $post->thumbnail) }}" class="img-fluid rounded my-3" style="max-width:400px;">
+                @endif
+
+                <div class="mb-2 text-muted small">
+                    <strong>By:</strong> {{ $post->author->name ?? 'Unknown' }}
+                    | <strong>Date:</strong> {{ $post->created_at->format('d-m-Y') }}
+                </div>
+
+                <article class="mb-4">
+                    {!! nl2br(e($post->body)) !!}
+                </article>
+
+                {{-- Like Button --}}
+                <form action="{{ route('blog.like') }}" method="POST" class="d-inline">
+                    @csrf
+                    <input type="hidden" name="type" value="post">
+                    <input type="hidden" name="id" value="{{ $post->id }}">
+                    <button class="btn btn-sm {{ $user && $post->likes->where('user_id', $user->id)->first() ? 'btn-success' : 'btn-outline-success' }}">
+                        👍 Like ({{ $post->likes->count() }})
+                    </button>
+                </form>
+
+                {{-- Share --}}
+                <button type="button" class="btn btn-info btn-sm ms-2"
+                        onclick="navigator.clipboard.writeText('{{ $post->share_link }}')">
+                    🔗 Share
+                </button>
+            </div>
         </div>
-        <article>
-            {!! nl2br(e($post->body)) !!}
-        </article>
 
-        {{-- Likes for Post --}}
-        <form action="{{ route('blog.like') }}" method="POST" style="display:inline;">
-            @csrf
-            <input type="hidden" name="type" value="post">
-            <input type="hidden" name="id" value="{{ $post->id }}">
-            <button class="btn btn-sm {{ $user && $post->likes->where('user_id', $user->id)->first() ? 'btn-success' : 'btn-outline-success' }}">
-                &#x1F44D; Like ({{ $post->likes->count() }})
-            </button>
-        </form>
+        {{-- Comments --}}
+        <div class="mt-4">
+            <h4 class="text-success">Comments ({{ $post->comments->count() }})</h4>
 
-        {{-- Share Button --}}
-        <button type="button" class="btn btn-info btn-sm"
-                onclick="navigator.clipboard.writeText('{{ $post->share_link }}')">
-            &#128279; Share
-        </button>
+            @auth
+                <form action="{{ route('blog.comment', $post->slug) }}" method="POST" class="mb-3">
+                    @csrf
+                    <textarea name="body" class="form-control" rows="3" placeholder="Add a comment..." required></textarea>
+                    <button class="btn btn-primary btn-sm mt-2">Comment</button>
+                </form>
+            @endauth
 
+            @if(session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
 
-        <hr>
-
-        {{-- Comments Section --}}
-        <h4>Comments ({{ $post->comments->count() }})</h4>
-        @auth
-            <form action="{{ route('blog.comment', $post->slug) }}" method="POST" class="mb-3">
-                @csrf
-                <textarea name="body" class="form-control" placeholder="Add a comment..." required></textarea>
-                <button class="btn btn-primary btn-sm mt-2">Comment</button>
-            </form>
-        @endauth
-
-        @if(session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
-
-        {{-- Recursive comments and replies --}}
-        <div>
-            @foreach($post->comments->where('parent_id', null) as $comment)
-                @include('frontend.blog.partials.comment', ['comment' => $comment, 'post' => $post, 'level' => 0])
-            @endforeach
+            {{-- Nested comments --}}
+            <div>
+                @foreach($post->comments->where('parent_id', null) as $comment)
+                    @include('frontend.blog.partials.comment', ['comment' => $comment, 'post' => $post, 'level' => 0])
+                @endforeach
+            </div>
         </div>
     </div>
-
-
-
-
 @endsection
