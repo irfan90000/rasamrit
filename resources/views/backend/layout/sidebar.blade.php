@@ -130,5 +130,14 @@
                 <div class="menu-title">Orders</div>
             </a>
         </li>
+        <li>
+            <a href="{{ route('admin.orders.index') }}">
+                <div class="parent-icon">
+                    <i class="bx bx-book"></i>
+
+                </div>
+                <div class="menu-title">Blog</div>
+            </a>
+        </li>
     </ul>
 </div>
