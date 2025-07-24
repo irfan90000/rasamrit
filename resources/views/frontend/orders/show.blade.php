@@ -3,8 +3,8 @@
 @section('content')
 <div class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Order #{{ $order->id }}</h1>
-        <a href="{{ route('orders.index') }}" class="btn btn-outline-primary">
+        <h2 class="text-success fw-bold">Order #{{ $order->id }}</h2>
+        <a href="{{ route('orders.index') }}" class="btn btn-outline-success fw-bold">
             Back to Orders
         </a>
     </div>
@@ -12,8 +12,9 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h5 class="mb-0">Order Items</h5>
+                <div class="card-header" style="    background: linear-gradient(325deg, #105c01, #009245);
+    color: #fff;">
+                    <h5 class="mb-0 text-white fw-bold " >Order Items</h5>
                 </div>
                 <div class="card-body">
                     @foreach($order->items as $item)
@@ -46,8 +47,10 @@
 
         <div class="col-lg-4">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h5 class="mb-0">Order Summary</h5>
+                <div class="card-header"
+                     style="    background: linear-gradient(325deg, #105c01, #009245);
+    color: #fff;">
+                    <h5 class="mb-0 text-white fw-bold">Order Summary</h5>
                 </div>
                 <div class="card-body">
                     <div class="d-flex justify-content-between mb-3">
@@ -75,8 +78,10 @@
             </div>
 
             <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Shipping & Billing</h5>
+                <div class="card-header"
+                     style="    background: linear-gradient(325deg, #105c01, #009245);
+    color: #fff;">
+                    <h5 class="mb-0 text-white fw-bold">Shipping & Billing</h5>
                 </div>
                 <div class="card-body">
                     <h6>Shipping Address</h6>

@@ -295,32 +295,37 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center gx-4 gy-5">
-            <div class="col-lg-5 wow fadeInLeft">
-                <h5 class="mb-3">
-                    Imagine enjoying all of this in your diet while still
-                    <mark class="highlight">achieving</mark>
-                    your weight loss goals!
-                </h5>
-                <a href="{{ route('front.subscription') }}" type="button" class="subs_btn animated slideInLeft">
-                    Start Food Subscripton <span><i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-            <div class="col-lg-7 wow fadeInUp">
-                <div class="slide_card">
-                    @foreach ($goal_list as $goal)
-                        <div class="img_card">
-                            <h6>{{ $goal->name }}</h6>
-                            <img src="{{ asset('storage/goal/' . $goal->image) }}" class="img-fluid" alt="" />
-                        </div>
-                    @endforeach
-                </div>
+
+    </div>
+</section>
+<section class="section-padding">
+    <div class="container" >
+    <div class="row align-items-center gx-4 gy-5">
+        <div class="col-lg-5 wow fadeInLeft">
+            <h5 class="mb-3">
+                Imagine enjoying all of this in your diet while still
+                <mark class="highlight">achieving</mark>
+                your weight loss goals!
+            </h5>
+            <a href="{{ route('front.subscription') }}" type="button" class="subs_btn animated slideInLeft">
+                Start Food Subscripton <span><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+        <div class="col-lg-7 wow fadeInUp">
+            <div class="slide_card">
+                @foreach ($goal_list as $goal)
+                    <div class="img_card">
+                        <h6>{{ $goal->name }}</h6>
+                        <img src="{{ asset('storage/goal/' . $goal->image) }}" class="img-fluid" alt="" />
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
+    </div>
 </section>
 <section class="section-padding bg-white">
-    <div class="container">
+    <div class="container" >
         <div class="text-center wow fadeInUp">
             <h1 class="section-intro-title">#OURFOODMENU</h1>
             <h5 class="section-title">Serving Our Most Popular Items</h5>

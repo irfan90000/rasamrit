@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-5">
-    <h1 class="mb-4">Shopping Cart</h1>
+    <h2 class="mb-4 fw-bold text-success">Shopping Cart</h2>
 
     @if($cartItems->count() > 0)
         <div class="row">
@@ -11,29 +11,29 @@
                     <div class="card-body">
                         @foreach($cartItems as $item)
                             <div class="row mb-4 cart-item" data-id="{{ $item->id }}">
-                                <div class="col-md-2">
+                                <div class="col-md-2 text-success">
                                     @if($item->product->image)
                                         <img src="{{ Storage::url($item->product->image) }}" class="img-fluid rounded" alt="{{ $item->product->name }}">
                                     @else
                                         <div class="bg-light text-center py-4 rounded">
-                                            <span class="text-muted">No Image</span>
+                                            <span class="text-muted text-success">No Image</span>
                                         </div>
                                     @endif
                                 </div>
                                 <div class="col-md-4">
-                                    <h5>{{ $item->product->name }}</h5>
+                                    <h5 class="fw-bold text-success">{{ $item->product->name }}</h5>
                                     <p class="text-muted mb-0">${{ number_format($item->product->price, 2) }} each</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="input-group">
-                                        <button class="btn btn-outline-secondary decrease-quantity" type="button">-</button>
-                                        <input type="number" class="form-control text-center quantity-input" value="{{ $item->quantity }}" min="1" max="{{ $item->product->stock_quantity }}">
-                                        <button class="btn btn-outline-secondary increase-quantity" type="button">+</button>
+                                    <div class="input-group border-success">
+                                        <button class="btn btn-success decrease-quantity" type="button">-</button>
+                                        <input type="number" class="form-control border-success text-center quantity-input" value="{{ $item->quantity }}" min="1" max="{{ $item->product->stock_quantity }}">
+                                        <button class="btn btn-success increase-quantity" type="button">+</button>
                                     </div>
                                     <small class="text-muted">{{ $item->product->stock_quantity }} available</small>
                                 </div>
                                 <div class="col-md-2">
-                                    <div class="h5 mb-0 item-total">${{ number_format($item->product->price * $item->quantity, 2) }}</div>
+                                    <div class="h5 mb-0 text-success item-total">${{ number_format($item->product->price * $item->quantity, 2) }}</div>
                                 </div>
                                 <div class="col-md-1">
                                     <button class="btn btn-link text-danger remove-item">
@@ -51,17 +51,17 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Order Summary</h5>
+                        <h5 class="card-title fw-bold text-success">Order Summary</h5>
                         <div class="d-flex justify-content-between mb-3">
-                            <span>Subtotal</span>
-                            <span class="cart-total">${{ number_format($total, 2) }}</span>
+                            <span class="text-success">Subtotal</span>
+                            <span class="cart-total text-success">${{ number_format($total, 2) }}</span>
                         </div>
                         <hr>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="h5">Total</span>
-                            <span class="h5 cart-total">${{ number_format($total, 2) }}</span>
+                        <div class="d-flex  justify-content-between mb-3">
+                            <span class="h5 text-success">Total</span>
+                            <span class="h5 cart-total text-success">${{ number_format($total, 2) }}</span>
                         </div>
-                        <a href="{{ route('checkout.index') }}" class="btn btn-primary btn-lg w-100">
+                        <a href="{{ route('checkout.index') }}" class="btn btn-success px-4 py-2 rounded-pill shadow-sm btn-lg w-100">
                             Proceed to Checkout
                         </a>
                     </div>
@@ -71,7 +71,7 @@
     @else
         <div class="text-center py-5">
             <h3 class="text-muted">Your cart is empty</h3>
-            <a href="{{ route('shop.index') }}" class="btn btn-primary mt-3">
+            <a href="{{ route('shop.index') }}" class="btn btn-success px-4 py-2 rounded-pill shadow-sm mt-3">
                 Continue Shopping
             </a>
         </div>

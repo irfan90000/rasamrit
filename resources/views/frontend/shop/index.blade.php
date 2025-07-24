@@ -6,8 +6,9 @@
         <!-- Filters -->
         <div class="col-lg-3">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h5 class="mb-0">Filters</h5>
+                <div class="card-header" style="    background: linear-gradient(325deg, #105c01, #009245);
+    color: #fff;">
+                    <h5 class="fw-bold text-white mb-0">Filters</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('shop.index') }}" method="GET">
@@ -43,7 +44,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                        <button type="submit" class="btn btn-success px-4 py-2 rounded-pill shadow-sm fw-bold w-100">Apply Filters</button>
                     </form>
                 </div>
             </div>
@@ -56,16 +57,16 @@
                     <div class="col-md-4 mb-4">
                         <div class="card h-100">
                             @if($product->image)
-                                <img src="{{ Storage::url($product->image) }}" class="card-img-top" alt="{{ $product->name }}">
+                                <img src="{{ Storage::url($product->image) }}" class="card-img-top text-success" alt="{{ $product->name }}">
                             @else
                                 <div class="card-img-top bg-light text-center py-4">No Image</div>
                             @endif
                             <div class="card-body">
-                                <h5 class="card-title">{{ $product->name }}</h5>
-                                <p class="card-text text-muted">{{ Str::limit($product->description, 100) }}</p>
+                                <h5 class="card-title fw-bold text-success">{{ $product->name }}</h5>
+                                <p class="card-text text-muted ">{{ Str::limit($product->description, 100) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0">${{ number_format($product->price, 2) }}</span>
-                                    <span class="badge badge-{{ $product->status === 'in_stock' ? 'success' : ($product->status === 'out_of_stock' ? 'danger' : 'warning') }}">
+                                    <span class="h5 mb-0 text-success">${{ number_format($product->price, 2) }}</span>
+                                    <span class="badge text-success badge-{{ $product->status === 'in_stock' ? 'success' : ($product->status === 'out_of_stock' ? 'danger' : 'warning') }}">
                                         {{ str_replace('_', ' ', ucfirst($product->status)) }}
                                     </span>
                                 </div>
@@ -73,7 +74,7 @@
                             <div class="card-footer bg-white border-top-0">
                                 <div class="d-grid">
                                     @if($product->status === 'in_stock')
-                                        <button class="btn btn-primary add-to-cart" data-product-id="{{ $product->id }}">
+                                        <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm add-to-cart" data-product-id="{{ $product->id }}">
                                             Add to Cart
                                         </button>
                                     @else
