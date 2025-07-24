@@ -131,7 +131,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin.orders.index') }}">
+            <a href="{{ route('admin.blog-posts.index') }}">
                 <div class="parent-icon">
                     <i class="bx bx-book"></i>
 

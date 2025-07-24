@@ -24,8 +24,12 @@
                    class="{{ Route::is('front.Program_subscription') ? 'active' : '' }} nav-item nav-link">
                     program Subscription
                 </a>
+                <a href="{{ route('blog.index') }}"
+                    class="{{ Route::is('blog.index') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">
+                   Blog
+                </a>
                 <a href="{{ route('front.foodmenu') }}"
-                    class="{{ Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">
+                   class="{{ Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">
                     Food Menu
                 </a>
                 <a href="{{ route('front.coaching') }}"
