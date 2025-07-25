@@ -20,12 +20,15 @@
                 </article>
 
                 {{-- Like Button --}}
-                <form action="{{ route('blog.like') }}" method="POST" class="d-inline">
+                <form id="like-form-{{ $post->id }}" action="{{ route('blog.like') }}" method="POST" class="d-inline">
                     @csrf
                     <input type="hidden" name="type" value="post">
                     <input type="hidden" name="id" value="{{ $post->id }}">
-                    <button class="btn btn-sm {{ $user && $post->likes->where('user_id', $user->id)->first() ? 'btn-success' : 'btn-outline-success' }}">
-                        👍 Like ({{ $post->likes->count() }})
+                    <button
+                        type="submit"
+                        id="like-btn-{{ $post->id }}"
+                        class="btn btn-sm {{ $user && $post->likes->where('user_id', $user->id)->first() ? 'btn-success' : 'btn-outline-success' }}">
+                        👍 Like (<span id="like-count-{{ $post->id }}">{{ $post->likes->count() }}</span>)
                     </button>
                 </form>
 
@@ -42,10 +45,12 @@
             <h4 class="text-success">Comments ({{ $post->comments->count() }})</h4>
 
             @auth
-                <form action="{{ route('blog.comment', $post->slug) }}" method="POST" class="mb-3">
+                <form id="blog-comment-form" action="{{ route('blog.comment', $post->slug) }}" method="POST" class="mb-3">
                     @csrf
                     <textarea name="body" class="form-control" rows="3" placeholder="Add a comment..." required></textarea>
-                    <button class="btn btn-success btn-sm mt-2">Comment</button>
+                    <button type="submit" class="btn btn-success btn-sm mt-2">Comment</button>
+                    <div id="blog-comment-success" class="mt-2" style="display:none"></div>
+                    <div id="blog-comment-error" class="mt-2 text-danger" style="display:none"></div>
                 </form>
             @endauth
 
@@ -62,3 +67,38 @@
         </div>
     </div>
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('blog-comment-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Hide previous messages
+        document.getElementById('blog-comment-success').style.display = 'none';
+        document.getElementById('blog-comment-error').style.display = 'none';
+
+        // Prepare data
+        const formData = new FormData(form);
+
+        axios.post(form.action, formData)
+            .then(function(response) {
+                // On success, show a message, clear textarea, or instantly append comment as you wish
+                document.getElementById('blog-comment-success').textContent = "Comment posted!";
+                document.getElementById('blog-comment-success').style.display = '';
+                form.querySelector('textarea[name="body"]').value = '';
+                // Optionally: dynamically prepend comment to comment list here!
+            })
+            .catch(function(error) {
+                let msg = 'Failed to post comment.';
+                if(error.response && error.response.data && error.response.data.errors) {
+                    msg = Object.values(error.response.data.errors).flat().join(' ');
+                }
+                document.getElementById('blog-comment-error').textContent = msg;
+                document.getElementById('blog-comment-error').style.display = '';
+            });
+    });
+});
+</script>

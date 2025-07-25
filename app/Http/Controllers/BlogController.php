@@ -44,6 +44,17 @@ class BlogController extends Controller
         ]);
         $blogPost->comments()->save($comment);
 
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Comment posted!',
+                'comment' => [
+                    'body' => $comment->body,
+                    'author' => optional($comment->author)->name ?? 'You',
+                    'created_at' => $comment->created_at->diffForHumans(),
+                ]
+            ]);
+        }
+
         return redirect()->route('blog.show', $blogPost->slug)->with('success', 'Comment posted!');
     }
 
@@ -56,19 +67,34 @@ class BlogController extends Controller
         ]);
 
         $user = Auth::user();
-        if (!$user) return back();
+        if (!$user) {
+            // For AJAX, return error status
+            if ($request->expectsJson()) {
+                return response()->json(['message' => 'Unauthorized'], 401);
+            }
+            return back();
+        }
 
         if ($data['type'] === 'post') {
-            $likeable = BlogPost::findOrFail($data['id']);
+            $likeable = \App\Models\BlogPost::findOrFail($data['id']);
         } else {
-            $likeable = Comment::findOrFail($data['id']);
+            $likeable = \App\Models\Comment::findOrFail($data['id']);
         }
 
         $existing = $likeable->likes()->where('user_id', $user->id)->first();
         if ($existing) {
             $existing->delete();
+            $liked = false;
         } else {
             $likeable->likes()->create(['user_id' => $user->id]);
+            $liked = true;
+        }
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'liked' => $liked,
+                'likes_count' => $likeable->likes()->count()
+            ]);
         }
 
         return back();
