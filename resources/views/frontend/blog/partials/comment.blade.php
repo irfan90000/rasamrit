@@ -10,18 +10,14 @@
         </div>
 
         {{-- Like Button --}}
-        <form action="{{ route('blog.like') }}"
-              method="POST"
-              class="d-inline like-form"
-              data-type="comment"
-              data-id="{{ $comment->id }}"
-              id="like-form-comment-{{ $comment->id }}">
+        <form action="{{ route('blog.like') }}" method="POST" class="d-inline">
             @csrf
+            <input type="hidden" name="type" value="comment">
+            <input type="hidden" name="id" value="{{ $comment->id }}">
             <button
-                type="button"
-                id="like-btn-comment-{{ $comment->id }}"
-                class="btn btn-link btn-sm p-0 m-0 text-decoration-none {{ auth()->check() && $comment->likes->where('user_id', auth()->id())->first() ? 'text-success fw-bold' : 'text-muted' }}">
-                👍 Like (<span id="like-count-comment-{{ $comment->id }}">{{ $comment->likes->count() }}</span>)
+                    type="submit"
+                    class="btn btn-link btn-sm p-0 m-0 text-decoration-none {{ auth()->check() && $comment->likes->where('user_id', auth()->id())->first() ? 'text-success fw-bold' : 'text-muted' }}">
+                👍 Like ({{ $comment->likes->count() }})
             </button>
         </form>
 
@@ -52,55 +48,3 @@
         @endforeach
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.like-form').forEach(function(form) {
-        const button = form.querySelector('button[type="button"]');
-        if (!button) return;
-
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const type = form.getAttribute('data-type');
-            const id = form.getAttribute('data-id');
-            const action = form.getAttribute('action');
-            const token = form.querySelector('input[name="_token"]').value;
-
-            button.disabled = true;
-            axios.post(action, {
-                type: type,
-                id: id,
-                _token: token
-            })
-            .then(function(response) {
-                // update UI
-                button.disabled = false;
-                // Update like count
-                if(response.data && typeof response.data.likes_count !== 'undefined') {
-                    const countSpan = document.getElementById('like-count-comment-' + id);
-                    if (countSpan) countSpan.textContent = response.data.likes_count;
-                }
-                // Toggle button style
-                if(response.data && typeof response.data.liked !== 'undefined') {
-                    if (response.data.liked) {
-                        button.classList.remove('text-muted');
-                        button.classList.add('text-success', 'fw-bold');
-                    } else {
-                        button.classList.remove('text-success', 'fw-bold');
-                        button.classList.add('text-muted');
-                    }
-                }
-            })
-            .catch(function(error) {
-                button.disabled = false;
-                // handle error
-                if(error.response && error.response.status === 401) {
-                    alert('Please login to like comments.');
-                }
-            });
-        });
-    });
-});
-</script>
