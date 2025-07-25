@@ -33,25 +33,28 @@ class BlogController extends Controller
     public function comment(Request $request, BlogPost $blogPost)
     {
         $data = $request->validate([
-            'body' => 'required|string',
+            'body'      => 'required|string',
             'parent_id' => 'nullable|exists:comments,id',
         ]);
 
         $comment = new Comment([
-            'user_id' => Auth::id(),
-            'body' => $data['body'],
+            'user_id'   => Auth::id(),
+            'body'      => $data['body'],
             'parent_id' => $data['parent_id'] ?? null,
         ]);
         $blogPost->comments()->save($comment);
+        $comment->load(['author', 'likes', 'replies']); // eager for partial
 
         if ($request->expectsJson()) {
+            $html = view('frontend.blog.partials.comment', [
+                'comment' => $comment,
+                'post'    => $blogPost,
+                'level'   => 0,
+            ])->render();
+
             return response()->json([
-                'message' => 'Comment posted!',
-                'comment' => [
-                    'body' => $comment->body,
-                    'author' => optional($comment->author)->name ?? 'You',
-                    'created_at' => $comment->created_at->diffForHumans(),
-                ]
+                'message'     => 'Comment posted!',
+                'html'        => $html
             ]);
         }
 

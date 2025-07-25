@@ -59,7 +59,7 @@
             @endif
 
             {{-- Nested comments --}}
-            <div>
+            <div id="blog-comments-list">
                 @foreach($post->comments->where('parent_id', null) as $comment)
                     @include('frontend.blog.partials.comment', ['comment' => $comment, 'post' => $post, 'level' => 0])
                 @endforeach
@@ -76,20 +76,24 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Hide previous messages
         document.getElementById('blog-comment-success').style.display = 'none';
         document.getElementById('blog-comment-error').style.display = 'none';
 
-        // Prepare data
         const formData = new FormData(form);
 
         axios.post(form.action, formData)
             .then(function(response) {
-                // On success, show a message, clear textarea, or instantly append comment as you wish
+                // Clear textarea
+                form.querySelector('textarea[name="body"]').value = '';
+                // Show success message
                 document.getElementById('blog-comment-success').textContent = "Comment posted!";
                 document.getElementById('blog-comment-success').style.display = '';
-                form.querySelector('textarea[name="body"]').value = '';
-                // Optionally: dynamically prepend comment to comment list here!
+
+                // Prepend the new comment HTML to the comment list
+                if(response.data && response.data.html) {
+                    const commentList = document.getElementById('blog-comments-list');
+                    commentList.insertAdjacentHTML('afterbegin', response.data.html);
+                }
             })
             .catch(function(error) {
                 let msg = 'Failed to post comment.';
