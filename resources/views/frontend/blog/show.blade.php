@@ -20,7 +20,7 @@
                 </article>
 
                 {{-- Like Button --}}
-                <form id="like-form-{{ $post->id }}" action="{{ route('blog.like') }}" method="POST" class="d-inline">
+                <form id="like-form-{{ $post->id }}" action="{{ route('blog.like') }}" method="POST" class="d-inline like-form">
                     @csrf
                     <input type="hidden" name="type" value="post">
                     <input type="hidden" name="id" value="{{ $post->id }}">
@@ -67,32 +67,38 @@
         </div>
     </div>
 @endsection
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    // Main comment form AJAX
     const form = document.getElementById('blog-comment-form');
-    if (!form) return;
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+            document.getElementById('blog-comment-success').style.display = 'none';
+            document.getElementById('blog-comment-error').style.display = 'none';
 
-        document.getElementById('blog-comment-success').style.display = 'none';
-        document.getElementById('blog-comment-error').style.display = 'none';
+            const formData = new FormData(form);
 
-        const formData = new FormData(form);
-
-        axios.post(form.action, formData)
+            axios.post(form.action, formData, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
             .then(function(response) {
-                // Clear textarea
                 form.querySelector('textarea[name="body"]').value = '';
-                // Show success message
                 document.getElementById('blog-comment-success').textContent = "Comment posted!";
                 document.getElementById('blog-comment-success').style.display = '';
 
-                // Prepend the new comment HTML to the comment list
                 if(response.data && response.data.html) {
                     const commentList = document.getElementById('blog-comments-list');
                     commentList.insertAdjacentHTML('afterbegin', response.data.html);
+                    
+                    // Reinitialize event listeners for new elements
+                    initializeLikeForms();
+                    initializeReplyForms();
                 }
             })
             .catch(function(error) {
@@ -103,6 +109,131 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('blog-comment-error').textContent = msg;
                 document.getElementById('blog-comment-error').style.display = '';
             });
-    });
+        });
+    }
+
+    // Initialize like and reply forms
+    initializeLikeForms();
+    initializeReplyForms();
+
+    function initializeLikeForms() {
+        // Remove existing listeners to prevent duplicates
+        document.querySelectorAll('.like-form').forEach(form => {
+            const newForm = form.cloneNode(true);
+            form.parentNode.replaceChild(newForm, form);
+        });
+
+        // Add event listeners to all like forms
+        document.querySelectorAll('.like-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const button = form.querySelector('button[type="submit"]');
+                const countSpan = button.querySelector('span');
+                
+                // Disable button during request
+                button.disabled = true;
+                
+                axios.post(form.action, formData, {
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(function(response) {
+                    if (response.data.liked) {
+                        button.classList.remove('btn-outline-success', 'text-muted');
+                        button.classList.add('btn-success', 'text-success', 'fw-bold');
+                    } else {
+                        button.classList.remove('btn-success', 'text-success', 'fw-bold');
+                        button.classList.add('btn-outline-success', 'text-muted');
+                    }
+                    
+                    // Update count
+                    countSpan.textContent = response.data.likes_count;
+                })
+                .catch(function(error) {
+                    console.error('Like error:', error);
+                    if (error.response && error.response.status === 401) {
+                        alert('Please login to like posts/comments');
+                    }
+                })
+                .finally(function() {
+                    button.disabled = false;
+                });
+            });
+        });
+    }
+
+    function initializeReplyForms() {
+        // Remove existing listeners to prevent duplicates
+        document.querySelectorAll('.reply-form').forEach(form => {
+            const newForm = form.cloneNode(true);
+            form.parentNode.replaceChild(newForm, form);
+        });
+
+        // Add event listeners to all reply forms
+        document.querySelectorAll('.reply-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const textarea = form.querySelector('textarea[name="body"]');
+                const submitBtn = form.querySelector('button[type="submit"]');
+                
+                // Disable form during request
+                submitBtn.disabled = true;
+                
+                axios.post(form.action, formData, {
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(function(response) {
+                    textarea.value = '';
+                    form.style.display = 'none';
+                    
+                    if(response.data && response.data.html) {
+                        // Find the parent comment container and append the reply
+                        const parentComment = form.closest('.mb-3');
+                        if (parentComment) {
+                            parentComment.insertAdjacentHTML('beforeend', response.data.html);
+                        }
+                    }
+                    
+                    // Reinitialize event listeners for new elements
+                    initializeLikeForms();
+                    initializeReplyForms();
+                })
+                .catch(function(error) {
+                    console.error('Reply error:', error);
+                    let msg = 'Failed to post reply.';
+                    if(error.response && error.response.data && error.response.data.errors) {
+                        msg = Object.values(error.response.data.errors).flat().join(' ');
+                    }
+                    alert(msg);
+                })
+                .finally(function() {
+                    submitBtn.disabled = false;
+                });
+            });
+        });
+
+        // Reply button toggle functionality
+        document.querySelectorAll('.reply-toggle-btn').forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+        });
+
+        document.querySelectorAll('.reply-toggle-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const commentId = this.dataset.commentId;
+                const replyForm = document.getElementById('reply-form-' + commentId);
+                if (replyForm) {
+                    replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+        });
+    }
 });
 </script>
