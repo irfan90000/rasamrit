@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="row align-items-center">
+                            <div class="row align-items-center">
                             <div class="col-lg-8">
                                 <div class="d-flex align-items-center text-dark py-2">
                                     <i class='bx bx-food-tag fs-4 me-1'></i>
@@ -21,6 +21,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -39,7 +41,7 @@
                                             <td>{{ $item->getDiet->name }}</td>
                                             <td class="text-capitalize">{{ $item->dietary }}</td>
                                             <td>
-                                                <div class="d-flex order-actions justify-content-center">
+                                                <div class="d-flex order-actions ">
                                                     <a href="{{ route('admin.food-menu.edit', $item->id) }}">
                                                         <i class='bx bxs-edit'></i>
                                                     </a>
@@ -57,7 +59,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                        </div>
+
                     </div>
                 </div>
             </div>

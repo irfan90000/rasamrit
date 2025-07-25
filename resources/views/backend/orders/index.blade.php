@@ -6,7 +6,20 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Orders</h3>
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center text-dark py-2">
+
+                                <i class='bx bx-cart fs-4 me-1'></i>
+                                <h6 class="mb-0 text-dark">
+                                  Orders
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-end">
+
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     @if(session('success'))
@@ -45,7 +58,7 @@
                                                     <option value="completed" {{ $order->status === 'completed' ? 'selected' : '' }}>Completed</option>
                                                     <option value="cancelled" {{ $order->status === 'cancelled' ? 'selected' : '' }}>Cancelled</option>
                                                 </select>
-                                                <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                                                <button type="submit" class="btn btn-sm btn-success ms-2">Update</button>
                                             </form>
                                         </td>
                                         <td>
@@ -57,12 +70,13 @@
                                                     <option value="paid" {{ $order->payment_status === 'paid' ? 'selected' : '' }}>Paid</option>
                                                     <option value="failed" {{ $order->payment_status === 'failed' ? 'selected' : '' }}>Failed</option>
                                                 </select>
-                                                <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                                                <button type="submit" class="btn btn-sm btn-success ms-2">Update</button>
                                             </form>
                                         </td>
                                         <td>
-                                            <a href="{{ route('admin.orders.show', $order) }}" class="btn btn-sm btn-info">
+                                            <a href="{{ route('admin.orders.show', $order) }}"> <button class="btn btn-sm btn-light text-success border-success border fw-bold">
                                                 View Details
+                                            </button>
                                             </a>
                                         </td>
                                     </tr>
