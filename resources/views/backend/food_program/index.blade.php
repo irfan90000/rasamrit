@@ -8,9 +8,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-8">
                                 <div class="d-flex align-items-center text-dark py-2">
-                                    <i class="bx bx-food-menu fs-4 me-1"></i>
+                                    <i class="bx bx-calendar fs-4 me-1"></i>
                                     <h6 class="mb-0 text-dark">
-                                        Food Program check router is working or not
+                                        Food Program
                                     </h6>
                                 </div>
                             </div>

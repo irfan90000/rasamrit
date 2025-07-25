@@ -1,17 +1,30 @@
 @extends('backend.layout.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Order #{{ $order->id }} Details</h3>
-                    <div class="card-tools">
-                        <a href="{{ route('admin.orders.index') }}" class="btn btn-default">
-                            Back to Orders
-                        </a>
+    <div class="page-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center text-dark py-2">
+{{--                                <i class='bx bxs-plus-square fs-5 me-1'></i>--}}
+                                <h5 class="mb-0 text-dark">Order #{{ $order->id }} Details</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <a href="{{ route('admin.orders.index') }}" class="btn btn-danger btn-sm">
+                                Cancel
+                            </a>
+                        </div>
                     </div>
+{{--                    <h3 class="card-title">Order #{{ $order->id }} Details</h3>--}}
+{{--                    <div class="card-tools">--}}
+{{--                        <a href="{{ route('admin.orders.index') }}" class="btn btn-default">--}}
+{{--                            Back to Orders--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="card-body">
                     @if(session('success'))
@@ -22,9 +35,9 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="card mb-4">
+                            <div class="card mb-4 bg-light ">
                                 <div class="card-header">
-                                    <h5 class="mb-0">Customer Information</h5>
+                                    <h5 class="mb-0 fw-bold text-success">Customer Information</h5>
                                 </div>
                                 <div class="card-body">
                                     <p><strong>Name:</strong> {{ $order->user->name }}</p>
@@ -33,9 +46,9 @@
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card bg-light">
                                 <div class="card-header">
-                                    <h5 class="mb-0">Shipping & Billing</h5>
+                                    <h5 class="mb-0 fw-bold text-success">Shipping & Billing</h5>
                                 </div>
                                 <div class="card-body">
                                     <h6>Shipping Address</h6>
@@ -48,9 +61,9 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="card mb-4">
+                            <div class="card mb-4 bg-light">
                                 <div class="card-header">
-                                    <h5 class="mb-0">Order Status</h5>
+                                    <h5 class="mb-0 fw-bold text-success">Order Status</h5>
                                 </div>
                                 <div class="card-body">
                                     <form action="{{ route('admin.orders.update-status', $order) }}" method="POST" class="mb-4">
@@ -65,30 +78,30 @@
                                                 <option value="cancelled" {{ $order->status === 'cancelled' ? 'selected' : '' }}>Cancelled</option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Update Status</button>
+                                        <button type="submit" class="btn btn-success mt-2">Update Status</button>
                                     </form>
 
                                     <form action="{{ route('admin.orders.update-payment', $order) }}" method="POST">
                                         @csrf
                                         @method('PATCH')
                                         <div class="form-group">
-                                            <label for="payment_status">Payment Status</label>
+                                            <label for="payment_status ">Payment Status</label>
                                             <select name="payment_status" id="payment_status" class="form-control">
                                                 <option value="pending" {{ $order->payment_status === 'pending' ? 'selected' : '' }}>Pending</option>
                                                 <option value="paid" {{ $order->payment_status === 'paid' ? 'selected' : '' }}>Paid</option>
                                                 <option value="failed" {{ $order->payment_status === 'failed' ? 'selected' : '' }}>Failed</option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Update Payment Status</button>
+                                        <button type="submit" class="btn btn-success mt-2">Update Payment Status</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            <h5 class="mb-0">Order Items</h5>
+                    <div class="card mt-4 bg-light">
+                        <div class="card-header ">
+                            <h5 class="mb-0 text-success fw-bold">Order Items</h5>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

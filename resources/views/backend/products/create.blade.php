@@ -1,23 +1,38 @@
 @extends('backend.layout.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row flex">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                    <div class="row align-items-center">
                         <div class="col-lg-8">
-                    <h3 class="card-title">Add New Product</h3>
+                            <div class="d-flex align-items-center text-dark py-2">
+                                <i class='bx bxs-plus-square fs-5 me-1'></i>
+                                <h6 class="mb-0 text-dark">
+                                    Add New Product
+                                </h6>
+                            </div>
                         </div>
                         <div class="col-lg-4 text-end">
-                    <div  class="card-tools">
-                        <a href="{{ route('admin.products.index') }}" class="btn btn-danger btn-sm">
-                            Cancel
-                        </a>
-                    </div>
+                            <a href="{{ route('admin.products.index') }}" class="btn btn-danger btn-sm">
+                                Cancel
+                            </a>
                         </div>
                     </div>
+{{--                    <div class="row flex">--}}
+{{--                        <div class="col-lg-8">--}}
+{{--                    <h3 class="card-title">Add New Product</h3>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-lg-4 text-end">--}}
+{{--                    <div  class="card-tools">--}}
+{{--                        <a href="{{ route('admin.products.index') }}" class="btn btn-danger btn-sm">--}}
+{{--                            Cancel--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="card-body">
                     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">

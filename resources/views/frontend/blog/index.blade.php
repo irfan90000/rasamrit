@@ -3,26 +3,27 @@
     <div class="container py-5">
         <h2 class="text-success fw-bold mb-4 border-bottom pb-2">Blog Posts</h2>
 
-        <div class="row g-4"> <!-- Bootstrap row with gap -->
+        <div class="row g-4">
             @foreach($posts as $singlePost)
-                <div class="col-md-4"> <!-- 3 columns per row on medium screens -->
-                    <div class="card h-100 shadow-sm border-success">
+                <div class="col-md-4">
+                    <div class="card h-100 border border-success  shadow-sm rounded-4" >
+                        @if($singlePost->thumbnail)
+                            <img src="{{ asset('storage/' . $singlePost->thumbnail) }}"
+                                 class="card-img-top rounded-top-4"
+                                 style="height: 200px; object-fit: cover;">
+                        @endif
+
                         <div class="card-body d-flex flex-column">
-                            <h5>
-                                <a class="text-success fw-bold text-decoration-none"
-                                   href="{{ route('blog.show', $singlePost->slug) }}">
+                            <h5 class="fw-bold text-success mb-2">
+                                <a href="{{ route('blog.show', $singlePost->slug) }}"
+                                   class="text-decoration-none text-success">
                                     {{ $singlePost->title }}
                                 </a>
                             </h5>
 
-                            @if($singlePost->thumbnail)
-                                <img src="{{ asset('storage/' . $singlePost->thumbnail) }}"
-                                     class="img-fluid rounded my-3" style="max-height: 180px; object-fit: cover;">
-                            @endif
-
-                            <div class="mb-2 text-muted small">
-                                <strong>By:</strong> {{ $singlePost->author->name ?? 'Unknown' }}
-                                | <strong>Date:</strong> {{ $singlePost->created_at->format('d-m-Y') }}
+                            <div class="mb-2 small text-dark">
+                                <strong>By:</strong> {{ $singlePost->author->name ?? 'Unknown' }}<br>
+                                <strong>Date:</strong> {{ $singlePost->created_at->format('d-m-Y') }}
                             </div>
 
                             <p class="text-dark flex-grow-1">
@@ -30,7 +31,7 @@
                             </p>
 
                             <a href="{{ route('blog.show', $singlePost->slug) }}"
-                               class="btn btn-outline-success btn-sm mt-auto">Read More</a>
+                               class="btn btn-success btn-sm mt-auto rounded-pill">Read More</a>
                         </div>
                     </div>
                 </div>

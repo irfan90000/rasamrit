@@ -95,7 +95,7 @@
     </style>
 @endsection
 <section class="hero-header"
-    style="background: url({{ asset('storage/website_setup/1736344839220.jpg' . websiteSetupValue('banner')) }});
+    style="background: url({{ asset('storage/website_setup/' . websiteSetupValue('banner')) }});
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;">
