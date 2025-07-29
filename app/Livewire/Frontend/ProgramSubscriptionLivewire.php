@@ -53,7 +53,7 @@ class ProgramSubscriptionLivewire extends Component
 
     public function render()
     {
-        return view('livewire.frontend.program-subscription-livewire');
+        return view('frontend.programsubscription')->layout('frontend.layout.app');
     }
     public function getDiet(){
         $this->diet_list = DietType::whereJsonContains('goal', $this->goalData)->get();

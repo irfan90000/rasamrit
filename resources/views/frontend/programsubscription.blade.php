@@ -3,7 +3,7 @@
     @section('description', $description)
     <div class="breadchrumb">
         <div class="container-fluid">
-            <h4 class="title">Food Subscription</h4>
+            <h4 class="title">Program Subscription</h4>
             <p class="sub-title">Transform Into the Best Version of Yourself!</p>
         </div>
     </div>
