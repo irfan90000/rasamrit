@@ -8,6 +8,7 @@ use App\Livewire\Frontend\ContactLivewire;
 use App\Livewire\Frontend\PricingLivewire;
 use App\Livewire\Frontend\ProgramLivewire;
 use App\Livewire\Frontend\SubscriptionLivewire;
+use App\Livewire\Frontend\ProgramSubscriptionLivewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
@@ -35,7 +36,7 @@ Route::group(['as'=>'front.'], function () {
         Route::get('food-program', ProgramLivewire::class)->name('program');
         Route::get('food-pricing', PricingLivewire::class)->name('pricing');
         Route::get('food-subscription', SubscriptionLivewire::class)->name('subscription');
-        Route::get('Program-subscription', SubscriptionLivewire::class)->name('Program_subscription');
+        Route::get('Program-subscription', ProgramSubscriptionLivewire::class)->name('Program_subscription');
         Route::get('connect-with-us', ContactLivewire::class)->name('contact');
     });
 });
@@ -64,3 +65,6 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{blogPost:slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::post('/blog/{blogPost:slug}/comment', [BlogController::class, 'comment'])->middleware('auth')->name('blog.comment');
 Route::post('/blog/like', [BlogController::class, 'like'])->middleware('auth')->name('blog.like');
+
+
+Route::get('/Landingpage', [BlogController::class, 'Landing']);

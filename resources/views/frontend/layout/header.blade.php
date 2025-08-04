@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a href="{{ route('front.index') }}" class="navbar-brand">
-            <img src="{{ asset('storage/website_setup/' . websiteSetupValue('logo')) }}" alt="Logo">
+            <img src="{{ asset('storage/website_setup/1736320329162.ico' . websiteSetupValue('logo')) }}" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <i class="fas fa-bars"></i>
@@ -157,6 +157,29 @@
                         @endauth
                     </ul>
                 </li>
+                @guest
+                    <a href="{{ route('login') }}" class="nav-item nav-link">
+                        <i class="fas fa-sign-in-alt me-1"></i> Login
+                    </a>
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarUserDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-1"></i> {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarUserDropdown">
+
+
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endguest
 
 
                 {{--                <a href="{{ route('shop.index') }}" class="{{ Route::is('shop.*') ? 'active' : '' }} nav-item nav-link">Shop</a>--}}
@@ -169,6 +192,7 @@
                 {{--                    </a>--}}
                 {{--                @endauth--}}
             </div>
+
             <a href="{{ route('front.contact') }}" type="button" class="tifn_btn">
                 Connect With Us <span><i class="fas fa-arrow-right ms-2"></i></span>
             </a>

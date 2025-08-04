@@ -22,18 +22,22 @@
                         <tbody>
                             @foreach($orders as $order)
                                 <tr>
+
+
                                     <td>{{ $order->id }}</td>
                                     <td>{{ $order->created_at->format('M d, Y') }}</td>
                                     <td>${{ number_format($order->total_amount, 2) }}</td>
                                     <td>
-                                        <span class="badge badge-{{ $order->status === 'completed' ? 'success' : ($order->status === 'cancelled' ? 'danger' : 'warning') }}">
-                                            {{ ucfirst($order->status) }}
-                                        </span>
+                                        {{ ucfirst($order->status) }}
+{{--                                        <span class="badge badge-{{ $order->status === 'completed' ? 'success' : ($order->status === 'cancelled' ? 'danger' : 'warning') }}">--}}
+{{--                                            {{ ucfirst($order->status) }}--}}
+{{--                                        </span>--}}
                                     </td>
                                     <td>
-                                        <span class="badge badge-{{ $order->payment_status === 'paid' ? 'success' : ($order->payment_status === 'failed' ? 'danger' : 'warning') }}">
-                                            {{ ucfirst($order->payment_status) }}
-                                        </span>
+                                        {{ ucfirst($order->payment_status) }}
+{{--                                        <span class="badge badge-{{ $order->payment_status === 'paid' ? 'success' : ($order->payment_status === 'failed' ? 'danger' : 'warning') }}">--}}
+{{--                                            {{ ucfirst($order->payment_status) }}--}}
+{{--                                        </span>--}}
                                     </td>
                                     <td>
                                         <a href="{{ route('orders.show', $order) }}" class="btn btn-sm btn-info">

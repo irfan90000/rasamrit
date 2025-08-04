@@ -74,9 +74,16 @@
                             <div class="card-footer bg-white border-top-0">
                                 <div class="d-grid">
                                     @if($product->status === 'in_stock')
-                                        <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm add-to-cart" data-product-id="{{ $product->id }}">
-                                            Add to Cart
-                                        </button>
+{{--                                        @auth--}}
+                                            <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm add-to-cart" data-product-id="{{ $product->id }}">
+                                                Add to Cart
+                                            </button>
+{{--                                        @else--}}
+{{--                                            <a href="{{ route('login') }}" class="btn btn-success px-4 py-2 rounded-pill shadow-sm text-center text-decoration-none">--}}
+{{--                                                Login to Add to Cart--}}
+{{--                                            </a>--}}
+{{--                                        @endauth--}}
+
                                     @else
                                         <button class="btn btn-secondary" disabled>
                                             {{ $product->status === 'out_of_stock' ? 'Out of Stock' : 'Coming Soon' }}
@@ -107,7 +114,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 $(document).ready(function() {
-    alert('test');
+
     $('.add-to-cart').on('click', function() {
         const productId = $(this).data('product-id');
         $.ajax({
@@ -123,7 +130,7 @@ $(document).ready(function() {
                 }
             },
             error: function(xhr) {
-                alert('Failed to add product to cart.');
+                alert('Please login before add to cart.');
             }
         });
     });

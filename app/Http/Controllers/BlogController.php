@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
 use App\Models\Comment;
+use App\Models\Faq;
+use App\Models\Goal;
 use App\Models\Like;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+
+    public function Landing()
+    {
+        $goal_list = Goal::latest()->get();
+        $testimonial_list = Testimonial::latest()->get();
+        $faq_list = Faq::latest()->take(3)->get();
+        return view('frontend.index2',compact('goal_list', 'testimonial_list', 'faq_list'), [
+            'page_title' => 'Rasamarit - Healthy & Tasty Food',
+            'description' => 'Discover the perfect blend of health and taste with Rasamrit. Explore our wide range of delicious and nutritious meals crafted to nourish your body and delight your taste buds.',
+        ]);
+    }
     // Show all posts list (optional)
     public function index()
     {
