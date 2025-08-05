@@ -92,90 +92,66 @@
             </p>
         </div>
 
-        <!-- Cards -->
-        <div class="row g-5">
-            <!-- Card 1 -->
+        <!-- Three Cards -->
+        <div class="row g-4">
+            <!-- Card 1: Feature -->
             <div class="col-md-4">
-                <div class="h-100 p-3" style="background-color: #fde3db; border-radius: 20px;">
-                    <div class="p-2" >
-                        <h5 class="card-title text-success fw-bold fs-5 mb-3">Food & Meals</h5>
-                        <ul class="list-unstyled fs-6">
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Food prep:</span>
-                                <span class="w-50">Freshly prepared, not factory-reheated</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Meals per day:</span>
-                                <span class="w-50">Detox drinks to dinner included</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Menu Variety:</span>
-                                <span class="w-50">28-day non-repeating</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Packaging:</span>
-                                <span class="w-50">Premium packaging</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="h-100 p-4" style="background-color: #fde3db; border-radius: 20px;">
+                    <h5 class="fw-bold text-success mb-4 text-center">Feature</h5>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1 fw-bold">• Food prep</li>
+                        <li class="mb-1 fw-bold">• Meals per day</li>
+                        <li class="mb-1 fw-bold">• Packaging</li>
+                        <li class="mb-1 fw-bold">• Personalization</li>
+                        <li class="mb-1 fw-bold">• Goal Fit</li>
+                        <li class="mb-1 fw-bold">• Menu Variety</li>
+                        <li class="mb-1 fw-bold">• Support</li>
+                        <li class="mb-1 fw-bold">• Payment</li>
+                        <li class="mb-1 fw-bold">• Price</li>
+                        <li class="mb-1 fw-bold">• Guarantee</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 2: Rasamrit -->
             <div class="col-md-4">
-                <div class=" h-100 p-3" style="background-color: #fef6c8; border-radius: 20px;">
-                    <div class="p-2">
-                        <h5 class="card-title text-success fw-bold fs-5 mb-3">Customization & Support</h5>
-                        <ul class="list-unstyled fs-6">
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Personalization:</span>
-                                <span class="w-50">Nutritionist-designed plans</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Goal Fit:</span>
-                                <span class="w-50">Weight loss/gain, diabetes</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Support:</span>
-                                <span class="w-50">Daily call, 24/7</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Guarantee:</span>
-                                <span class="w-50">Full refund if no result</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="h-100 p-4" style="background-color: #fef6c8; border-radius: 20px;">
+                    <h5 class="fw-bold text-success mb-4 text-center">Rasamrit</h5>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1 fw-bold">• Freshly prepared, not factory-reheated</li>
+                        <li class="mb-1 fw-bold">• Detox drinks to dinner included</li>
+                        <li class="mb-1 fw-bold">• Premium packaging</li>
+                        <li class="mb-1 fw-bold">• Nutritionist-designed - healthy & sustainable</li>
+                        <li class="mb-1 fw-bold">• Weight loss, gain, diabetes, etc.</li>
+                        <li class="mb-1 fw-bold">• 28-day non-repeating meal</li>
+                        <li class="mb-1 fw-bold">• Daily call, 24/7</li>
+                        <li class="mb-1 fw-bold">• COD, no advance</li>
+                        <li class="mb-1 fw-bold">• Half of the market rate</li>
+                        <li class="mb-1 fw-bold">• Full refund if no result</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Card 3: Other Brands -->
             <div class="col-md-4">
-                <div class=" h-100 p-3" style="background-color: #e1f8e8; border-radius: 20px;">
-                    <div class="p-2">
-                        <h5 class="card-title text-success fw-bold fs-5 mb-3">Pricing & Payments</h5>
-                        <ul class="list-unstyled fs-6">
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Payment:</span>
-                                <span class="w-50">COD, no advance</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Price:</span>
-                                <span class="w-50">Half of the market rate</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Other Brands:</span>
-                                <span class="w-50">High price, upfront payment</span>
-                            </li>
-                            <li class="d-flex mb-2" style="gap: 12px;">
-                                <span class="fw-bold w-50">Policy:</span>
-                                <span class="w-50">No refund in others</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="h-100 p-4" style="background-color: #e1f8e8; border-radius: 20px;">
+                    <h5 class="fw-bold text-success mb-4 text-center">Other Brands</h5>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1 fw-bold">• Cooked in bulk</li>
+                        <li class="mb-1 fw-bold">• 2–4 max</li>
+                        <li class="mb-1 fw-bold">• Plastic containers</li>
+                        <li class="mb-1 fw-bold">• Pre-decided menu</li>
+                        <li class="mb-1 fw-bold">• General meals</li>
+                        <li class="mb-1 fw-bold">• Repeats weekly</li>
+                        <li class="mb-1 fw-bold">• Limited</li>
+                        <li class="mb-1 fw-bold">• Upfront payment</li>
+                        <li class="mb-1 fw-bold">• High price</li>
+                        <li class="mb-1 fw-bold">• No refund policy</li>
+                    </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
 

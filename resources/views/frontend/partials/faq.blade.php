@@ -30,7 +30,7 @@
                                         data-bs-target="#collapse{{ $index }}"
                                         aria-expanded="false"
                                         aria-controls="collapse{{ $index }}"
-                                        style="background-color: #d1fae5; color: #065f46; border: none; box-shadow: none; outline: none;">
+                                        style="background-color: #E8FCEF; color: #065f46; border: none; box-shadow: none; outline: none;">
                                     {{ $faq['q'] }}
                                 </button>
 

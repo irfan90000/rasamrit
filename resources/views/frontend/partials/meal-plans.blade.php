@@ -62,7 +62,7 @@
         @endphp
 
         @foreach ($plans as $plan)
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 ">
                 <div class="card h-100 shadow-sm border border-gray rounded-3 p-4 text-center">
                     <div class="mb-3 display-4">{{ $plan['icon'] }}</div>
                     <h5 class="fw-bold text-success">{{ $plan['title'] }}</h5>

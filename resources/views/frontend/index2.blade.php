@@ -151,6 +151,45 @@
 </section>
 
 
+<section>
+<div class="py-5 text-white" style="background-color: #198754;">
+    <div class="container">
+        <div class="row text-center g-0">
+            <!-- Box 1 -->
+            <div class="col-md-3 border-end border-white">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fas fa-home fs-1 mb-3"></i>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="col-md-3 border-end border-white">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fas fa-comments fs-1 mb-3"></i>
+                </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="col-md-3 border-end border-white">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fas fa-utensils fs-1 mb-3"></i>
+                </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fas fa-weight fs-1 mb-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+{{--     about section--}}
+
 <section class="section-padding bg-white">
     <div class="container">
         <div class="row gx-4 gy-5 align-items-center">
@@ -214,6 +253,15 @@
         </div>
     </div>
 </section>
+
+{{--   end  about section--}}
+
+
+@include('frontend.partials.three-section')
+
+
+
+
 @include('frontend.partials.why-choose')
 {{--@include('frontend.partials.meal-plans')--}}
 {{--@include('frontend.partials.how-work')--}}
@@ -378,7 +426,7 @@
 </section>
 
 
-
+@include('frontend.partials.Our-reviews')
 
 <div class="container my-5">
     <div class="row  text-white rounded-4 p-4 align-items-center" style="background-color: #065f46;
@@ -424,6 +472,13 @@
 
 
 @include('frontend.partials.faq')
+
+
+<section style="background-color: #198754; height: 250px; width: 100%;">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+
+    </div>
+</section>
 
 
 @endsection
