@@ -17,7 +17,7 @@
             <!-- Right Text -->
             <div class="col-md-6 bg-light p-3 d-flex flex-column justify-content-center"
                  style="height: 100px; border-top-right-radius: .5rem; border-bottom-right-radius: .5rem;">
-                <h3 class="fw-bold text-success mb-1">Our Meal Plans</h3>
+                <h5 class="fw-bold text-success mb-1">Our Meal Plans</h5>
                 <p class="text-muted mb-0 fs-6 fw-semibold">Choose what fits your body best with our food dietitians</p>
 
             </div>

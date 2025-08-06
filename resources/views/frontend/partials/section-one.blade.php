@@ -5,7 +5,7 @@
     @php
         $trustElements = [
             [
-                'image' => asset('frontend/img/about-2.jpg'),
+                'image' => asset('frontend/img/homemade.jpg'),
                 'title' => '100% Homemade Food Delivery',
             ],
             [
@@ -13,15 +13,15 @@
                 'title' => 'Zero White Sugar, Salt, or Refined Oils',
             ],
             [
-                'image' => asset('frontend/img/about-2.jpg'),
+                'image' => asset('frontend/img/frshcook.jpeg'),
                 'title' => 'Freshly Cooked Per Order',
             ],
             [
-                'image' => asset('frontend/img/about-2.jpg'),
+                'image' => asset('frontend/img/plastic-free.jpeg'),
                 'title' => 'Plastic-Free Packaging',
             ],
             [
-                'image' => asset('frontend/img/about-2.jpg'),
+                'image' => asset('frontend/img/weight-loss-meal.jpeg'),
                 'title' => 'Guaranteed Weight Loss Meal Subscription',
             ],
         ];
@@ -33,7 +33,7 @@
                 <div class="card trust-card h-100 border border-gray shadow-sm">
                     <img src="{{ $element['image'] }}" alt="{{ $element['title'] }}" class="card-img-top object-fit-cover">
                     <div class="card-body text-left bg-white rounded-bottom px-3 py-4 d-flex align-items-center justify-content-center">
-                        <h6 class="card-title fw-bold fs-6 mb-0 text-success">{{ $element['title'] }}</h6>
+                        <h5 class="card-title fw-bold fs-6 mb-0 text-dark">{{ $element['title'] }}</h5>
                     </div>
                 </div>
             </div>

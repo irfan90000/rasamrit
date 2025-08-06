@@ -2,8 +2,8 @@
     <div class="container px-0 py-4" >
         <!-- Section Title -->
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">How It Works</h2>
-            <p class="lead text-dark">Simplicity, delivered in 5 easy steps</p>
+            <h2 class="fw-bold text-success">How Our Meal Subscription Works</h2>
+            <p class="lead text-muted fw-bold">Simplicity, delivered in 5 easy steps</p>
         </div>
 
         <!-- Steps Cards Full-Width -->
@@ -30,6 +30,9 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="mt-4">
+        <h6 class="text-muted fw-bold text-center"> Adjust your plan anytime. 24/7 chat & call support.</h6>
         </div>
     </div>
 </section>

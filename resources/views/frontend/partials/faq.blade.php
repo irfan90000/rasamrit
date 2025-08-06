@@ -35,9 +35,9 @@
                                 </button>
 
                             </h2>
-                            <div id="collapse{{ $index }}" class="accordion-collapse collapse fw-semibold" aria-labelledby="heading{{ $index }}" data-bs-parent="#faqAccordion">
+                            <div id="collapse{{ $index }}" class="accordion-collapse  collapse fw-semibold" aria-labelledby="heading{{ $index }}" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body"
-                                     style="background-color: #d1fae5; color: #065f46;">
+                                     style="background-color: #E8FCEF; color: #065f46;">
                                     {{ $faq['a'] }}
                                 </div>
                             </div>

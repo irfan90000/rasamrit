@@ -68,14 +68,16 @@
         <!-- Bottom Highlights -->
         <div class="text-center mt-5">
             <p class="mb-2">
-                <i class="bi bi-geo-alt-fill text-danger me-1"></i>
+                <i class="fas fa-map-marker-alt text-danger me-1"></i>
                 <strong>Free delivery in Bangalore</strong>
             </p>
+
             <p class="text-muted small mb-3">
-                <i class="bi bi-cash me-1"></i>COD Available &nbsp; | &nbsp;
-                <i class="bi bi-shield-lock me-1"></i>No Advance Required &nbsp; | &nbsp;
-                <i class="bi bi-arrow-repeat me-1"></i>Easy Pause or Switch
+                <i class="fas fa-money-bill-wave me-1"></i>COD Available &nbsp; | &nbsp;
+                <i class="fas fa-shield-alt me-1"></i>No Advance Required &nbsp; | &nbsp;
+                <i class="fas fa-retweet me-1"></i>Easy Pause or Switch
             </p>
+
             <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
                 Start a 3-Day Trial Meal Plan
             </button>
