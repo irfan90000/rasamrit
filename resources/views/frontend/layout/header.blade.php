@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a href="{{ route('front.index') }}" class="navbar-brand">
-            <img src="{{ asset('storage/website_setup/1736320329162.ico' . websiteSetupValue('logo')) }}" alt="Logo">
+            <img src="{{ asset('storage/website_setup/' . websiteSetupValue('logo')) }}" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <i class="fas fa-bars"></i>

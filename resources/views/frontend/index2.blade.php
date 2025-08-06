@@ -632,7 +632,7 @@
                                                 class="fw-semibold px-4 py-2 rounded-pill border-0"
                                                 style="background-color: #F2C94C; color: #1A7A29;"
                                         >
-                                           <a class="fw-semibold text-success" href="#"> Explore Food Subscriptions </a>
+                                           <a class="fw-semibold text-white" href="#"> Explore Food Subscriptions </a>
                                         </button>
 
                                     </div>

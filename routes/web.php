@@ -67,4 +67,4 @@ Route::post('/blog/{blogPost:slug}/comment', [BlogController::class, 'comment'])
 Route::post('/blog/like', [BlogController::class, 'like'])->middleware('auth')->name('blog.like');
 
 
-Route::get('/Landingpage', [BlogController::class, 'Landing']);
+Route::get('/home2', [BlogController::class, 'Landing']);
