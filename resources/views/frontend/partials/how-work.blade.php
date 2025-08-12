@@ -1,4 +1,4 @@
-<section class="py-5" style="background-color: #f1f8ff; border-radius: 16px;" >
+<section class="py-5" style=" border-radius: 16px;" >
     <div class="container px-0 py-4" >
         <!-- Section Title -->
         <div class="text-center mb-5">
@@ -21,11 +21,11 @@
             @foreach ($steps as $index => $step)
                 <div class="col-12 col-md-6 col-lg-2 flex-fill">
                     <div class="card h-100 text-center border-0 rounded-4 shadow-sm"
-                         style="background-color: #d6fadd;">
+                         style="    background: linear-gradient(125deg, #105c01, #009245);">
                         <div class="card-body py-5 px-3 d-flex flex-column align-items-center justify-content-center">
-                            <h5 class="fw-bold mb-2" style="color: #14532D;">{{ $step['title'] }}</h5>
+                            <h5 class="fw-bold mb-2 text-white" >{{ $step['title'] }}</h5>
 
-                            <p class="text-dark  mb-0">{{ $step['desc'] }}</p>
+                            <p class="text-white  mb-0" >{{ $step['desc'] }}</p>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
 
 
 <!-- Testimonial Section -->
-<section class="py-5 bg-white">
+<section class="py-5 " style="background-color: #f5f5f5">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-success">Proof That It Works</h2>
@@ -50,14 +50,14 @@
 
         <div class="row g-4">
             <div class="col-md-6">
-                <div class="border p-4 rounded-4 shadow-sm h-100 bg-light">
-                    <p class="fst-italic">“I lost 6kg in 5 weeks — without starving or skipping meals. Rasamrit is magic!”</p>
+                <div class="border p-4 rounded-4 shadow-sm h-100 bg-white">
+                    <h6 class="fst-italic text-black">“I lost 6kg in 5 weeks — without starving or skipping meals. Rasamrit is magic!”</h6>
                     <p class="fw-bold mb-0 text-success">— Priya Mehta, HR Manager</p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="border p-4 rounded-4 shadow-sm h-100 bg-light">
-                    <p class="fst-italic">“I’m diabetic, and Rasamrit has helped me balance sugar without compromising on taste.”</p>
+                <div class="border p-4 rounded-4 shadow-sm h-100 bg-white">
+                    <h6 class="fst-italic text-black">“I’m diabetic, and Rasamrit has helped me balance sugar without compromising on taste.”</h6>
                     <p class="fw-bold mb-0 text-success">— Rohit S., Software Developer</p>
                 </div>
             </div>
@@ -66,7 +66,7 @@
 </section>
 
 <!-- Nutritionists Section -->
-<section class="py-5 bg-light">
+<section class="py-5 ">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-success">Meet Your Nutritionists & Trainers</h2>
@@ -75,19 +75,19 @@
 
         @php
             $experts = [
-                ['name' => 'Nilesh Shah', 'image' => asset('frontend/img/about-1.jpg'), 'linkedin' => 'https://linkedin.com/in/nilesh'],
-                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/img/about-1.jpg'), 'linkedin' => 'https://linkedin.com/in/anjali'],
-                ['name' => 'Ritika Sen', 'image' => asset('frontend/img/about-1.jpg'), 'linkedin' => 'https://linkedin.com/in/ritika'],
+                ['name' => 'Nilesh Shah', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => 'https://linkedin.com/in/nilesh'],
+                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => 'https://linkedin.com/in/anjali'],
+                ['name' => 'Ritika Sen', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => 'https://linkedin.com/in/ritika'],
             ];
         @endphp
 
         <div class="row justify-content-center g-4">
             @foreach ($experts as $expert)
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 border-0 shadow-sm text-center">
-                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top rounded-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white">
-                            <h5 class="fw-bold text-dark mb-1">{{ $expert['name'] }}</h5>
+                <div class="col-md-4 col-sm-6 gap-4">
+                    <div class="card h-100 border-0 shadow-sm text-center" >
+                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 400px; object-fit: cover;">
+                        <div class="card-body "  style="background-color: #f5f5f5">
+                            <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
                             <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-success small">View LinkedIn</a>
                         </div>
                     </div>

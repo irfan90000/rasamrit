@@ -1,4 +1,4 @@
-<section class="py-5 bg-white">
+<section class="py-5 " style="background-color: #f5f5f5 ">
     <div class="container px-3 px-md-2">
         <!-- Section Title -->
         <div class="text-center mb-5">
@@ -43,7 +43,7 @@
 
             @foreach ($plans as $plan)
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow rounded-4" style="background-color: {{ $plan['bg'] }};">
+                    <div class="card h-100 border-0 shadow rounded-4 bg-white" >
                         <div class="card-body d-flex flex-column align-items-center text-center px-4 py-5">
 {{--                            <div class="mb-3">--}}
 {{--                                <i class="bi {{ $plan['icon'] }} fs-1 text-dark"></i>--}}
