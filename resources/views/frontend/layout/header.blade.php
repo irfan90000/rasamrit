@@ -12,76 +12,23 @@
                    class="{{ Route::is('front.index') || Route::is('front.contact') || Route::is('front.terms') || Route::is('front.privacy') ? 'active' : '' }} nav-item nav-link ">
                     Home
                 </a>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ Route::is('front.program') || Route::is('front.Program_subscription') ? 'active' : '' }}"
-                       href="#"
-                       id="navbarProgramDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Program
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarProgramDropdown">
-                        <li>
-                            <a href="{{ route('front.program') }}" class="dropdown-item {{ Route::is('front.program') ? 'active' : '' }}">
-                                Program
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('front.Program_subscription') }}" class="dropdown-item {{ Route::is('front.Program_subscription') ? 'active' : '' }}">
-                                Program Subscription
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                {{--                <a href="{{ route('front.program') }}"--}}
-                {{--                   class="{{ Route::is('front.program') ? 'active' : '' }} nav-item nav-link">Program</a>--}}
-
-
-{{--                <a href="{{ route('front.pricing') }}"--}}
-{{--                   class="{{ Route::is('front.pricing') ? 'active' : '' }} nav-item nav-link">Pricing</a>--}}
-
-
-{{--                <li class="nav-item dropdown">--}}
-{{--                    <a class="nav-link dropdown-toggle {{ Route::is('front.subscription') || Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }}"--}}
-{{--                       href="#"--}}
-{{--                       id="navbarFoodDropdown"--}}
-{{--                       role="button"--}}
-{{--                       data-bs-toggle="dropdown"--}}
-{{--                       aria-expanded="false">--}}
-{{--                        Food--}}
-{{--                    </a>--}}
-{{--                    <ul class="dropdown-menu" aria-labelledby="navbarFoodDropdown">--}}
-
-
-{{--                        <li>--}}
-{{--                            <a href="{{ route('front.subscription') }}"--}}
-{{--                               class="dropdown-item {{ Route::is('front.subscription') ? 'active' : '' }}">--}}
-{{--                                Food Subscription--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
                 <li class="nav-item">
                     <a href="{{ route('front.foodmenu') }}"
                        class="nav-link {{ Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }}">
                         Food Menu
                     </a>
                 </li>
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ Route::is('front.pricing') || Route::is('front.subscription') ? 'active' : '' }}"
+                    <a class="nav-link dropdown-toggle
+        {{ Route::is('front.pricing') || Route::is('front.subscription') || Route::is('front.program') || Route::is('front.Program_subscription') || Route::is('front.coaching') ? 'active' : '' }}"
                        href="#"
-                       id="navbarPricingDropdown"
+                       id="navbarServicesDropdown"
                        role="button"
                        data-bs-toggle="dropdown"
                        aria-expanded="false">
-                        Pricing
+                        Services
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarPricingDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarServicesDropdown">
                         <li>
                             <a href="{{ route('front.pricing') }}"
                                class="dropdown-item {{ Route::is('front.pricing') ? 'active' : '' }}">
@@ -94,27 +41,26 @@
                                 Food Subscription
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('front.program') }}"
+                               class="dropdown-item {{ Route::is('front.program') ? 'active' : '' }}">
+                                Program
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('front.Program_subscription') }}"
+                               class="dropdown-item {{ Route::is('front.Program_subscription') ? 'active' : '' }}">
+                                Program Subscription
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('front.coaching') }}"
+                               class="dropdown-item {{ Route::is('front.coaching') ? 'active' : '' }}">
+                                Online Coaching
+                            </a>
+                        </li>
                     </ul>
                 </li>
-
-
-
-                {{--                <a href="{{ route('front.subscription') }}"--}}
-                {{--                    class="{{ Route::is('front.subscription') ? 'active' : '' }} nav-item nav-link">--}}
-                {{--                    Food Subscription--}}
-                {{--                </a>--}}
-                {{--                <a href="{{ route('front.Program_subscription') }}"--}}
-                {{--                   class="{{ Route::is('front.Program_subscription') ? 'active' : '' }} nav-item nav-link">--}}
-                {{--                    program Subscription--}}
-                {{--                </a>--}}
-                {{--                <a href="{{ route('front.foodmenu') }}"--}}
-                {{--                    class="{{ Route::is('front.foodmenu') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">--}}
-                {{--                    Food Menu--}}
-                {{--                </a>--}}
-                <a href="{{ route('front.coaching') }}"
-                   class="{{ Route::is('front.coaching') ? 'active' : '' }} nav-item nav-link">
-                    Online Coaching
-                </a>
                 <a href="{{ route('blog.index') }}"
                    class="{{ Route::is('blog.index') || Route::is('front.allmenu') ? 'active' : '' }} nav-item nav-link">
                     Blog
@@ -123,7 +69,6 @@
                    class="{{ Route::is('front.about') ? 'active' : '' }} nav-item nav-link">
                     About Us
                 </a>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ Route::is('shop.*') || Route::is('cart.*') || Route::is('orders.*') ? 'active' : '' }}"
                        href="#"
@@ -140,7 +85,6 @@
                                 Shop
                             </a>
                         </li>
-
                         @auth
                             <li>
                                 <a href="{{ route('cart.index') }}"
@@ -167,8 +111,6 @@
                             <i class="fas fa-user me-1"></i> {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarUserDropdown">
-
-
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -181,16 +123,6 @@
                     </li>
                 @endguest
 
-
-                {{--                <a href="{{ route('shop.index') }}" class="{{ Route::is('shop.*') ? 'active' : '' }} nav-item nav-link">Shop</a>--}}
-                {{--                @auth--}}
-                {{--                    <a href="{{ route('cart.index') }}" class="{{ Route::is('cart.*') ? 'active' : '' }} nav-item nav-link">--}}
-                {{--                        Cart <span class="badge badge-primary cart-count">0</span>--}}
-                {{--                    </a>--}}
-                {{--                    <a href="{{ route('orders.index') }}" class="{{ Route::is('orders.*') ? 'active' : '' }} nav-item nav-link">--}}
-                {{--                        My Orders--}}
-                {{--                    </a>--}}
-                {{--                @endauth--}}
             </div>
 
             <a href="{{ route('front.contact') }}" type="button" class="tifn_btn">
