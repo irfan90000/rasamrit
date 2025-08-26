@@ -113,36 +113,19 @@
 
 
 </style>
-<section style="background-color: #f5f5f5 ">
+<section >
 <div class="container py-5 day-section">
     <!-- Heading -->
-    <div class="text-center mb-5">
-        <h2 class="fw-bold text-success">A Day at Rasamrit – Your Daily Nutrition, Fully Managed</h2>
-        <p class="lead text-muted">From morning detox to dinner done right, we take care of everything.</p>
-    </div>
 
-    <!-- Intro Card -->
-    <div class="card overflow-hidden mb-5 shadow-sm border-0 rounded-4">
-        <div class="row g-0 flex-column flex-md-row align-items-stretch">
-            <!-- Left Image -->
-            <div class="col-md-6">
-                <img src="{{ asset('frontend/img/about-1.jpg') }}"
-                     alt="A Day at Rasamrit"
-                     class="img-fluid w-100 meal-intro-img">
-            </div>
-
-            <!-- Right Text -->
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-center meal-intro-text">
-                <h5  class="fw-bold text-success mb-2">Our Meal Plans</h5>
-                <p class="text-muted mb-0 fs-6 fw-semibold">
-                    Choose what fits your body best with our expert dietitians guiding you every step.
-                </p>
-            </div>
-        </div>
-    </div>
 
     <!-- Plans Grid -->
     <div class="row g-4">
+        <div class="p-4 d-flex flex-column justify-content-center ">
+            <h2  class="fw-bold text-center text-success mb-2">Our Meal Plans</h2>
+            <p class="text-muted text-center mb-0 fs-6 fw-semibold">
+                Choose what fits your body best with our expert dietitians guiding you every step.
+            </p>
+        </div>
         @php
             $plans = [
                 ['title' => 'Weight Loss Plan (1000–1400 cal)', 'desc' => 'Burn fat with high-fiber, low-GI meals', 'icon' => 'fa-fire'],
@@ -158,7 +141,7 @@
             <div class="col-12 col-sm-6 col-lg-4 ">
                 <div class=" h-100 shadow-lg  plan-card rounded-3 p-4 text-center ">
                     <div class="mb-3 text-success fs-1"><i class="fas {{ $plan['icon'] }} plan-icon"></i></div>
-                    <h5 class="fw-bold text-success ">{{ $plan['title'] }}</h5>
+                    <h5 class="fw-bold text-dark ">{{ $plan['title'] }}</h5>
                     <p class="text-muted">{{ $plan['desc'] }}</p>
                 </div>
             </div>
@@ -167,9 +150,16 @@
         <!-- CTA -->
         <div class="col-12">
             <div class="text-center mt-4">
-                <a href="#subscribe"  class="subs_btn animated slideInLeft">
-                    Start Meal Subscription in Bangalore <span><i class="fas fa-arrow-right"></i></span>
-                </a>
+                <button
+                        class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+
+                >
+                    <a class="fw-semibold text-white" href="#subscribe" >
+                        Start Meal Subscription in Bangalore </a>
+                </button>
+{{--                <a href="#subscribe"  class="subs_btn animated slideInLeft">--}}
+{{--                    Start Meal Subscription in Bangalore <span><i class="fas fa-arrow-right"></i></span>--}}
+{{--                </a>--}}
 {{--                <a href="#subscribe" class="btn btn-success btn-lg rounded-pill px-4 cta-btn">--}}
 {{--                    Start Meal Subscription in Bangalore--}}
 {{--                </a>--}}

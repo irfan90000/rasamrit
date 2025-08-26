@@ -1,17 +1,111 @@
+<style>
+
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease-in-out;
+    }
+    .circle-number {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .border-gray {
+        border: 1px solid #ccc !important;
+    }
+
+    @media (max-width: 576px) {
+        .circle-number {
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+        }
+    }
+    .object-fit-cover {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .custom-five-cols {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .custom-col {
+        flex: 0 0 calc(20% - 12px); /* 5 cards per row with spacing */
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 992px) {
+        .custom-col {
+            flex: 0 0 calc(50% - 12px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .custom-col {
+            flex: 0 0 100%;
+        }
+    }
+
+    .trust-card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .trust-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-top {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body {
+        border-top: 1px solid #dee2e6;
+    }
+
+    .border-gray {
+        border: 1px solid #ccc !important;
+    }
+    table thead th {
+        border-color: #fff !important;
+    }
+    table td, table th {
+        padding: 1rem !important;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    table td:first-child {
+        font-weight: 600;
+        color: #333;
+    }
+
+</style>
 <div>
     @section('title', $page_title)
     @section('description', $description)
-    <div class="breadchrumb">
+    <div class="breadchrumb" style="height: 50vh;">
         <div class="container-fluid">
-            <h4 class="title">Food Pricing</h4>
-            <p class="sub-title">Transform Into the Best Version of Yourself!</p>
+            <h1 class="title">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>
+            <p class="sub-title mt-1">Enjoy delicious, homemade food delivered straight to your doorstep with Rasamrit, <br>
+                the trusted choice for home-cooked food delivery in Bangalore.</p>
         </div>
     </div>
-    <div class="section-padding bg-white">
-        <div class="container">
-            <div class="row g-4 align-items-center">
+    <div class="section-padding" style="background-color: #f5f5f5">
+        <div class="container" >
+            <div class="row g-4 align-items-center " >
                 <div class="col-lg-5 wow fadeInLeft">
-                    <h5 class="fw-bold mb-0">Our Food Pricing</h5>
+                    <h2 class="fw-bold mb-0">Meal Preferences and Customization</h2>
+                    <p class="">We understand that every customer has unique food preferences.
+                        With Rasamrit, you can fully customize your plan:</p>
                 </div>
                 <div class="col-lg-7 wow fadeInUp">
                     <div class="card filter_card">
@@ -87,6 +181,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+                @include('frontend.partials.why-choose')
+            <div class="row g-4 align-items-center">
                 <div class="col-lg-12">
                     <div class="row g-3 mt-lg-4 wow fadeInUp">
                         @foreach ($plan_list as $plan)
@@ -141,6 +239,8 @@
                         @endforeach
                     </div>
                 </div>
+            </div>
+            @include('frontend.partials.faq-pricing-plans')
             </div>
         </div>
     </div>

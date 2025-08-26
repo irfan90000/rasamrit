@@ -1,5 +1,5 @@
 <!-- Nutritionists Section -->
-<section class="py-5 ">
+<section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-success">Meet Your Nutritionists & Trainers</h2>
@@ -8,28 +8,76 @@
 
         @php
             $experts = [
-                ['name' => 'Nilesh Shah', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => 'https://linkedin.com/in/nilesh'],
-                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => 'https://linkedin.com/in/anjali'],
-                ['name' => 'Ritika Sen', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => 'https://linkedin.com/in/ritika'],
+                ['name' => 'Nilesh Shah', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
+                ['name' => 'Ritika Sen', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Amit Verma', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Sneha Gupta', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
+                ['name' => 'Rahul Khanna', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Pooja Sharma', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Dr. Arjun Mehta', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Kavita Nair', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Vikram Joshi', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Meera Iyer', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
+                ['name' => 'Sahil Bhatia', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
             ];
         @endphp
 
-        <div class="row justify-content-center g-4">
-            @foreach ($experts as $expert)
-                <div class="col-md-4 col-sm-6 gap-4">
-                    <div class="card h-100 border-0 shadow-sm text-center" >
-                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 400px; object-fit: cover;">
-                        <div class="card-body "  style="background-color: #f5f5f5">
-                            <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
-                            <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-success small">View LinkedIn</a>
+        <div id="expertsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                @foreach ($experts as $index => $expert)
+                    @if ($index % 3 == 0)
+                        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                            <div class="row justify-content-center g-4">
+                                @endif
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm text-center">
+                                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 350px; object-fit: cover;">
+                                        <div class="card-body" style="background-color: #f5f5f5">
+                                            <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
+                                            <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-success small">View LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @if ($index % 3 == 2 || $loop->last)
+                            </div>
                         </div>
-                    </div>
-                </div>
-            @endforeach
+                    @endif
+                @endforeach
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#expertsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#expertsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
 
         <div class="text-center mt-5">
-            <a href="#" class="btn btn-success px-4 py-2 rounded-pill shadow-sm">Chat With an Expert Now</a>
+            <a href="#" class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
+                Chat With an Expert Now
+            </a>
         </div>
     </div>
 </section>
+
+<!-- Auto-slide interval -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector('#expertsCarousel');
+        if (carousel) {
+            new bootstrap.Carousel(carousel, {
+                interval: 3000, // slide every 3 seconds
+                ride: 'carousel',
+                pause: false, // keep sliding even on hover
+                wrap: true    // infinite loop
+            });
+        }
+    });
+</script>

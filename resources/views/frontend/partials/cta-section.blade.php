@@ -4,8 +4,9 @@
     <p class="text-muted mb-4">
         Get your personalized meal plan by booking a free call with our certified nutritionist.
     </p>
-    <div class="text-center mt-5">
-        <a href="#contact" class="btn btn-success px-4 py-2 rounded-pill shadow-sm ">Book Free Call</a>
-    </div>
+
+        <button
+                class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">Book Free Call</button>
+
 </div>
 </section>

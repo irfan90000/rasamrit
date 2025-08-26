@@ -119,28 +119,28 @@
 
 
 
-<section class="py-5 ">
+<section class="pt-5 ">
     <div class="container">
-        <h2 class="text-center fw-bold mb-2 text-success">Why Trust Us?</h2>
-        <p class="text-center text-muted mb-5">
-            We’ve built our reputation on honesty, quality, and care in every meal we serve.
-        </p>
+{{--        <h2 class="text-center fw-bold mb-2 text-success">Why Trust Us?</h2>--}}
+{{--        <p class="text-center text-muted mb-5">--}}
+{{--            We’ve built our reputation on honesty, quality, and care in every meal we serve.--}}
+{{--        </p>--}}
 
         @php
             $trustElements = [
                 [
                     'image' => asset('frontend/img/food-delivery.png'),
-                    'title' => '100% Homemade Food Delivery',
+                    'title' => '100% Homemade ',
                     'desc'  => 'Every meal is prepared in our own kitchen using family recipes.'
                 ],
                 [
                     'image' => asset('frontend/img/Nosalt.jpg'),
-                    'title' => 'Zero White Sugar, Salt, or Refined Oils',
+                    'title' => 'Zero White Sugar',
                     'desc'  => 'We use only natural, wholesome ingredients — nothing hidden.'
                 ],
                 [
                     'image' => asset('frontend/img/frshcook.jpeg'),
-                    'title' => 'Freshly Cooked Per Order',
+                    'title' => 'Freshly Cooked ',
                     'desc'  => 'No reheating, no preservatives — your order is made just for you.'
                 ],
                 [
@@ -150,7 +150,7 @@
                 ],
                 [
                     'image' => asset('frontend/img/Meal-Subscription.jpg'),
-                    'title' => 'Guaranteed Weight Loss Meal Subscription',
+                    'title' => 'Guaranteed Results',
                     'desc'  => 'A proven plan backed by our satisfied customers and nutritionists.'
                 ],
             ];
@@ -163,7 +163,7 @@
                         <img src="{{ $element['image'] }}" alt="{{ $element['title'] }}">
                     </div>
                     <h5 class="fw-bold fs-6 text-dark mb-1">{{ $element['title'] }}</h5>
-                    <p class="text-muted small mb-0">{{ $element['desc'] }}</p>
+{{--                    <p class="text-muted small mb-0">{{ $element['desc'] }}</p>--}}
                 </div>
             @endforeach
         </div>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title')</title>
-    <meta content="@yield('description')" name="description">
+    <title>Best Prepared Meal Delivery Service in Bangalore – Rasamrit</title>
+    <meta content="Get the best prepared meal delivery service delivered to your door. Budget-friendly, clean eating plans for weight loss, fitness & busy lifestyles." name="description">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta content="" name="keywords"> --}}
 
@@ -70,7 +70,7 @@
     <script>
         $(document).ready(function() {
 
-         
+
             var $videoSrc;
 
             $('.btn-play').click(function() {

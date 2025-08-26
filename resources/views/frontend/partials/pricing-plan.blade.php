@@ -48,16 +48,21 @@
 {{--                            <div class="mb-3">--}}
 {{--                                <i class="bi {{ $plan['icon'] }} fs-1 text-dark"></i>--}}
 {{--                            </div>--}}
-                            <h5 class="fw-bold text-success mb-1">{{ $plan['type'] }}</h5>
+                            <h5 class="fw-bold text-dark mb-1">{{ $plan['type'] }}</h5>
                             <p class="text-muted small mb-3">{{ $plan['ideal'] }}</p>
                             <h3 class="fw-bold" style="color: #198754;">{{ $plan['price'] }}
                                 @if($plan['price'] !== 'Custom')
                                     <small class="fs-6 text-muted">/day</small>
                                 @endif
                             </h3>
-                            <button class="btn btn-success mt-3 px-4 rounded-pill plan-btn text-white border-0">
-                                Select Plan
+                            <button class="fw-semibold  py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+                                    style="padding-right: 36px;padding-left: 36px;">
+                                <a class="fw-semibold text-white" >
+                                    Select Plan </a>
                             </button>
+{{--                            <button class="btn btn-success mt-3 px-4 rounded-pill plan-btn text-white border-0">--}}
+{{--                                Select Plan--}}
+{{--                            </button>--}}
 
                         </div>
                     </div>
@@ -66,22 +71,67 @@
         </div>
 
         <!-- Bottom Highlights -->
-        <div class="text-center mt-5">
-            <p class="mb-2">
-                <i class="fas fa-map-marker-alt text-danger me-1"></i>
-                <strong>Free delivery in Bangalore</strong>
-            </p>
 
-            <p class="text-muted small mb-3">
-                <i class="fas fa-money-bill-wave me-1"></i>COD Available &nbsp; | &nbsp;
-                <i class="fas fa-shield-alt me-1"></i>No Advance Required &nbsp; | &nbsp;
-                <i class="fas fa-retweet me-1"></i>Easy Pause or Switch
-            </p>
+        <div class="container my-5">
+            <div class="row align-items-center bg-light rounded shadow-sm p-4">
 
-            <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
-                Start a 3-Day Trial Meal Plan
-            </button>
+                <!-- Image Column -->
+                <div class="col-md-6 mb-3 mb-md-0">
+
+{{--                    src="frontend/img/free-image.jpg"--}}
+
+                    <img src="{{ asset('frontend/img/free-image.jpg') }}"
+                         alt="Delivery Service"
+                         class="img-fluid rounded shadow-sm">
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-md-6 text-center text-md-start">
+                    <!-- Heading -->
+                    <h2 class="fs-4 fw-bold text-success mb-3">
+                        <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        Free delivery in Bangalore
+                    </h2>
+
+                    <!-- Trust Points -->
+                    <p class=" small mb-4">
+                        <i class="fas fa-money-bill-wave me-1 text-black"></i> COD Available
+                        <span class="mx-2">|</span>
+                        <i class="fas fa-shield-alt me-1 text-black"></i> No Advance Required
+                        <span class="mx-2">|</span>
+                        <i class="fas fa-retweet me-1 text-black"></i> Easy Pause or Switch
+                    </p>
+
+                    <!-- CTA -->
+
+                    <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
+                        Start a 3-Day Trial Meal Plan
+                    </button>
+                </div>
+
+            </div>
         </div>
+
+
+
+
+
+        {{--        <div class="text-center mt-5">--}}
+{{--            <p class="mb-2">--}}
+{{--                <i class="fas fa-map-marker-alt text-danger me-1"></i>--}}
+{{--                <strong>Free delivery in Bangalore</strong>--}}
+{{--            </p>--}}
+
+{{--            <p class="text-muted small mb-3">--}}
+{{--                <i class="fas fa-money-bill-wave me-1"></i>COD Available &nbsp; | &nbsp;--}}
+{{--                <i class="fas fa-shield-alt me-1"></i>No Advance Required &nbsp; | &nbsp;--}}
+{{--                <i class="fas fa-retweet me-1"></i>Easy Pause or Switch--}}
+{{--            </p>--}}
+
+{{--            <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm">--}}
+{{--                Start a 3-Day Trial Meal Plan--}}
+{{--            </button>--}}
+{{--        </div>--}}
     </div>
 </section>
 

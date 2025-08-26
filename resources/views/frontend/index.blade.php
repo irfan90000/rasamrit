@@ -96,7 +96,7 @@
     </style>
 @endsection
 <section class="hero-header"
-    style="background-image: url({{ asset('storage/website_setup/1736344839220.jpg') }});
+    style="background-image: url({{ asset('frontend/image/main-banner.jpg') }});
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;">
@@ -117,16 +117,16 @@
 
                     <!-- Orange Button -->
                     <button
-                            class="  px-4 py-2 rounded-pill border-0"
-                            style="background-color: #FA724C;"
+                            class="  px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+
                     >
                         <a class="text-white fw-semibold" href="#"> Get My Custom Meal Plan </a>
                     </button>
 
                     <!-- Yellow Button -->
                     <button
-                            class="fw-semibold px-4 py-2 rounded-pill border-0"
-                            style="background-color: #F2C94C; color: #1A7A29;"
+                            class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+
                     >
                         <a class="fw-semibold text-white" href="#"> Explore Food Subscriptions </a>
                     </button>
@@ -142,16 +142,19 @@
 
 
 </section>
-@include('frontend.partials.section-one')
-@include('frontend.partials.About-section')
 
-@include('frontend.partials.why-choose')
-@include('frontend.partials.meal-plans')
+@include('frontend.partials.About-section')
+@include('frontend.partials.trusted-food')
+@include('frontend.partials.section-one')
 @include('frontend.partials.Meal-subscription')
+@include('frontend.partials.why-choose')
+@include('frontend.partials.Aday-at')
+@include('frontend.partials.meal-plans')
+
 @include('frontend.partials.how-work')
 @include('frontend.partials.Meet-Nutritionists')
 
-<section class="video_section">
+<section class="video_section" style="    min-height: 500px;">
     <div class="video_content">
         <button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{ websiteSetupValue('video') }}"
             data-bs-target="#videoModal">

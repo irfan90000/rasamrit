@@ -20,52 +20,52 @@
             <tbody class="bg-white">
             <tr>
                 <td>Food prep</td>
-                <td>A real, freshly prepared meal delivery service, not factory-reheated food.</td>
+                <td class="fw-bold text-success">A real, freshly prepared meal delivery service, not factory-reheated food.</td>
                 <td>Cooked in bulk</td>
             </tr>
             <tr>
                 <td>Meals per day</td>
-                <td>Everything you need — from detox drinks to dinner, all meals + beverages</td>
+                <td class="fw-bold text-success">Everything you need — from detox drinks to dinner, all meals + beverages</td>
                 <td>2–4 max</td>
             </tr>
             <tr>
                 <td>Packaging</td>
-                <td>Premium packaging</td>
+                <td class="fw-bold text-success">Premium packaging</td>
                 <td>Plastic containers</td>
             </tr>
             <tr>
                 <td>Personalization</td>
-                <td>Nutritionist-designed - healthy eating and sustainable weight loss</td>
+                <td class="fw-bold text-success">Nutritionist-designed - healthy eating and sustainable weight loss</td>
                 <td>Pre-decided menu</td>
             </tr>
             <tr>
                 <td>Goal Fit</td>
-                <td>Weight loss, gain, diabetes, and healthy eating.</td>
+                <td class="fw-bold text-success">Weight loss, gain, diabetes, and healthy eating.</td>
                 <td>General meals</td>
             </tr>
             <tr>
                 <td>Menu Variety</td>
-                <td>28-day non-repeating meal</td>
+                <td class="fw-bold text-success">28-day non-repeating meal</td>
                 <td>Repeats weekly</td>
             </tr>
             <tr>
                 <td>Support</td>
-                <td>Daily call, 24/7</td>
+                <td class="fw-bold text-success">Daily call, 24/7</td>
                 <td>Limited</td>
             </tr>
             <tr>
                 <td>Payment</td>
-                <td>COD, no advance</td>
+                <td class="fw-bold text-success">COD, no advance</td>
                 <td>Upfront payment</td>
             </tr>
             <tr>
                 <td>Price</td>
-                <td>Half of the market rate</td>
+                <td class="fw-bold text-success">Half of the market rate</td>
                 <td>High price</td>
             </tr>
             <tr>
                 <td>Guarantee</td>
-                <td>Full refund if no result</td>
+                <td class="fw-bold text-success">Full refund if no result</td>
                 <td>No refund policy</td>
             </tr>
             </tbody>
