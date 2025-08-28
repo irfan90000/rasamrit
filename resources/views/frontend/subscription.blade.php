@@ -1,12 +1,34 @@
 <div>
     @section('title', $page_title)
     @section('description', $description)
-    <div class="breadchrumb">
+    <div class="breadchrumb" style="height: 50vh;">
         <div class="container-fluid">
-            <h4 class="title">Food Subscription</h4>
-            <p class="sub-title">Transform Into the Best Version of Yourself!</p>
+            <div class="row  mx-5   text-center">
+                <h1 class="text-success fw-bold">
+                    Healthy Food Subscription in Bangalore – Fresh, Homemade & Affordable
+                </h1>
+                <p class="sub-title text-dark">
+                    Experience the comfort of homemade food delivery in Bangalore with Rasamrit.
+                    Whether you're aiming for a healthier diet, weight loss, or just want a daily
+                    high-protein meal plan, our subscription service is designed just for you.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-4">
+        <div>
+            <h2 class="text-center text-success fw-bold">
+                Flexible Meal Subscription Plans in Bangalore
+            </h2>
+            <p class="mx-auto text-center mt-0 w-full lg:w-1/2">
+                Choose from our 3-day, 14-day, or 30-day meal subscription Bangalore packages.
+                Starting from just ₹70/day, every meal box is prepared fresh with hygienic
+                ingredients and delivered on time.
+            </p>
         </div>
     </div>
+
     <div class="subscription_area">
         <div class="container">
             <div class="row g-3">
@@ -415,4 +437,5 @@
             </div>
         </div>
     </div>
+    @include('frontend.partials.faq-food-subscription')
 </div>

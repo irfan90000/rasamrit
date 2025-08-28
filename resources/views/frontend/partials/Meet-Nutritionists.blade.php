@@ -8,18 +8,13 @@
 
         @php
             $experts = [
-                ['name' => 'Nilesh Shah', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
-                ['name' => 'Ritika Sen', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Amit Verma', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Sneha Gupta', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
-                ['name' => 'Rahul Khanna', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Pooja Sharma', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Dr. Arjun Mehta', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Kavita Nair', 'image' => asset('frontend/img/DrNilesh.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Vikram Joshi', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
-                ['name' => 'Meera Iyer', 'image' => asset('frontend/img/Dr.Anjali.jpg'), 'linkedin' => '#'],
-                ['name' => 'Sahil Bhatia', 'image' => asset('frontend/img/DrRitika.jpeg'), 'linkedin' => '#'],
+                ['name' => 'Nilesh Shah', 'image' => asset('frontend/image/Doctor-1.jpg'), 'linkedin' => '#'],
+                ['name' => 'Dr. Anjali Kapoor', 'image' => asset('frontend/image/Doctor-2.jpg'), 'linkedin' => '#'],
+                ['name' => 'Ritika Sen', 'image' => asset('frontend/image/Doctor-33.jpg'), 'linkedin' => '#'],
+                ['name' => 'Amit Verma', 'image' => asset('frontend/image/Doctor-4.jpg'), 'linkedin' => '#'],
+                ['name' => 'Sneha Gupta', 'image' => asset('frontend/image/Doctor-555.jpg'), 'linkedin' => '#'],
+                ['name' => 'Rahul Khanna', 'image' => asset('frontend/image/Doctor-6.jpg'), 'linkedin' => '#'],
+
             ];
         @endphp
 
@@ -34,7 +29,7 @@
 
                                 <div class="col-md-4">
                                     <div class="card h-100 border-0 shadow-sm text-center">
-                                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 350px; object-fit: cover;">
+                                        <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 400px; object-fit: cover;">
                                         <div class="card-body" style="background-color: #f5f5f5">
                                             <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
                                             <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-success small">View LinkedIn</a>

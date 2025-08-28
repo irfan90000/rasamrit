@@ -2,51 +2,51 @@
     $meals = [
         [
             "time" => "6:00 AM",
-            "title" => "healthy-weightloss-drink.webp",
+            "title" => "Detox Water",
             "desc"  => "Tulsi + Jira or Rose water or Cucumber + Mint",
-               "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+               "image" => asset('frontend/image/detox-water-3.jpg'),
         ],
         [
             "time" => "7:30 AM",
-            "title" => "healthy-weightloss-drink.webp",
+            "title" => "Cold-Pressed Juice",
             "desc"  => "A different blend every day (e.g., Beetroot + Carrot + Apple)",
-            "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+            "image" => asset('frontend/image/Cold-juice-3.jpg'),
         ],
         [
             "time" => "8:30 AM",
             "title" => "Fresh Salad",
             "desc"  => "7–8 exotic fruits, rich in fiber, vitamins & antioxidants",
-              "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+              "image" => asset('frontend/image/fruit-bow--2.jpg'),
         ],
         [
             "time" => "9:30 AM",
             "title" => "Breakfast",
             "desc"  => "High protein oats meal, Poha or Egg sandwich – fully customisable",
-           "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+           "image" => asset('frontend/image/breakfast-2.jpg'),
         ],
         [
             "time" => "11:00 AM",
             "title" => "Mid-Morning Snacks",
             "desc"  => "Freshly cut fruits or dry fruits (with Green Tea)",
-              "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+              "image" => asset('frontend/image/mid-morning-.jpg'),
         ],
         [
             "time" => "1:00 PM",
-            "title" => "Lunch",
+            "title" => "Lunch + Detox Water ",
             "desc"  => "Calorie counted meal (Veg/Non-Veg)",
-            "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+            "image" => asset('frontend/image/lunch.jpg'),
         ],
         [
             "time" => "4:30 PM",
             "title" => "Snacks + Green Tea",
             "desc"  => "Light evening snacks with detox tea",
-              "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+              "image" => asset('frontend/image/green-snacks.jpeg'),
         ],
         [
             "time" => "7:00 PM",
             "title" => "Dinner + Detox Water",
             "desc"  => "Calorie counted meal as per request",
-             "image" => asset('frontend/img/healthy-weightloss-drink.webp'),
+             "image" => asset('frontend/image/dinner.jpg'),
         ],
     ];
 @endphp
@@ -63,7 +63,7 @@
                     <div class="shadow-sm border-0 rounded-4 h-100 p-2 bg-white">
                         <div class="row g-0 align-items-center h-100">
                             <div class="col-5">
-                                <img src="{{ $meal['image'] }}" class="img-fluid rounded-start" style="height: 140px;" alt="{{ $meal['title'] }}">
+                                <img src="{{ $meal['image'] }}" class="img-fluid rounded-4 w-100 " style="height: 140px; object-fit: cover" alt="{{ $meal['title'] }}">
                             </div>
                             <div class="col-7">
                                 <div class="p-2">

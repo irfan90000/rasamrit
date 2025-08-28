@@ -92,14 +92,28 @@
             font-weight: 600;
             color: #333;
         }
+        .main-banner {
+            background-image: url("{{ asset('frontend/image/main-banner.jpg') }}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 400px; /* important! */
+        }
+
+        @media (max-width: 768px) {
+            .main-banner {
+                background-position: right center;
+                background-size: 200% auto;
+            }
+        }
 
     </style>
 @endsection
-<section class="hero-header"
-    style="background-image: url({{ asset('frontend/image/main-banner.jpg') }});
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;">
+<section class="hero-header main-banner">
+{{--    style="background-image: url({{ asset('frontend/image/main-banner.jpg') }});--}}
+{{--        background-position: center center;--}}
+{{--        background-repeat: no-repeat;--}}
+{{--        background-size: cover;">--}}
     <div class="container">
         <div class="row align-items-center">
 

@@ -2,10 +2,12 @@
 @section('content')
 @section('title', $page_title)
 @section('description', $description)
-<div class="breadchrumb">
+<div class="breadchrumb" style="height: 50vh;">
     <div class="container-fluid">
-        <h4 class="title">Food Menu</h4>
-        <p class="sub-title">Transform Into the Best Version of Yourself!</p>
+        <h1 class="text-success text-center fw-bold">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>
+        <p class="text-center text-dark">
+            Discover Rasamrit's freshly curated healthy food Bangalore online menu with meals crafted for every lifestyle,
+            from vegetarian comfort to low-carb and ketogenic meal boxes.</p>
     </div>
 </div>
 
@@ -20,17 +22,20 @@
             @if ($diet->getFood->count() > 0)
                 <div class="food_menu_area">
                     <div class="text-center wow fadeInUp">
-                        <h1 class="into-title">#{{ $diet->name }}</h1>
+                        <h1 class="into-title mb-2 text-success">#{{ $diet->name }}</h1>
+                        <p class="text-dark text-center">Flavorful and balanced vegetarian meals are prepared fresh for every weekday.</p>
                     </div>
                     @foreach ($diet->getFood as $food)
                         <div class="text-center wow fadeInUp">
-                            <h4 class="intro_subtitle">
+
+                            <h4 class="intro_subtitle mb-2">
                                 {{ match ($food->dietary) {
                                     'vegetarian' => 'Veg Food',
                                     'nonvegetarian' => 'Nonveg Food',
                                     default => 'Egg Food',
                                 } }}
                             </h4>
+                            <p class="text-dark mt-0 text-center">All vegetarian meals are made with fresh organic vegetables and home-style recipes.</p>
                         </div>
                         <div class="tab-class text-center wow fadeInUp">
                             <ul class="nav nav-pills food_menu">

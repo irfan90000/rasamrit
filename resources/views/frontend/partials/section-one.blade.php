@@ -163,10 +163,12 @@
                         <img src="{{ $element['image'] }}" alt="{{ $element['title'] }}">
                     </div>
                     <h5 class="fw-bold fs-6 text-dark mb-1">{{ $element['title'] }}</h5>
-{{--                    <p class="text-muted small mb-0">{{ $element['desc'] }}</p>--}}
                 </div>
             @endforeach
         </div>
+
+
+
     </div>
 </section>
 
@@ -200,19 +202,43 @@
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* Grid Layout */
-    @media (min-width: 992px) {
-        .custom-five-cols {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1.5rem;
-        }
+    /* Grid Layout (default: mobile) */
+    .custom-five-cols {
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
     }
-    @media (max-width: 991px) {
+
+    .custom-five-cols .custom-col {
+        text-align: center;
+    }
+
+    /* Tablet: 2 + 2 + 1 */
+    @media (min-width: 768px) and (max-width: 1199px) {
         .custom-five-cols {
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
+
+        /* Last one centered */
+        .custom-five-cols .custom-col:last-child {
+            grid-column: 1 / -1;      /* span full width */
+            justify-self: center;     /* center horizontally */
+        }
     }
+
+    /* Large screens: all 5 in one row */
+    @media (min-width: 1200px) {
+        .custom-five-cols {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .custom-five-cols .custom-col:last-child {
+            grid-column: auto;
+            justify-self: auto;
+        }
+    }
+
+
 </style>

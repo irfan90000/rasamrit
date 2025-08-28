@@ -5,19 +5,19 @@
                 <div class="row g-3">
                     <div class="col-6 text-start">
                         <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
-                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/about-img-1.jpg') }}">
+                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/about--2222.jpg') }}">
                     </div>
                     <div class="col-6 text-start">
                         <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"
-                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-img-2.jpg') }}" style="margin-top: 25%;">
+                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-44444.jpg') }}" style="margin-top: 25%;">
                     </div>
                     <div class="col-6 text-end">
                         <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"
-                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/about-img-3.jpg') }}">
+                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/breakfast-2.jpg') }}">
                     </div>
                     <div class="col-6 text-end">
                         <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
-                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-img-4.jpg') }}">
+                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-four.jpg') }}">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <div class="row g-4 mb-4">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-3 border-primary px-3">
-                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">15</h2>
+                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">5</h2>
                             <div class="ps-4">
                                 <p class="mb-0">Years of</p>
                                 <h6 class="text-uppercase mb-0">Experience</h6>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-3 border-primary px-3">
-                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">50</h2>
+                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">500</h2>
                             <div class="ps-4">
                                 <p class="mb-0">Popular</p>
                                 <h6 class="text-uppercase mb-0">Food Options</h6>

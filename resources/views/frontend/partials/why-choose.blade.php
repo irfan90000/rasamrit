@@ -1,4 +1,4 @@
-<div >
+<section>
 <div class="container py-5">
     <div class="text-center mb-5">
         <h2 class="fw-bold text-success">Why Choose Rasamrit?</h2>
@@ -9,8 +9,10 @@
     </div>
 
     <div class="table-responsive rounded-4 overflow-hidden shadow-lg">
-        <table class="table table-bordered table-hover align-middle text-center mb-0">
-            <thead style="background: linear-gradient(125deg, #105c01, #009245); color: #fff;" class="fw-bold fs-6">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle text-center mb-0">
+                <thead style="background: linear-gradient(125deg, #105c01, #009245); color: #fff;" class="fw-bold fs-6">
+
             <tr>
                 <th class="py-3">Feature</th>
                 <th class="py-3 text-white">Rasamrit</th>
@@ -74,5 +76,18 @@
 </div>
 </div>
 
+</section>
+
+<style>
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    }
+
+    .table-wrapper table {
+        min-width: 600px; /* ensures table doesn’t shrink too much */
+    }
+
+</style>
 
 

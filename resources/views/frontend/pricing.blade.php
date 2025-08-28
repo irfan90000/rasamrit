@@ -240,6 +240,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row g-4 align-items-center mt-2">
+                <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
+                <p class="mt-0 text-center">We currently deliver across major areas in Bengaluru, including Koramangala,
+                    Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.</p>
+
+            </div>
+            @include('frontend.partials.Delivery-area')
             @include('frontend.partials.faq-pricing-plans')
             </div>
         </div>
