@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend;
 
 use App\Models\Goal;
+use App\Models\Testimonial;
 use Livewire\Component;
 use App\Models\FoodPlan;
 use App\Models\FoodPricing;
@@ -14,13 +15,14 @@ class PricingLivewire extends Component
     public $description = "Affordable healthy meals for everyone! Check out Rasamrit's detailed pricing chart and choose a plan that suits your budget and lifestyle.";
     public $mealpref, $dietary, $goal;
     public $mealprice, $totalprice, $actualprice, $totalmeal;
-    public $plan_list, $goal_list;
+    public $plan_list, $goal_list,$testimonial_list;
 
     public function mount()
     {
         $goal_ids = FoodPricing::pluck('goal')->unique()->toArray();
         $this->goal_list = Goal::whereIn('id', $goal_ids)->latest()->get();
         $this->goal = $goal_ids[0] ?? 0;
+
         $plan_ids = FoodPricing::where('goal', $this->goal)->pluck('plan')->unique()->toArray();
         $this->plan_list = FoodPlan::whereIn('id', $plan_ids)->get();
         $this->mealpref = ['breakfast'];
@@ -30,6 +32,7 @@ class PricingLivewire extends Component
         $this->actualprice = [];
         $this->totalmeal = [];
         $this->updatePrice();
+        $this->testimonial_list = Testimonial::latest()->get();
     }
 
     public function render()

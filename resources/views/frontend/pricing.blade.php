@@ -1,77 +1,13 @@
 <style>
 
-
     .card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
         transition: 0.3s ease-in-out;
     }
-    .circle-number {
-        width: 48px;
-        height: 48px;
-        font-size: 18px;
-    }
-
-    .border-gray {
-        border: 1px solid #ccc !important;
-    }
-
-    @media (max-width: 576px) {
-        .circle-number {
-            width: 36px;
-            height: 36px;
-            font-size: 16px;
-        }
-    }
-    .object-fit-cover {
-        object-fit: cover;
-        height: 100%;
-    }
-
-    .custom-five-cols {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .custom-col {
-        flex: 0 0 calc(20% - 12px); /* 5 cards per row with spacing */
-        margin-bottom: 24px;
-    }
-
-    @media (max-width: 992px) {
-        .custom-col {
-            flex: 0 0 calc(50% - 12px);
-        }
-    }
-
-    @media (max-width: 576px) {
-        .custom-col {
-            flex: 0 0 100%;
-        }
-    }
-
-    .trust-card {
-        border-radius: 0.5rem;
-        overflow: hidden;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .trust-card:hover {
-        transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
-    }
-
-    .card-img-top {
-        height: 140px;
-        width: 100%;
-        object-fit: cover;
-    }
-
     .card-body {
         border-top: 1px solid #dee2e6;
     }
-
     .border-gray {
         border: 1px solid #ccc !important;
     }
@@ -87,17 +23,63 @@
         font-weight: 600;
         color: #333;
     }
+    .slideInLeft {
+        animation-name: slideInLeft;
+    }
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .title-pricing {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.4;
 
+        font-family: "Poppins", serif;
+        color: #333;
+        margin-top: 80px;
+
+    }
+
+    @media (max-width: 768px) {
+        .title-pricing {
+            font-size: 22px;
+
+            margin-top: 4px;
+        }
+    }
+    .sub-title1 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .sub-title1 {
+
+        }
+    }
 </style>
 <div>
     @section('title', $page_title)
     @section('description', $description)
-    <div class="breadchrumb" style="height: 50vh;">
+    <div class="breadchrumb" style="height: 50vh; ">
         <div class="container-fluid">
-            <h1 class="title">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>
-            <p class="sub-title mt-1">Enjoy delicious, homemade food delivered straight to your doorstep with Rasamrit, <br>
-                the trusted choice for home-cooked food delivery in Bangalore.</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 text-center">
+                    <h1 class="title-pricing text-center fw-bold slideInLeft animated">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>
+                    <p class="sub-title1 mt-1">Enjoy delicious, homemade food delivered straight to your doorstep with Rasamrit,
+                        the trusted choice for home-cooked food delivery in Bangalore.</p>
+                </div>
+            </div>
         </div>
+{{--        <div class="container-fluid">--}}
+{{--            <h1 class="title-pricing text-center fw-bold">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>--}}
+{{--            <p class="sub-title1 mt-1">Enjoy delicious, homemade food delivered straight to your doorstep with Rasamrit, <br>--}}
+{{--                the trusted choice for home-cooked food delivery in Bangalore.</p>--}}
+{{--        </div>--}}
     </div>
     <div class="section-padding" style="background-color: #f5f5f5">
         <div class="container" >
@@ -183,7 +165,7 @@
                 </div>
             </div>
 
-                @include('frontend.partials.why-choose')
+
             <div class="row g-4 align-items-center">
                 <div class="col-lg-12">
                     <div class="row g-3 mt-lg-4 wow fadeInUp">
@@ -240,13 +222,18 @@
                     </div>
                 </div>
             </div>
+            @include('frontend.partials.why-choose')
             <div class="row g-4 align-items-center mt-2">
                 <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
                 <p class="mt-0 text-center">We currently deliver across major areas in Bengaluru, including Koramangala,
                     Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.</p>
+                <h6 class="mt-0 text-center text-danger fw-bold">
+                    Do we serve your area? Contact us or WhatsApp us to confirm delivery availability.
+                </h6>
 
             </div>
             @include('frontend.partials.Delivery-area')
+            @include('frontend.partials.testimonial-section')
             @include('frontend.partials.faq-pricing-plans')
             </div>
         </div>

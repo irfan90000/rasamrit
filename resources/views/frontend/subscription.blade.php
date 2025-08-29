@@ -1,33 +1,106 @@
+<style>
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease-in-out;
+    }
+
+
+    .card-body {
+        border-top: 1px solid #dee2e6;
+    }
+
+    .border-gray {
+        border: 1px solid #ccc !important;
+    }
+    table thead th {
+        border-color: #fff !important;
+    }
+    table td, table th {
+        padding: 1rem !important;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    table td:first-child {
+        font-weight: 600;
+        color: #333;
+    }
+    .slideInLeft {
+          animation-name: slideInLeft;
+      }
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    .title-pricing {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        font-family: "Poppins", serif;
+        color: #333;
+        margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+        .title-pricing {
+            font-size: 18px;
+
+            margin-top: 4px;
+        }
+    }
+    .sub-title2 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .sub-title2 {
+
+            font-size: 14px;
+        }
+    }
+</style>
 <div>
     @section('title', $page_title)
     @section('description', $description)
     <div class="breadchrumb" style="height: 50vh;">
         <div class="container-fluid">
-            <div class="row  mx-5   text-center">
-                <h1 class="text-success fw-bold">
-                    Healthy Food Subscription in Bangalore – Fresh, Homemade & Affordable
-                </h1>
-                <p class="sub-title text-dark">
-                    Experience the comfort of homemade food delivery in Bangalore with Rasamrit.
-                    Whether you're aiming for a healthier diet, weight loss, or just want a daily
-                    high-protein meal plan, our subscription service is designed just for you.
-                </p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 text-center">
+                    <h1 class="title-pricing fw-bold slideInLeft animated">
+                        Healthy Food Subscription in Bangalore – Fresh, Homemade & Affordable
+                    </h1>
+                    <p class="sub-title2 mt-1">
+                        Experience the comfort of homemade food delivery in Bangalore with Rasamrit.
+                        Whether you're aiming for a healthier diet, weight loss, or just want a daily
+                        high-protein meal plan, our subscription service is designed just for you.
+                    </p>
+                </div>
             </div>
         </div>
 
+
     </div>
     <div class="container mt-4">
-        <div>
-            <h2 class="text-center text-success fw-bold">
-                Flexible Meal Subscription Plans in Bangalore
-            </h2>
-            <p class="mx-auto text-center mt-0 w-full lg:w-1/2">
-                Choose from our 3-day, 14-day, or 30-day meal subscription Bangalore packages.
-                Starting from just ₹70/day, every meal box is prepared fresh with hygienic
-                ingredients and delivered on time.
-            </p>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-8 text-center">
+                <h2 class="text-dark fw-bold">
+                    Flexible Meal Subscription Plans in Bangalore
+                </h2>
+                <p class="mt-0">
+                    Choose from our 3-day, 14-day, or 30-day meal subscription Bangalore packages.
+                    Starting from just ₹70/day, every meal box is prepared fresh with hygienic
+                    ingredients and delivered on time.
+                </p>
+            </div>
         </div>
     </div>
+
 
     <div class="subscription_area">
         <div class="container">
@@ -437,5 +510,7 @@
             </div>
         </div>
     </div>
+    @include('frontend.partials.why-choose')
+    @include('frontend.partials.testimonial-section')
     @include('frontend.partials.faq-food-subscription')
 </div>

@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend;
 
 use App\Models\Goal;
+use App\Models\Testimonial;
 use Livewire\Component;
 use App\Models\DietType;
 use App\Models\FoodPlan;
@@ -16,7 +17,7 @@ class SubscriptionLivewire extends Component
     $actualprice, $discount, $totalprice;
 
     public $bmi, $bmiheight, $bmiweight, $bmistatus;
-    public $plan_list, $goal_list;
+    public $plan_list, $goal_list, $testimonial_list ;
 
     public $page_title = "Food Subscription Plan | Rasamarti - Healthy & Tasty Food";
     public $description = "Enjoy hassle-free healthy eating with Rasamrit's food subscription plans. Get fresh, tasty, and nutritious meals delivered to your doorstep regularly.";
@@ -48,6 +49,7 @@ class SubscriptionLivewire extends Component
         $goal_ids = FoodPricing::pluck('goal')->unique()->toArray();
         $this->goal_list = Goal::whereIn('id', $goal_ids)->latest()->get();
         $this->plan_list = [];
+        $this->testimonial_list = Testimonial::latest()->get();
     }
 
     public function render()

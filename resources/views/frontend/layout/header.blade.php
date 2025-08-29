@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
+    <div class="container-fluid">
         <a href="{{ route('front.index') }}" class="navbar-brand">
             <img src="{{ asset('frontend/image/Group-13.png') }}" alt="logo">
 {{--            <img src="{{ asset('storage/website_setup/' . websiteSetupValue('logo')) }}" alt="Logo">--}}

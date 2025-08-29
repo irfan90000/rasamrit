@@ -2,13 +2,153 @@
 @section('content')
 @section('title', $page_title)
 @section('description', $description)
+
+<style>
+
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease-in-out;
+    }
+    .circle-number {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .border-gray {
+        border: 1px solid #ccc !important;
+    }
+
+    @media (max-width: 576px) {
+        .circle-number {
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+        }
+    }
+    .object-fit-cover {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .custom-five-cols {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .custom-col {
+        flex: 0 0 calc(20% - 12px); /* 5 cards per row with spacing */
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 992px) {
+        .custom-col {
+            flex: 0 0 calc(50% - 12px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .custom-col {
+            flex: 0 0 100%;
+        }
+    }
+
+    .trust-card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .trust-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-top {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body {
+        border-top: 1px solid #dee2e6;
+    }
+
+    .border-gray {
+        border: 1px solid #ccc !important;
+    }
+    table thead th {
+        border-color: #fff !important;
+    }
+    table td, table th {
+        padding: 1rem !important;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    table td:first-child {
+        font-weight: 600;
+        color: #333;
+    }
+    .slideInLeft {
+        animation-name: slideInLeft;
+    }
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .title-pricing {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        font-family: "Poppins", serif;
+        color: #333;
+        margin-top: 100px;
+    }
+
+    @media (max-width: 768px) {
+        .title-pricing {
+            font-size: 22px;
+            color: #333;
+            margin-top: 4px;
+        }
+    }
+    .sub-title1 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .sub-title1 {
+            color: #333;
+        }
+    }
+</style>
+
+
 <div class="breadchrumb" style="height: 50vh;">
     <div class="container-fluid">
-        <h1 class="text-success text-center fw-bold">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>
-        <p class="text-center text-dark">
-            Discover Rasamrit's freshly curated healthy food Bangalore online menu with meals crafted for every lifestyle,
-            from vegetarian comfort to low-carb and ketogenic meal boxes.</p>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+                <h1 class="title-pricing text-center fw-bold animated slideInLeft">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>
+                <p class="sub-title1 mt-1">
+                    Discover Rasamrit's freshly curated healthy food Bangalore online menu with meals crafted for every lifestyle,
+                    from vegetarian comfort to low-carb and ketogenic meal boxes.</p>
+            </div>
+        </div>
     </div>
+{{--    <div class="container-fluid">--}}
+{{--        <h1 class="text-success text-center fw-bold">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>--}}
+{{--        <p class="text-center text-dark">--}}
+{{--            Discover Rasamrit's freshly curated healthy food Bangalore online menu with meals crafted for every lifestyle,--}}
+{{--            from vegetarian comfort to low-carb and ketogenic meal boxes.</p>--}}
+{{--    </div>--}}
 </div>
 
 <section class="section-padding1 bg-white">

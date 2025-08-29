@@ -106,6 +106,41 @@
                 background-size: 200% auto;
             }
         }
+        .slideInLeft {
+            animation-name: slideInLeft;
+        }
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        .hero_title1 {
+            font-size: 46px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-top: 0;
+            font-family: "Poppins", serif;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .hero_title1 {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+        .hero_subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .hero_subtitle {
+                color: #fff;
+            }
+        }
+
 
     </style>
 @endsection
@@ -118,7 +153,7 @@
         <div class="row align-items-center">
 
             <div class="col-lg-6 text-center text-lg-start">
-                <h2 class="hero_title fw-bold animated slideInLeft">
+                <h2 class="hero_title1 fw-bold animated slideInLeft">
                     {{ websiteSetupValue('title') }}
                 </h2>
 {{--                <p class="hero_spantitle animated slideInLeft text-success">--}}
@@ -180,6 +215,7 @@
 
 
 @include('frontend.partials.pricing-plan')
+@include('frontend.partials.testimonial-section')
 @include('frontend.partials.faq')
 @include('frontend.partials.cta-section')
 @endsection
