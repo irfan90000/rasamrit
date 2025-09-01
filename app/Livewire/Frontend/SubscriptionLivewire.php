@@ -19,8 +19,10 @@ class SubscriptionLivewire extends Component
     public $bmi, $bmiheight, $bmiweight, $bmistatus;
     public $plan_list, $goal_list, $testimonial_list ;
 
-    public $page_title = "Food Subscription Plan | Rasamarti - Healthy & Tasty Food";
-    public $description = "Enjoy hassle-free healthy eating with Rasamrit's food subscription plans. Get fresh, tasty, and nutritious meals delivered to your doorstep regularly.";
+    public $page_title = "Healthy Food Subscription Bangalore | Monthly Meals by Rasamrit";
+    public $description = "Try Rasamrit's healthy food subscription in Bangalore. 
+                           Fresh homemade meals for weight loss or balance. 
+                           Monthly plans start at just ₹70/day!";
 
     public function mount()
     {

@@ -162,7 +162,7 @@
             @if ($diet->getFood->count() > 0)
                 <div class="food_menu_area">
                     <div class="text-center wow fadeInUp">
-                        <h1 class="into-title mb-2 text-success">#{{ $diet->name }}</h1>
+                        <h1 class="into-title mb-2 text-success">#{{ $diet->name }} </h1>
                         <p class="text-dark text-center">Flavorful and balanced vegetarian meals are prepared fresh for every weekday.</p>
                     </div>
                     @foreach ($diet->getFood as $food)
@@ -302,3 +302,4 @@
     </div>
 </section>
 @endsection
+

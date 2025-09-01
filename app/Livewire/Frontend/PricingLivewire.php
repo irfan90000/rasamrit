@@ -11,8 +11,10 @@ use App\Models\FoodPricing;
 class PricingLivewire extends Component
 {
 
-    public $page_title = "Pricing Chart | Rasamarti - Healthy & Tasty Food";
-    public $description = "Affordable healthy meals for everyone! Check out Rasamrit's detailed pricing chart and choose a plan that suits your budget and lifestyle.";
+    public $page_title = "Affordable Home-Cooked Food Delivery in Bangalore – Rasamrit ";
+    public $description = "Get fresh, healthy, and affordable home-cooked food delivery in Bangalore.
+     Choose from 3-day, 14-day, 
+    or 30-day monthly food delivery Bangalore plans. Tiffin service starts at just ₹70/day!";
     public $mealpref, $dietary, $goal;
     public $mealprice, $totalprice, $actualprice, $totalmeal;
     public $plan_list, $goal_list,$testimonial_list;
