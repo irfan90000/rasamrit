@@ -34,12 +34,16 @@ class DietTypeController extends Controller
     {
         $request->validate([
             'name'     =>  'required',
+            'fooddescription'     =>  'required',
+            'dietdescription'     =>  'required',
             'goal'     =>  'required|array',
         ]);
 
         $diet = new DietType;
         $diet->goal = $request->goal;
         $diet->name = $request->name;
+        $diet->fooddescription = $request->fooddescription;
+        $diet->dietdescription = $request->dietdescription;
 
         $diet->save();
         return redirect()->route('admin.diet-type.index')->with('success', 'Diet type added successfully.');
@@ -71,12 +75,18 @@ class DietTypeController extends Controller
     {
         $request->validate([
             'name'     =>  'required',
+
+            'fooddescription'     =>  'required',
+            'dietdescription'     =>  'required',
             'goal'     =>  'required|array',
         ]);
 
         $diet = DietType::findOrFail($id);
         $diet->goal = $request->goal;
         $diet->name = $request->name;
+
+        $diet->fooddescription = $request->fooddescription;
+        $diet->dietdescription = $request->dietdescription;
 
         $diet->save();
         return redirect()->route('admin.diet-type.index')->with('success', 'Diet type updated successfully.');

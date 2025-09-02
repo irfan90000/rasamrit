@@ -1,70 +1,70 @@
-<style>
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-        transition: 0.3s ease-in-out;
-    }
+{{--<style>--}}
+{{--    .card:hover {--}}
+{{--        transform: translateY(-4px);--}}
+{{--        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);--}}
+{{--        transition: 0.3s ease-in-out;--}}
+{{--    }--}}
 
 
-    .card-body {
-        border-top: 1px solid #dee2e6;
-    }
+{{--    .card-body {--}}
+{{--        border-top: 1px solid #dee2e6;--}}
+{{--    }--}}
 
-    .border-gray {
-        border: 1px solid #ccc !important;
-    }
-    table thead th {
-        border-color: #fff !important;
-    }
-    table td, table th {
-        padding: 1rem !important;
-        font-size: 0.95rem;
-        font-weight: 500;
-    }
-    table td:first-child {
-        font-weight: 600;
-        color: #333;
-    }
-    .slideInLeft {
-          animation-name: slideInLeft;
-      }
-    .animated {
-        animation-duration: 1s;
-        animation-fill-mode: both;
-    }
+{{--    .border-gray {--}}
+{{--        border: 1px solid #ccc !important;--}}
+{{--    }--}}
+{{--    table thead th {--}}
+{{--        border-color: #fff !important;--}}
+{{--    }--}}
+{{--    table td, table th {--}}
+{{--        padding: 1rem !important;--}}
+{{--        font-size: 0.95rem;--}}
+{{--        font-weight: 500;--}}
+{{--    }--}}
+{{--    table td:first-child {--}}
+{{--        font-weight: 600;--}}
+{{--        color: #333;--}}
+{{--    }--}}
+{{--    .slideInLeft {--}}
+{{--          animation-name: slideInLeft;--}}
+{{--      }--}}
+{{--    .animated {--}}
+{{--        animation-duration: 1s;--}}
+{{--        animation-fill-mode: both;--}}
+{{--    }--}}
 
-    .title-pricing {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.4;
+{{--    .title-pricing {--}}
+{{--        font-size: 32px;--}}
+{{--        font-weight: 500;--}}
+{{--        line-height: 1.4;--}}
 
-        font-family: "Poppins", serif;
-        color: #333;
-        margin-top: 60px;
-    }
+{{--        font-family: "Poppins", serif;--}}
+{{--        color: #333;--}}
+{{--        margin-top: 60px;--}}
+{{--    }--}}
 
-    @media (max-width: 768px) {
-        .title-pricing {
-            font-size: 18px;
+{{--    @media (max-width: 768px) {--}}
+{{--        .title-pricing {--}}
+{{--            font-size: 18px;--}}
 
-            margin-top: 4px;
-        }
-    }
-    .sub-title2 {
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 30px;
-        color: #333;
-        text-align: center;
-    }
+{{--            margin-top: 4px;--}}
+{{--        }--}}
+{{--    }--}}
+{{--    .sub-title2 {--}}
+{{--        font-size: 16px;--}}
+{{--        font-weight: 400;--}}
+{{--        margin-bottom: 30px;--}}
+{{--        color: #333;--}}
+{{--        text-align: center;--}}
+{{--    }--}}
 
-    @media (max-width: 768px) {
-        .sub-title2 {
+{{--    @media (max-width: 768px) {--}}
+{{--        .sub-title2 {--}}
 
-            font-size: 14px;
-        }
-    }
-</style>
+{{--            font-size: 14px;--}}
+{{--        }--}}
+{{--    }--}}
+{{--</style>--}}
 <div>
     @section('title', $page_title)
     @section('description', $description)
