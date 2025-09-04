@@ -312,16 +312,56 @@
     </div>
     @include('frontend.partials.Delivery-area')
     <section class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="text-2xl font-bold text-success mb-4">
-                Why Customers Love Our Food Menu
-            </h2>
-            <p class="text-dark mb-2">Meals change every day (no repeats in a week)</p>
-            <p class="text-dark mb-2">Hygienically prepared with love</p>
-            <p class="text-dark mb-2">Nutritionist-designed for your health goals</p>
-            <p class="text-dark">Suitable for office-goers, students, and fitness lovers</p>
+        <div class="container">
+            <div class="row align-items-start g-5">
+
+                <!-- Left Column -->
+
+
+
+                <div class="col-lg-7">
+                    <!-- First Heading -->
+                    <h2 class="text-2xl fw-bold text-success mb-3">
+                        Why Choose Rasamrit for Healthy Food Online?
+                    </h2>
+                    <p class="text-dark mb-4">
+                        We combine the comfort of homemade meals with the science of nutrition, offering Bangalore’s most trusted healthy food delivery service.
+                        All meals are made from fresh organic ingredients, delivered on time, and suited for weight management or daily nourishment.
+                    </p>
+
+                    <!-- Second Heading -->
+                    <h2 class="text-2xl fw-bold text-success mb-3">
+                        Looking for Healthy Food in Bangalore Online Near You?
+                    </h2>
+                    <p class="text-dark">
+                        Explore Rasamrit’s wide range of meal kits, brochures, and packages tailored for every preference –
+                        from diet food home delivery near me to organic food service in Bangalore.
+                        <br><br>
+                        Order your healthy food online from Rasamrit now and enjoy weekly meal prep with organic vegetables,
+                        delicious boxes, and doorstep delivery in Bangalore. Starting at just ₹70/day.
+                    </p>
+                </div>
+
+                <!-- Right Column -->
+
+                <div class="col-lg-5">
+                    <h2 class="text-2xl fw-bold text-success mb-4 text-center text-lg-start">
+                        Why Customers Love Our Food Menu
+                    </h2>
+                    <ul class="list-disc list-inside text-dark text-left">
+                        <li>Meals change every day (no repeats in a week)</li>
+                        <li>Hygienically prepared with love</li>
+                        <li>Nutritionist-designed for your health goals</li>
+                        <li>Suitable for office-goers, students, and fitness lovers</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    @include('frontend.partials.faq')
+    @include('frontend.partials.cta-section')
 
 
 @endsection

@@ -216,6 +216,6 @@
 
 @include('frontend.partials.pricing-plan')
 @include('frontend.partials.testimonial-section')
-@include('frontend.partials.faq')
+@include('frontend.partials.faq-home')
 @include('frontend.partials.cta-section')
 @endsection

@@ -510,7 +510,84 @@
             </div>
         </div>
     </div>
+    <div class="">
+        <div class="p-4 rounded shadow text-white text-center" style="background: linear-gradient(125deg, #105c01, #009245)">
+            <h2 class="mb-3 fw-bold text-white">Need help choosing a plan?</h2>
+            <a href="tel:+919876543210" class="btn btn-light btn-lg fw-bold">
+                <i class="fas fa-phone-alt me-2"></i> Call Us
+            </a>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <!-- Left Column -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="text-start mb-4">
+                        <h2 class="fw-bold text-success">Monthly Food Delivery Bangalore</h2>
+                        <p class="lead">Our fresh and healthy food subscription is ideal for:</p>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-12 d-flex align-items-start">
+                            <span class="me-3 text-success fs-4"><i class="fas fa-check-circle"></i></span>
+                            <p class="mb-0">Busy professionals & students</p>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-start">
+                            <span class="me-3 text-success fs-4"><i class="fas fa-check-circle"></i></span>
+                            <p class="mb-0">Gym-goers looking for protein meals</p>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-start">
+                            <span class="me-3 text-success fs-4"><i class="fas fa-check-circle"></i></span>
+                            <p class="mb-0">Health-conscious families</p>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-start">
+                            <span class="me-3 text-success fs-4"><i class="fas fa-check-circle"></i></span>
+                            <p class="mb-0">People on specific weight loss meal subscription Bangalore plans</p>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-start">
+                            <span class="me-3 text-success fs-4"><i class="fas fa-check-circle"></i></span>
+                            <p class="mb-0">Anyone craving home-style, nutritious food</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-6">
+                    <div class="text-start mb-4">
+                        <h2 class="fw-bold text-success">What Makes Rasamrit the Best Meal Subscription in Bangalore?</h2>
+                        <p class="lead">
+                            Unlike generic meal delivery services, Rasamrit brings the warmth of a home kitchen with every tiffin.
+                        </p>
+                    </div>
+
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center">
+                            <span class="text-primary fs-4 me-3"><i class="fas fa-user-md"></i></span>
+                            <p class="mb-0">Designed by Certified Nutrition Experts</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <span class="text-primary fs-4 me-3"><i class="fas fa-certificate"></i></span>
+                            <p class="mb-0">FSSAI Licensed & 100% verified</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <span class="text-primary fs-4 me-3"><i class="fas fa-users"></i></span>
+                            <p class="mb-0">10,000+ Meals Delivered</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
     @include('frontend.partials.why-choose')
     @include('frontend.partials.testimonial-section')
     @include('frontend.partials.faq-food-subscription')
+    @include('frontend.partials.cta-section')
 </div>

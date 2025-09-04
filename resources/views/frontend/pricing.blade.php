@@ -120,20 +120,20 @@
                                             <div class="col-lg-12">
                                                 <span class="icon"><i class="fas fa-rupee-sign"></i></span>
                                                 <span class="meal_price">
-                                                    {{ number_format($mealprice[$plan->id], 2) }}
-                                                    <small>/Day</small>
-                                                </span>
+                                {{ number_format($mealprice[$plan->id], 2) }}
+                                <small>/Day</small>
+                            </span>
                                             </div>
                                             <div class="col-lg-12">
                                                 <span class="icon"><i class="fas fa-rupee-sign"></i></span>
                                                 <span class="total_price">
-                                                    {{ number_format($totalprice[$plan->id], 2) }}
-                                                </span>
+                                {{ number_format($totalprice[$plan->id], 2) }}
+                            </span>
                                                 @if ($plan->discount)
                                                     <span class="icon"><i class="fas fa-rupee-sign"></i></span>
                                                     <span class="actual_price">
-                                                        {{ number_format($actualprice[$plan->id], 2) }}
-                                                    </span>
+                                    {{ number_format($actualprice[$plan->id], 2) }}
+                                </span>
                                                 @endif
                                             </div>
                                             <div class="col-lg-12">
@@ -141,8 +141,7 @@
                                                 <span class="meal">{{ $totalmeal[$plan->id] }} meals</span>
                                             </div>
                                             <div class="col-lg-12">
-                                                <a href="{{ route('front.subscription') }}" type="button"
-                                                    class="subs_btn">
+                                                <a href="{{ route('front.subscription') }}" type="button" class="subs_btn">
                                                     Subscribe Now <span><i class="fas fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
@@ -156,7 +155,46 @@
                                 </div>
                             </div>
                         @endforeach
+
+                        {{-- Fourth hard-coded card --}}
+                        <div class="col-lg-3">
+                            <div class="card plan_card">
+                                <div class="card-body">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <span class="name">Special Plan</span>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <span class="day">30 Days</span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="icon"><i class="fas fa-rupee-sign"></i></span>
+                                            <span class="meal_price">250.00 <small>/Day</small></span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="icon"><i class="fas fa-rupee-sign"></i></span>
+                                            <span class="total_price">7500.00</span>
+                                            <span class="icon"><i class="fas fa-rupee-sign"></i></span>
+                                            <span class="actual_price">9000.00</span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="icon"><i class="fas fa-utensils"></i></span>
+                                            <span class="meal">90 meals</span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <a href="{{ route('front.subscription') }}" type="button" class="subs_btn">
+                                                Subscribe Now <span><i class="fas fa-arrow-right"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="discount">
+                                    Save 20%
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
             @include('frontend.partials.why-choose')
@@ -172,7 +210,9 @@
             @include('frontend.partials.Delivery-area')
             @include('frontend.partials.testimonial-section')
             @include('frontend.partials.faq-pricing-plans')
+
             </div>
+        @include('frontend.partials.cte-pricing')
         </div>
     </div>
 </div>

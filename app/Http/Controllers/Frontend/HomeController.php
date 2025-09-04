@@ -24,7 +24,8 @@ class HomeController
     public function foodmenu()
     {
         $diet_list = DietType::with('getFood')->latest()->get();
-        return view('frontend.foodmenu',compact('diet_list'), [
+        $faq_list = Faq::latest()->take(3)->get();
+        return view('frontend.foodmenu',compact('diet_list' ,'faq_list'), [
             'page_title'    => 'Menu | Rasamarti - Healthy & Tasty Food',
             'description'   => 'Explore Rasamrits diverse menu filled with wholesome and flavorful dishes. From breakfast to dinner, find healthy options for every craving!',
         ]);
@@ -48,7 +49,8 @@ class HomeController
     public function about()
     {
         $faq_list = Faq::latest()->get();
-        return view('frontend.about',compact('faq_list'), [
+        $faq_list = Faq::latest()->take(3)->get();
+        return view('frontend.about',compact('faq_list' , 'faq_list'), [
             'page_title' => 'About Rasamarti - Healthy & Tasty Food',
             'description' => 'Learn more about Rasamrit, your trusted partner in healthy and tasty living. Discover our mission, vision, and commitment to wellness.',
         ]);
