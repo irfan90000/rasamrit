@@ -42,10 +42,19 @@
 
 
 
+<style>
+    .main-bannerr {
+        background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px 0;
+        height: auto;
+    }
+</style>
 
-
-
-<section class="section-padding">
+<div class="main-bannerr">
+<section class="">
     <div class="container">
         <div class="text-center wow fadeInUp">
             <h2 class="section-intro-title text-success fw-bold">#HOWITWORKS</h2>
@@ -99,7 +108,7 @@
 
     </div>
 </section>
-<section class="section-padding">
+<section class="">
     <div class="container" >
         <div class="row align-items-center gx-4 gy-5">
             <div class="col-lg-5 wow fadeInLeft">
@@ -132,6 +141,7 @@
         </div>
     </div>
 </section>
+</div>
 {{--<section class="section-padding bg-white">--}}
 {{--    <div class="container" >--}}
 {{--        <div class="text-center wow fadeInUp">--}}

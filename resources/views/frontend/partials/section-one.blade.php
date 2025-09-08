@@ -183,7 +183,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, #28a745, #88d498);
+        background: linear-gradient(125deg, #105c01, #009245);
         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }

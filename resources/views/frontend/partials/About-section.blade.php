@@ -1,5 +1,6 @@
-<section class="section-padding " style="background-color: #f5f5f5">
+<section class="section-padding main-bannerr" style="background-color: #f5f5f5">
     <div class="container">
+
         <div class="row gx-4 gy-5 align-items-center">
             <div class="col-lg-6">
                 <div class="row g-3">
@@ -23,7 +24,7 @@
             </div>
 
             <div class="col-lg-6 ps-lg-5">
-                <span class="badge_title">About Rasamrit:</span>
+                <span class="badge_title text-success">About Rasamrit:</span>
                 <h2 class="mb-3  text-black">Know About <span class="mb-3 fw-semibold text-success"> Rasamrit</span></h2>
                 <p class="mb-2">
                     We are not a food factory. We are your partner in wellness.
@@ -98,3 +99,18 @@
     </div>
 
 </section>
+
+
+<style>
+    .main-bannerr {
+        background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px 0;
+        height: auto;
+    }
+    .text-success{
+        color: #197241;
+    }
+</style>
