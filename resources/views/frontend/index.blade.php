@@ -92,16 +92,48 @@
                 font-weight: 600;
                 color: #333;
             }
+            /* Default background for large screens */
             .main-bannerr-bg {
                 background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 90vh;            /* fix height */
-                object-fit: cover;        /* image ko crop karke fit karega */
-                object-position: center;  /* center align karega */
+                height: 90vh;
+                position: relative;
             }
+
+            /* Transparent white overlay */
+            .overlay-white {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+                z-index: 1;
+            }
+
+            /* Ensure content is above the overlay */
+            .hero-header .container-fluid {
+                position: relative;
+                z-index: 2;
+            }
+
+            /* Override background image on small screens */
+            @media (max-width: 1024px) {
+                .main-bannerr-bg {
+                    background-image: url("{{ asset('frontend/image/mobile-banner.png') }}");
+                    background-position: center center;
+                    background-size: cover;
+                    height: auto;
+                }
+
+                .overlay-white {
+                    background-color: rgba(255, 255, 255, 0.4); /* lighter overlay for mobile if needed */
+                }
+            }
+
 
             @media (max-width: 768px) {
                 .main-banner {
@@ -116,6 +148,9 @@
                 animation-duration: 1s;
                 animation-fill-mode: both;
             }
+            .text-green{
+                color: #197241;
+            }
             .hero_title1 {
                 font-size: 46px;
                 font-weight: 500;
@@ -125,10 +160,16 @@
                 color: #197241;
             }
 
+            @media (max-width: 1024px) {
+                .hero_title1 {
+                    font-size: 32px;
+                    color: #197241;
+                }
+            }
             @media (max-width: 768px) {
                 .hero_title1 {
                     font-size: 24px;
-                    color: #fff;
+                    color: #197241;
                 }
             }
             .hero_subtitle {
@@ -136,6 +177,12 @@
                 font-weight: 400;
                 margin-bottom: 30px;
                 color: #333;
+            }
+            @media (max-width: 768px) {
+                .hero_subtitle {
+                    color: #333;
+                    margin-bottom: 5px;
+                }
             }
             .main-bannerc {
 
@@ -145,14 +192,15 @@
                 object-fit: cover;        /* image ko crop karke fit karega */
                 object-position: center;  /* center align karega */
             }
+            @media (max-width: 1024px) {
+                .main-bannerc {
+                   display: none;
+                }
+            }
             .hero-header img.main-bannerc {
                 animation: none !important; /* is par disable */
             }
-            @media (max-width: 768px) {
-                .hero_subtitle {
-                    color: #fff;
-                }
-            }
+
             .main-title{
                 padding-left: 36px;
                 color: #0e6006 !important;
@@ -162,39 +210,61 @@
                     padding-left: 8px;
                 }
             }
+            @media (max-width: 768px) {
+            .button-width{
+            width: 60%;
+                 }
+            }
+            @media (max-width: 405px) {
+                .button-width{
+                    width: 75%;
+                }
+            }
+            .button-bg{
+                color: #197241;
+                border-color: #197241;
+                background-color: transparent;
+            }
+            .button-bg:hover{
+                background-color: #197241;
+                color: white;
+                border-color: #197241;
+            }
+
         </style>
     @endsection
-    <section class="hero-header main-bannerr-bg">
+    <section class="hero-header main-bannerr-bg position-relative">
+        <div class="overlay-white"></div>
         {{--    style="background-image: url({{ asset('frontend/image/main-banner.jpg') }});--}}
         {{--        background-position: center center;--}}
         {{--        background-repeat: no-repeat;--}}
         {{--        background-size: cover;">--}}
-        <div class="container-fluid ">
+        <div class="container-fluid position-relative">
             <div class="row align-items-center">
 
                 <!-- Left Side (col-6) -->
-                <div class="col-lg-6 text-center text-lg-start main-title">
+                <div class="col-lg-6 col-md-6 col-sm-9 text-center text-lg-start main-title">
                     <h2 class="hero_title1 fw-bold animated slideInLeft">
                         {{ websiteSetupValue('title') }}
                     </h2>
                     <p class="hero_subtitle animated slideInLeft" >
                         {{ websiteSetupValue('description') }}
                     </p>
-                    <div class="d-flex flex-column flex-md-row gap-3 mt-5">
-                        <button class="px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
+                    <div class="d-flex flex-column flex-md-row gap-3 md:mt-5 mt-2">
+                        <button class="px-4 py-2 rounded-pill button-width border-0 subs_btn animated slideInLeft">
                             <a class="text-white fw-semibold" href="#"> Get My Custom Meal Plan </a>
                         </button>
-                        <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
-                            <a class="fw-semibold text-white" href="#"> Explore Food Subscriptions </a>
+                        <button class="fw-bold px-4 py-2 button-width button-bg rounded-pill border-2 ">
+                         Explore Food Subscriptions
                         </button>
                     </div>
                     <div class="mt-4">
-                        <p class="small mb-4 fw-bold fs-6">
-                            <i class="fas fa-retweet me-1 text-black"></i> Free Delivery
+                        <p class="small mb-4 fw-bold fs-6 text-green">
+                            <i class="fas fa-retweet me-1 text-green"></i> Free Delivery
                             <span class="mx-2">|</span>
-                            <i class="fas fa-shield-alt me-1 text-black"></i> No Advance
+                            <i class="fas fa-shield-alt me-1 text-green"></i> No Advance
                             <span class="mx-2">|</span>
-                            <i class="fas fa-money-bill-wave me-1 text-black"></i> COD Available
+                            <i class="fas fa-money-bill-wave me-1 text-green"></i> COD Available
                         </p>
                     </div>
                 </div>
@@ -216,7 +286,7 @@
     @include('frontend.partials.About-section')
     @include('frontend.partials.trusted-food')
     @include('frontend.partials.section-one')
-    @include('frontend.partials.Meal-subscription')
+    @include('frontend.partials.How-It-works')
     @include('frontend.partials.why-choose')
     @include('frontend.partials.Aday-at')
     @include('frontend.partials.meal-plans')

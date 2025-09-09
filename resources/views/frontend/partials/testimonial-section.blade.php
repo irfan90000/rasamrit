@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-lg-5 wow fadeInLeft">
-                <h5 class="mb-3 text-success fw-bold">
+                <h5 class="mb-3 text-green fw-bold">
                     Look How Our Customers Achieved Their Health Goals with
                     <mark class="highlight">{{ config('app.name') }}</mark>
                 </h5>
@@ -21,11 +21,11 @@
                                 {{ $testimonial->description }}
                             </p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle"
+                                <img class="img-fluid flex-shrink-0 rounded-circle text-green"
                                      alt="" src="{{ asset('storage/testimonial/' . $testimonial->image) }}"
                                      style="width: 40px; height: 40px; object-fit:cover">
                                 <div class="ps-3">
-                                    <h6 class="mb-0">{{ $testimonial->name }}</h6>
+                                    <h6 class="mb-0 text-green">{{ $testimonial->name }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -35,3 +35,8 @@
         </div>
     </div>
 </section>
+<style>
+    .text-green{
+        color: #197241;
+    }
+</style>

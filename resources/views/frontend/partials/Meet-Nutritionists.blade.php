@@ -2,7 +2,7 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">Meet Your Nutritionists & Trainers</h2>
+            <h2 class="fw-bold text-green">Meet Your Nutritionists & Trainers</h2>
             <p class="text-muted">Work 1:1 with our expert in-house team</p>
         </div>
 
@@ -32,7 +32,7 @@
                                         <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 400px; object-fit: cover;">
                                         <div class="card-body" style="background-color: #f5f5f5">
                                             <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
-                                            <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-success small">View LinkedIn</a>
+                                            <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-green small">View LinkedIn</a>
                                         </div>
                                     </div>
                                 </div>
@@ -76,3 +76,8 @@
         }
     });
 </script>
+<style>
+    .text-green{
+        color: #197241;
+    }
+</style>

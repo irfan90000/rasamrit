@@ -3,7 +3,7 @@
     <div class="container">
         <!-- Heading -->
         <div class="text-center mb-4">
-            <h2 class="fw-bold text-success">SUCCESS WITH RASAMRIT</h2>
+            <h2 class="fw-bold text-green">SUCCESS WITH RASAMRIT</h2>
             <p class="text-muted w-75 mx-auto">
                 With Rasamrit's trusted weight loss food delivery in Bangalore, you can focus 100% on your fitness goals without ever stressing about food.
             </p>
@@ -215,7 +215,9 @@
         padding: 1.5rem;
         height: 100%;
     }
-
+    .text-green{
+        color: #197241;
+    }
     .before-after {
         display: flex;
         justify-content: center;

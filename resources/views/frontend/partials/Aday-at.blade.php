@@ -53,7 +53,7 @@
 <section style="background-color: #f5f5f5;">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">A Day at Rasamrit – Your Daily Nutrition, Fully Managed</h2>
+            <h2 class="fw-bold text-green">A Day at Rasamrit – Your Daily Nutrition, Fully Managed</h2>
             <p class="lead text-muted">From morning detox to dinner done right, we take care of everything.</p>
         </div>
 
@@ -63,12 +63,12 @@
                     <div class="shadow-sm border-0 rounded-4 h-100 p-2 bg-white">
                         <div class="row g-0 align-items-center h-100">
                             <div class="col-5">
-                                <img src="{{ $meal['image'] }}" class="img-fluid rounded-4 w-100 " style="height: 140px; object-fit: cover" alt="{{ $meal['title'] }}">
+                                <img src="{{ $meal['image'] }}" class="img-fluid  rounded-4 w-100 " style="height: 140px; object-fit: cover" alt="{{ $meal['title'] }}">
                             </div>
                             <div class="col-7">
                                 <div class="p-2">
                                     <small class="fw-bold d-block text-dark">{{ $meal['time'] }}</small>
-                                    <h6 class="fw-bold text-success mb-1">{{ $meal['title'] }}</h6>
+                                    <h6 class="fw-bold text-green mb-1">{{ $meal['title'] }}</h6>
                                     <p class="small text-muted mb-0">{{ $meal['desc'] }}</p>
                                 </div>
                             </div>
@@ -84,3 +84,14 @@
         </div>
     </div>
 </section>
+
+
+<style>
+
+    .text-green{
+        color: #197241;
+
+
+    }
+
+</style>
