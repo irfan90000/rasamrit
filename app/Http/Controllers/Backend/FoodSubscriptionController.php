@@ -14,7 +14,11 @@ class FoodSubscriptionController extends Controller
     public function index()
     {
         $subscription_list = FoodSubscription::with('getGoal', 'getDietType', 'getPlan')->latest()->get();
-        return view('backend.subscription.index',compact('subscription_list'), ['page_title' => 'Food Subscription']);
+        return view('backend.subscription.index',compact('subscription_list'), [
+            'page_title'    => 'Healthy Food Subscription Bangalore | Monthly Meals by Rasamrit',
+            'description'   => ' Try Rasamrit healthy food subscription in Bangalore. Fresh homemade meals for 
+        weight loss or balance. Monthly plans start at just ₹70/day!',
+        ]);
     }
 
     /**

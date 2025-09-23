@@ -16,7 +16,12 @@ class FoodPricingController extends Controller
     public function index()
     {
         $pricing_list = FoodPricing::with(['getPlan', 'getGoal'])->latest()->get();
-        return view('backend.food_pricing.index',compact('pricing_list'), ['page_title' => 'Food Pricing']);
+        return view('backend.food_pricing.index',compact('pricing_list'), [
+            'page_title'    => 'Affordable Home-Cooked Food Delivery in Bangalore – Rasamrit',
+            'description'   => ' Get fresh, healthy, and affordable home-cooked food delivery in Bangalore. 
+            Choose from 3-day, 14-day, 
+            or 30-day monthly food delivery Bangalore plans. Tiffin service starts at just ₹70/day!',
+        ]);
     }
 
     /**

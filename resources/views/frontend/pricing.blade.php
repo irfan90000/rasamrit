@@ -1,5 +1,5 @@
 
-<div>
+<section>
     @section('title', $page_title)
     @section('description', $description)
     <div class="breadchrumb" style="height: 50vh; ">
@@ -212,7 +212,8 @@
             @include('frontend.partials.faq-pricing-plans')
 
             </div>
-        @include('frontend.partials.cte-pricing')
+
         </div>
-    </div>
-</div>
+          @include('frontend.partials.cte-pricing')
+    </section>
+

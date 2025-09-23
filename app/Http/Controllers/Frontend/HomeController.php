@@ -16,8 +16,9 @@ class HomeController
         $testimonial_list = Testimonial::latest()->get();
         $faq_list = Faq::latest()->take(3)->get();
         return view('frontend.index',compact('goal_list', 'testimonial_list', 'faq_list'), [
-            'page_title' => 'Rasamarit - Healthy & Tasty Food',
-            'description' => 'Discover the perfect blend of health and taste with Rasamrit. Explore our wide range of delicious and nutritious meals crafted to nourish your body and delight your taste buds.',
+            'page_title' => 'Best Prepared Meal Delivery Service in Bangalore – Rasamrit',
+            'description' => 'Get the best prepared meal delivery service delivered to your door. Budget-friendly, 
+            clean eating plans for weight loss, fitness & busy lifestyles.',
         ]);
     }
 
@@ -26,8 +27,9 @@ class HomeController
         $diet_list = DietType::with('getFood')->latest()->get();
         $faq_list = Faq::latest()->take(3)->get();
         return view('frontend.foodmenu',compact('diet_list' ,'faq_list'), [
-            'page_title'    => 'Menu | Rasamarti - Healthy & Tasty Food',
-            'description'   => 'Explore Rasamrits diverse menu filled with wholesome and flavorful dishes. From breakfast to dinner, find healthy options for every craving!',
+            'page_title'    => 'Healthy Food Online in Bangalore | Rasamrit Weekly Food Menu',
+            'description'   => ' Explore Rasamrit’s healthy food Bangalore online menu. Find delicious vegetarian, low-carb, keto, and balanced meals available for home delivery. 
+            Subscribe now for fresh, organic food boxes every week!',
         ]);
     }
 
@@ -41,8 +43,9 @@ class HomeController
         $goal_list = Goal::latest()->get();
         $testimonial_list = Testimonial::latest()->get();
         return view('frontend.coaching',compact('goal_list', 'testimonial_list'), [
-            'page_title' => 'Online Coaching | Rasamarti - Healthy & Tasty Food',
-            'description' => 'Transform your lifestyle with Rasamrit online coaching. Get expert guidance on healthy eating, fitness, and sustainable habits.',
+            'page_title' => 'Rasamrit Virtual Meal Plans - Starting at Just ₹99',
+            'description' => 'Get expert online coaching for healthy meal planning from Rasamrit. Ideal for individuals who 
+            cannot subscribe to meal delivery. Learn to prep balanced meals at home.',
         ]);
     }
 

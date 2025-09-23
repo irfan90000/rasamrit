@@ -15,7 +15,11 @@ class FoodMenuController extends Controller
     public function index()
     {
         $food_list = FoodMenu::with('getDiet')->latest()->get();
-        return view('backend.food_menu.index',compact('food_list'), ['page_title' => 'Food Menu']);
+        return view('backend.food_menu.index',compact('food_list'), [
+            'page_title'    => 'Healthy Food Online in Bangalore | Rasamrit Weekly Food Menu',
+            'description'   => '  Explore Rasamrit’s healthy food Bangalore online menu. Find delicious vegetarian, low-carb, keto, and balanced meals available for home delivery. 
+            Subscribe now for fresh, organic food boxes every week!',
+        ]);
     }
 
     /**

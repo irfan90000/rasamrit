@@ -1,12 +1,80 @@
-<section style="background-color: #f5f5f5 ">
-    <div class="text-center mt-2  py-4">
-        <h3 class="fw-bold text-success mb-3">Prefer a personal touch?</h3>
-        <p class="text-muted mb-4">
-            Call or WhatsApp us for a meal consultation or to customize your subscription. Experience the warmth of homemade food in Bangalore with just a click.
-        </p>
+<section>
+    <div class="position-relative text-white main-banner-cta">
+        <!-- Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: rgba(0, 0, 0, 0.4);"></div>
 
-        <button
-                class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">Book Free Call</button>
+        <!-- Content -->
+        <div class="position-relative z-1 d-flex justify-content-center align-items-center text-center h-100 pt-4">
+            <div class="d-flex flex-column align-items-center">
+                <h2 class="fw-bold mb-3 text-white text-font">Prefer a personal touch?</h2>
+                <p class="mb-4 text-description text-white">
+                    Call or WhatsApp us for a meal consultation or to customize your subscription. Experience the warmth of homemade food in Bangalore with just a click.
 
+                </p>
+                <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+                        style="background: linear-gradient(125deg, #105c01, #009245);">
+                    Book Free Call
+                </button>
+            </div>
+        </div>
     </div>
 </section>
+
+<style>
+    .main-banner-cta {
+        background-image: url("{{ asset('frontend/image/mobile-banner.png') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 450px;
+    }
+    @media (max-width: 768px) {
+        .main-banner-cta {
+            min-height: 350px;
+        }
+    }
+    .text-font {
+        font-size: 60px;
+    }
+    @media (max-width: 768px) {
+        .text-font {
+            font-size: 30px;
+        }
+    }
+
+    .text-description {
+        font-size: 22px;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    @media (max-width: 1124px) {
+        .text-description {
+            font-size: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    @media (max-width: 768px) {
+        .text-description {
+            font-size: 16px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+</style>
+
+
+{{--<section style="background-color: #f5f5f5 ">--}}
+{{--    <div class="text-center mt-2  py-4">--}}
+{{--        <h3 class="fw-bold text-success mb-3">Prefer a personal touch?</h3>--}}
+{{--        <p class="text-muted mb-4">--}}
+{{--            Call or WhatsApp us for a meal consultation or to customize your subscription. Experience the warmth of homemade food in Bangalore with just a click.--}}
+{{--        --}}
+{{--        </p>--}}
+
+{{--        <button--}}
+{{--                class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">Book Free Call</button>--}}
+
+{{--    </div>--}}
+{{--</section>--}}

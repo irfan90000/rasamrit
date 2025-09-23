@@ -7,13 +7,13 @@
         <!-- Content -->
         <div class="position-relative z-1 d-flex justify-content-center align-items-center text-center h-100 pt-4">
             <div class="d-flex flex-column align-items-center">
-                <h2 class="fw-bold mb-3 text-white text-font">Feel the Difference with Every Bite</h2>
+                <h2 class="fw-bold mb-3 text-white text-font">Join Rasamrit’s Online Coaching today</h2>
                 <p class="mb-4 text-description text-white">
-                    Get your personalized meal plan by booking a free call with our certified nutritionist.
+                    Learn how to eat better, anywhere you live.
                 </p>
                 <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
                         style="background: linear-gradient(125deg, #105c01, #009245);">
-                    Book Free Call
+                    Get Started
                 </button>
             </div>
         </div>

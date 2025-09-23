@@ -129,6 +129,17 @@
                 color: #333;
             }
         }
+        .main-banner-menu {
+            background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 60px 0;
+        }
+
+        .text-green{
+            color: #197241;
+        }
     </style>
 
 
@@ -311,57 +322,75 @@
 
     </div>
     @include('frontend.partials.Delivery-area')
-    <section class="py-5 bg-light">
+
+    <section class="py-5 main-banner-menu">
         <div class="container">
-            <div class="row align-items-start g-5">
+            <h2 class="fw-bold text-center text-success mb-5">
+                Why Choose Rasamrit for Healthy Food Online?
+            </h2>
 
-                <!-- Left Column -->
+            <div class="row g-4">
 
-
-
-                <div class="col-lg-7">
-                    <!-- First Heading -->
-                    <h2 class="text-2xl fw-bold text-success mb-3">
-                        Why Choose Rasamrit for Healthy Food Online?
-                    </h2>
-                    <p class="text-dark mb-4">
-                        We combine the comfort of homemade meals with the science of nutrition, offering Bangalore’s most trusted healthy food delivery service.
-                        All meals are made from fresh organic ingredients, delivered on time, and suited for weight management or daily nourishment.
-                    </p>
-
-                    <!-- Second Heading -->
-                    <h2 class="text-2xl fw-bold text-success mb-3">
-                        Looking for Healthy Food in Bangalore Online Near You?
-                    </h2>
-                    <p class="text-dark">
-                        Explore Rasamrit’s wide range of meal kits, brochures, and packages tailored for every preference –
-                        from diet food home delivery near me to organic food service in Bangalore.
-                        <br><br>
-                        Order your healthy food online from Rasamrit now and enjoy weekly meal prep with organic vegetables,
-                        delicious boxes, and doorstep delivery in Bangalore. Starting at just ₹70/day.
-                    </p>
+                <!-- Left Card -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 h-100 rounded-4">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-success mb-3">
+                                Looking for Healthy Food in Bangalore Online Near You?
+                            </h4>
+                            <p class="text-muted">
+                                Combines homemade meals with the science of nutrition, offering Bangalore's most trusted
+                                healthy food delivery service. All meals are made from fresh organic ingredients,
+                                and are perfect for weight management or daily nourishment.
+                            </p>
+                            <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                                <a href="#menu" class="btn btn-success px-4 py-2 fw-semibold rounded-pill">
+                                    Explore the menu
+                                </a>
+                                <a href="#trial" class="btn btn-outline-success px-4 py-2 fw-semibold rounded-pill">
+                                    Start 3-day trial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right Column -->
-
-                <div class="col-lg-5">
-                    <h2 class="text-2xl fw-bold text-success mb-4 text-center text-lg-start">
-                        Why Customers Love Our Food Menu
-                    </h2>
-                    <ul class="list-disc list-inside text-dark text-left">
-                        <li>Meals change every day (no repeats in a week)</li>
-                        <li>Hygienically prepared with love</li>
-                        <li>Nutritionist-designed for your health goals</li>
-                        <li>Suitable for office-goers, students, and fitness lovers</li>
-                    </ul>
+                <!-- Right Card -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 h-100 rounded-4">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-success mb-3">
+                                Why Customers Love Our Food Menu
+                            </h4>
+                            <ul class="list-unstyled text-muted mb-4">
+                                <li class="mb-2">
+                                    ✅ Meals change every day (no repeats in a week)
+                                </li>
+                                <li class="mb-2">
+                                    ✅ Hygienically prepared with love
+                                </li>
+                                <li class="mb-2">
+                                    ✅ Nutritionist-designed for health goals
+                                </li>
+                                <li>
+                                    ✅ Suitable for office-goers, students and fitness lovers
+                                </li>
+                            </ul>
+                            <a href="#trial" class="btn btn-success px-4 py-2 fw-semibold rounded-pill">
+                                Start 3-day trial
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
+
     @include('frontend.partials.faq')
     @include('frontend.partials.cta-section')
 
 
 @endsection
+

@@ -1,5 +1,5 @@
 <!-- Nutritionists Section -->
-<section class="py-5">
+<section class="py-5 main-banner-about">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-green">Meet Your Nutritionists & Trainers</h2>
@@ -79,5 +79,13 @@
 <style>
     .text-green{
         color: #197241;
+    }
+    .main-banner-about {
+        background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px 0;
+        height: auto;
     }
 </style>

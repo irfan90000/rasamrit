@@ -22,10 +22,17 @@
         background-color: #d6fadd;
     }
 
-
+    .main-banner-about {
+        background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px 0;
+        height: auto;
+    }
 
 </style>
-<section >
+<section class="main-banner-about">
 <div class="container py-5 day-section">
     <!-- Heading -->
 

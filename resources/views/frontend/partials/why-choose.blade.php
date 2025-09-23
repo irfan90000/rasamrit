@@ -8,7 +8,10 @@
                 <thead>
                 <tr>
                     <th class="py-3 bg-green text-white">Feature</th>
-                    <th class="py-3 bg-green text-white">🌿 Rasamrit</th>
+                    <th class="py-3 bg-green text-white">
+                        <img style="width: 24px; height: 24px;"
+                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/rasamrit.png') }}">
+                        Rasamrit</th>
                     <th class="py-3 text-dark bg-white">Other Brands</th>
                 </tr>
                 </thead>
