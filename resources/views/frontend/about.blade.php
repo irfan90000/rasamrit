@@ -11,7 +11,7 @@
     <section class="section-padding bg-white">
         <div class="container">
             <div class="row gx-4 gy-5 align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 ">
                     <div class="row g-3">
                         <div class="col-6 text-start">
                         <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 ps-lg-5 wow fadeIn">
+            <div class="col-lg-6 ps-lg-5 wow fadeIn ">
                 <span class="badge_title">About Us</span>
                 <h3 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h3>
                 <p class="mb-2">
@@ -130,53 +130,6 @@
 
                 @include('frontend.partials.why-choose')
 
-{{--            <div class="col-lg-6">--}}
-{{--                <div class="row g-3">--}}
-{{--                    <div class="col-6 text-start">--}}
-{{--                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"--}}
-{{--                             alt="" src="{{ asset('frontend/img/about-1.jpg') }}">--}}
-{{--                    </div>--}}
-{{--                    <div class="col-6 text-start">--}}
-{{--                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"--}}
-{{--                             alt="" src="{{ asset('frontend/img/about-2.jpg') }}" style="margin-top: 25%;">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="col-lg-6 wow fadeInUp">--}}
-{{--                <span class="badge_title mb-3">Why Choose Us</span>--}}
-{{--                <ul>--}}
-{{--                    <li class="text-justify">--}}
-{{--                        <b>Personalised Meal Plans:</b> Our team of nutritionists and health experts designs--}}
-{{--                        personalised meal--}}
-{{--                        plans based on your dietary preferences, nutritional needs, and health objectives.--}}
-{{--                    </li>--}}
-{{--                    <li class="text-justify">--}}
-{{--                        <b>Delicious Meals Delivered:</b> Enjoy the convenience of having freshly prepared, nutritious--}}
-{{--                        meals--}}
-{{--                        delivered straight to your home or office. We take the hassle out of meal prep so you can focus--}}
-{{--                        on--}}
-{{--                        living your best life.--}}
-{{--                    </li>--}}
-{{--                    <li class="text-justify">--}}
-{{--                        <b>Expert Gym Trainers:</b> Take advantage of our professional gym trainers who will come to--}}
-{{--                        your doorstep.--}}
-{{--                        Whether you're new to fitness or looking to level up your workouts, our trainers will create--}}
-{{--                        personalised workout plans and provide guidance to help you achieve your fitness goals.--}}
-{{--                    </li>--}}
-{{--                    <li class="text-justify">--}}
-{{--                        <b>Guaranteed Transformation:</b> We are confident in the effectiveness of our programs. If you--}}
-{{--                        don't see--}}
-{{--                        the promised transformation, we offer a money-back guarantee.--}}
-{{--                    </li>--}}
-{{--                    <li class="text-justify">--}}
-{{--                        <b>Expert Guidance:</b> Receive ongoing support and guidance from our experienced wellness--}}
-{{--                        coaches. We're--}}
-{{--                        here to answer your questions, provide motivation, and ensure your success on your health--}}
-{{--                        journey.--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
            @include('frontend.partials.faq')
         </div>
         {{--    </div>--}}

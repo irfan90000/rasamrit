@@ -16,7 +16,7 @@
             <div class="col-lg-7 wow fadeInUp">
                 <div class="owl-carousel testimonial-carousel">
                     @foreach ($testimonial_list as $testimonial)
-                        <div class="testimonial-item">
+                        <div class="testimonial-item" style="background-color: #c3f1d5">
                             <p class="title">
                                 {{ $testimonial->description }}
                             </p>

@@ -16,9 +16,9 @@ class HomeController
         $testimonial_list = Testimonial::latest()->get();
         $faq_list = Faq::latest()->take(3)->get();
         return view('frontend.index',compact('goal_list', 'testimonial_list', 'faq_list'), [
-            'page_title' => 'Best Prepared Meal Delivery Service in Bangalore – Rasamrit',
-            'description' => 'Get the best prepared meal delivery service delivered to your door. Budget-friendly, 
-            clean eating plans for weight loss, fitness & busy lifestyles.',
+            'page_title' => 'Healthy Food Bangalore | Best Prepared Meal Delivery Service',
+            'description' => 'Looking for healthy food Bangalore near me? Rasamrit offers the best prepared meal 
+            delivery service at an affordable price for weight loss and busy lifestyles.',
         ]);
     }
 
@@ -54,8 +54,9 @@ class HomeController
         $faq_list = Faq::latest()->get();
         $faq_list = Faq::latest()->take(3)->get();
         return view('frontend.about',compact('faq_list' , 'faq_list'), [
-            'page_title' => 'About Rasamarti - Healthy & Tasty Food',
-            'description' => 'Learn more about Rasamrit, your trusted partner in healthy and tasty living. Discover our mission, vision, and commitment to wellness.',
+            'page_title' => 'About Rasamrit – Your Trusted Homemade Food Provider',
+            'description' => ' Discover Rasamrit’s journey of homemade healthy meals in Bangalore. 
+            Stay fit with expert plans designed by nutritionists, join us today! ',
         ]);
     }
 

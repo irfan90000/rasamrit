@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="row gx-4 gy-5 align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 order-2 order-lg-1">
                 <div class="row g-3">
                     <div class="col-6 text-start">
                         <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
@@ -44,7 +44,7 @@
 
             </div>
 
-            <div class="col-lg-6 ps-lg-5">
+            <div class="col-lg-6 ps-lg-5 order-1 order-lg-2">
                 <span class="badge_title text-green">About Rasamrit:</span>
                 <h2 class="mb-3  text-black">Know About <span class="mb-3 fw-semibold text-green"> Rasamrit</span></h2>
                 <p class="mb-2 about-text">
@@ -85,6 +85,11 @@
         background-position: center;
         padding: 60px 0;
         height: auto;
+    }
+    @media (max-width: 768px) {
+        .main-banner-about{
+            padding: 16px 0 !important;
+        }
     }
     .text-green{
         color: #197241;

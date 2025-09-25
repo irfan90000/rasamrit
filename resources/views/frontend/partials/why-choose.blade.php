@@ -71,8 +71,10 @@
         </div>
 
         <div class="mt-4">
-            <button class="btn btn-success bg-green btn-lg">Start 3-day trial</button>
-            <button class="btn btn-outline-dark btn-lg ms-2">Explore →</button>
+            <a href="/food-subscription" class="btn btn-success bg-green btn-lg">
+                Start 3-day trial
+            </a>
+
         </div>
     </div>
 </section>
@@ -130,10 +132,10 @@
 
     @media (max-width: 768px) {
         .table {
-            font-size: 0.85rem;
+            font-size: 0.65rem;
         }
         .table td, .table th {
-            padding: 0.75rem !important;
+            padding: 2px !important;
         }
     }
 </style>

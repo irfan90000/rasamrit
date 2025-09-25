@@ -70,7 +70,7 @@
         <div class="col-12">
             <div class="text-center mt-4">
                 <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
-                    <a class="fw-semibold text-white" href="#subscribe" >
+                    <a class="fw-semibold text-white" href="/food-subscription" >
                         Start Meal Subscription in Bangalore </a>
                 </button>
             </div>

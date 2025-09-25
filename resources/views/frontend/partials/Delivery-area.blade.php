@@ -5,7 +5,9 @@
         <div class="col-md-6 mb-3 mb-md-0">
             <div class="ratio ratio-4x3">
                 <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.111156463539!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670e3b2f5f7%3A0x2f7e9b94c02b3d9d!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1693660299446!5m2!1sen!2sin"
+                        src="https://www.google.com/maps?q=Highway+9,+BMSIT+College,+Avalahalli,+Yelahanka,+Bengaluru,+Karnataka&output=embed"
+                        width="100%"
+                        height="450"
                         style="border:0;"
                         allowfullscreen
                         loading="lazy"

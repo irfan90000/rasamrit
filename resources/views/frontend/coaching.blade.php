@@ -84,7 +84,7 @@
             }
             @media (max-width: 768px) {
                 .main-flexible {
-
+                   background-image: none;
                     height: auto;
                 }
             }
@@ -205,14 +205,14 @@
             <div class="row align-items-center ">
 
                 <!-- Left Content -->
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center order-2 order-lg-1">
                     <div>
                     <img src="{{ asset('frontend/image/main-banner.jpg') }}"
                          alt="Rasamrit Online Coaching"
                          class="img-fluid img-rasamrit rounded-3 shadow-sm">
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 order-1 order-lg-2">
                     <h2 class="fw-bold mb-4 text-success">What is Rasamrit’s Online Coaching?</h2>
                     <p class="text-dark">
                         Our online coaching program is designed for individuals who live outside our meal delivery service area
@@ -334,7 +334,7 @@
 
 {{--      flexible support--}}
 
-    <section class="py-5 bg-light">
+    <section class="md:py-5 py-2 bg-light">
         <div class="container">
             <div class="row align-items-center main-flexible">
                 <!-- Left side: Content (4 columns) -->

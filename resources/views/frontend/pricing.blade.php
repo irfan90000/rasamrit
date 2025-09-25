@@ -199,14 +199,26 @@
             </div>
             @include('frontend.partials.why-choose')
             <div class="row g-4 align-items-center mt-2">
-                <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
-                <p class="mt-0 text-center">We currently deliver across major areas in Bengaluru, including Koramangala,
-                    Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.</p>
-                <h6 class="mt-0 text-center text-danger fw-bold">
-                    Do we serve your area? Contact us or WhatsApp us to confirm delivery availability.
-                </h6>
+                <div class="col-12">
+                    <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
+                    <p class="mt-0 text-center">
+                        We currently deliver across major areas in Bengaluru, including Koramangala,
+                        Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.
+                    </p>
+                    <h6 class="mt-0 text-center text-danger fw-bold">
+                        Do we serve your area? Contact us or WhatsApp us to confirm delivery availability.
+                    </h6>
+                </div>
 
+                <div class="col-12 text-center">
+                    <a href="tel:+917204490402"
+                       class="fw-semibold px-5 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+                       style="background: linear-gradient(125deg, #105c01, #009245); text-decoration: none; color: #fff;">
+                        Call Us Now
+                    </a>
+                </div>
             </div>
+
             @include('frontend.partials.Delivery-area')
             @include('frontend.partials.testimonial-section')
             @include('frontend.partials.faq-pricing-plans')

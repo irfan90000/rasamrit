@@ -47,12 +47,14 @@
             @media (max-width: 992px) {
                 .custom-col {
                     flex: 0 0 calc(50% - 12px);
+                    margin-bottom: 0;
                 }
             }
 
             @media (max-width: 576px) {
                 .custom-col {
                     flex: 0 0 100%;
+                    margin-bottom: 0;
                 }
             }
 
@@ -252,10 +254,10 @@
                     </p>
                     <div class="d-flex flex-column flex-md-row gap-3 md:mt-5 mt-2">
                         <button class="px-4 py-2 rounded-pill button-width border-0 subs_btn animated slideInLeft">
-                            <a class="text-white fw-semibold" href="#"> Get My Custom Meal Plan </a>
+                            <a class="text-white fw-semibold" href="/food-pricing"> Get My Custom Meal Plan </a>
                         </button>
                         <button class="fw-bold px-4 py-2 button-width button-bg rounded-pill border-2 ">
-                         Explore Food Subscriptions
+                            <i class="fas fa-phone me-2 text-green fw-bold"></i> +91-7204490402
                         </button>
                     </div>
                     <div class="mt-4">
@@ -306,7 +308,9 @@
 
 
     @include('frontend.partials.pricing-plan')
+    @include('frontend.partials.Blog-Section')
     @include('frontend.partials.testimonial-section')
+    @include('frontend.partials.Eat-Healthy')
     @include('frontend.partials.faq-home')
     @include('frontend.partials.cta-section')
 @endsection

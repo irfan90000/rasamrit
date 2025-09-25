@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="text-end">
+                        <div class="md:text-end text-start">
                             <i class="fas fa-2x fa-notes-medical text-primary text-green mb-3"></i>
                             <h5>Structure Your Diet</h5>
                             <p>You will be assigned a personal nutritionist, and your diet plan will be tailored to your
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="text-lg-start text-end">
+                        <div class="text-lg-start ">
                             <i class="fas fa-heart fa-2x text-primary text-green mb-3"></i>
                             <h5>Get Fit</h5>
                             <p>Reach your fitness goals with our dedicated support and built-in progress tracker.</p>

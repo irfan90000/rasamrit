@@ -11,10 +11,12 @@
                 <p class="mb-4 text-description text-white">
                     Get your personalized meal plan by booking a free call with our certified nutritionist.
                 </p>
-                <button class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
-                        style="background: linear-gradient(125deg, #105c01, #009245);">
+                <a href="tel:+917204490402"
+                   class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
+                   style="background: linear-gradient(125deg, #105c01, #009245); text-decoration: none; display: inline-block; color: #fff;">
                     Book Free Call
-                </button>
+                </a>
+
             </div>
         </div>
     </div>
