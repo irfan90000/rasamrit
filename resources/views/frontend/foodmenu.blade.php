@@ -4,7 +4,9 @@
     @section('description', $description)
 
     <style>
-
+        .text-color{
+            color: #197241 !important;
+        }
 
         .card:hover {
             transform: translateY(-4px);
@@ -111,7 +113,7 @@
 
         @media (max-width: 768px) {
             .title-pricing {
-                font-size: 22px;
+                font-size: 18px;
                 color: #333;
                 margin-top: 4px;
             }
@@ -127,6 +129,8 @@
         @media (max-width: 768px) {
             .sub-title1 {
                 color: #333;
+                font-size: 14px;
+                margin-bottom: 10px;
             }
         }
         .main-banner-menu {
@@ -173,13 +177,13 @@
                 @if ($diet->getFood->count() > 0)
                     <div class="food_menu_area">
                         <div class="text-center wow fadeInUp">
-                            <h1 class="into-title mb-2 text-success">#{{ $diet->name }} </h1>
-                            <p class="text-dark text-center">{{ $diet->fooddescription }}</p>
+                            <h1 class="into-title mb-2 text-color">#{{ $diet->name }} </h1>
+                            <p class="text-dark text-center ">{{ $diet->fooddescription }}</p>
                         </div>
                         @foreach ($diet->getFood as $food)
                             <div class="text-center wow fadeInUp">
 
-                                <h4 class="intro_subtitle mb-2">
+                                <h4 class="intro_subtitle text-color mb-2" style="color: #197241">
                                     {{ match ($food->dietary) {
                                         'vegetarian' => 'Veg Food',
                                         'nonvegetarian' => 'Nonveg Food',
@@ -312,15 +316,25 @@
             @endforeach
         </div>
     </section>
+    <div class="container">
     <div class="row g-4 align-items-center mt-2">
-        <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
-        <p class="mt-0 text-center">We currently deliver across major areas in Bengaluru, including Koramangala,
-            Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.</p>
-        <h6 class="mt-0 text-center text-danger fw-bold">
-            Do we serve your area? Contact us or WhatsApp us to confirm delivery availability.
-        </h6>
-
+        <div class="col-12">
+            <h2 class="text-center text-success fw-bold">Delivery Areas in Bangalore</h2>
+        </div>
+        <div class="col-12">
+            <p class="mt-0 text-center">
+                We currently deliver across major areas in Bengaluru, including Koramangala,
+                Whitefield, Indiranagar, HSR Layout, Jayanagar, and more.
+            </p>
+        </div>
+        <div class="col-12">
+            <h6 class="mt-0 text-center text-danger fw-bold">
+                Do we serve your area? Contact us or WhatsApp us to confirm delivery availability.
+            </h6>
+        </div>
     </div>
+    </div>
+
     @include('frontend.partials.Delivery-area')
 
     <section class="py-5 main-banner-menu">

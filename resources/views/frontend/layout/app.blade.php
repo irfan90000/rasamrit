@@ -15,6 +15,11 @@
     <link href="{{ asset('frontend/css/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+
+
     @livewireStyles
     @yield('styles')
 </head>

@@ -1197,9 +1197,9 @@ input::-webkit-inner-spin-button {
     .tifn_btn {
         margin: 0 auto 10px;
     }
-    .sticky-top.navbar-dark {
-        position: relative;
-    }
+    /*.sticky-top.navbar-dark {*/
+    /*    position: relative;*/
+    /*}*/
     .navbar-dark .navbar-nav .nav-link,
     .sticky-top.navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;

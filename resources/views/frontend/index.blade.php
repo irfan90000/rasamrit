@@ -256,9 +256,12 @@
                         <button class="px-4 py-2 rounded-pill button-width border-0 subs_btn animated slideInLeft">
                             <a class="text-white fw-semibold" href="/food-pricing"> Get My Custom Meal Plan </a>
                         </button>
-                        <button class="fw-bold px-4 py-2 button-width button-bg rounded-pill border-2 ">
-                            <i class="fas fa-phone me-2 text-green fw-bold"></i> +91-7204490402
-                        </button>
+                        <a href="tel:+917204490402" class="text-decoration-none " style="text-align: justify;">
+                            <button class="fw-bold px-4 py-2 button-width button-bg rounded-pill border-2">
+                                <i class="fas fa-phone me-2 text-green fw-bold"></i> +91-7204490402
+                            </button>
+                        </a>
+
                     </div>
                     <div class="mt-4">
                         <p class="small mb-4 fw-bold fs-6 text-green">
@@ -308,9 +311,9 @@
 
 
     @include('frontend.partials.pricing-plan')
-    @include('frontend.partials.Blog-Section')
     @include('frontend.partials.testimonial-section')
     @include('frontend.partials.Eat-Healthy')
+    @include('frontend.partials.Blog-Section')
     @include('frontend.partials.faq-home')
     @include('frontend.partials.cta-section')
 @endsection

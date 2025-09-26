@@ -11,7 +11,7 @@
     <section class="section-padding bg-white">
         <div class="container">
             <div class="row gx-4 gy-5 align-items-center">
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 order-2 order-lg-1">
                     <div class="row g-3">
                         <div class="col-6 text-start">
                         <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 ps-lg-5 wow fadeIn ">
+                <div class="col-lg-6 ps-lg-5 wow fadeIn order-1 order-lg-2">
                 <span class="badge_title">About Us</span>
                 <h3 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h3>
                 <p class="mb-2">
@@ -74,65 +74,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 text-center">
-                <a href="{{ route('front.subscription') }}" type="button" class="subs_btn wow fadeInLeft">
-                    Start Food Subscripton <span><i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-            <div class="col-lg-6 wow fadeInLeft">
-                <span class="badge_title mb-3">Our Vision & Mission</span>
-                <p class="mb-3">
-                    <b>To inspire a world where health and wellness are accessible, achievable, and sustainable for
-                        everyone. At Rasamrit, we envision a healthier society where people take pride in their
-                        well-being,
-                        supported by our fresh, nutritious offerings and expert guidance.</b>
-                </p>
-                <p class="mb-2 text-success">
-                    <b>Our mission is to:</b>
-                </p>
-                <ul>
-                    <li class="text-justify">
-                        Provide <b>tailored health solutions</b> by combining nutrition, fitness, and wellness services.
-                    </li>
-                    <li class="text-justify">
-                        Deliver <b>fresh, wholesome meals</b> prepared daily, ensuring no preservatives, bulk storage,
-                        or
-                        compromise on quality.
-                    </li>
-                    <li class="text-justify">
-                        Empower individuals to transform their health by offering <b>affordable, convenient, and
-                            customizable</b> programs.
-                    </li>
-                    <li class="text-justify">
-                        Make <b>health accessible</b> to all with a focus on excellent customer service and free
-                        doorstep
-                        delivery.
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-6 text-end">
-                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"
-                             alt="" src="{{ asset('frontend/img/about-3.jpg') }}">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"
-                             alt="" src="{{ asset('frontend/img/about-4.jpg') }}">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 text-center">
-                <a href="{{ route('front.subscription') }}" type="button" class="subs_btn wow fadeInLeft">
-                    Start Food Subscripton <span><i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
 
-                @include('frontend.partials.why-choose')
 
-           @include('frontend.partials.faq')
+
+
         </div>
-        {{--    </div>--}}
+            <div class="col-lg-12 text-center my-3">
+                <a href="{{ route('front.subscription') }}" type="button" class="subs_btn wow fadeInLeft">
+                    Start Food Subscripton <span><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        @include('frontend.partials.why-choose')
+
+        @include('frontend.partials.faq')
     </section>
 
 @endsection
