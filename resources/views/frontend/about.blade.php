@@ -4,7 +4,7 @@
     @section('description', $description)
     <div class="breadchrumb">
         <div class="container-fluid">
-            <h4 class="title">About Us</h4>
+            <h1 class="title">About Us</h1>
             <p class="sub-title">Transform Into the Best Version of Yourself!</p>
         </div>
     </div>
@@ -35,7 +35,7 @@
             </div>
                 <div class="col-lg-6 ps-lg-5 wow fadeIn order-1 order-lg-2">
                 <span class="badge_title">About Us</span>
-                <h3 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h3>
+                <h2 class="mb-3">Know About <mark class="highlight">{{ config('app.name') }}</mark></h2>
                 <p class="mb-2">
                     At {{ config('app.name') }}, we believe that health is the greatest wealth. We’re here to simplify
                     your journey toward a healthier, more fulfilling lifestyle. Inspired by how celebrities transform
@@ -56,19 +56,19 @@
                 <div class="row g-4 mb-4">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-3 border-primary px-3">
-                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">15</h2>
+                            <p class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">15</p>
                             <div class="ps-4">
                                 <p class="mb-0">Years of</p>
-                                <h6 class="text-uppercase mb-0">Experience</h6>
+                                <p class="text-uppercase mb-0">Experience</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-3 border-primary px-3">
-                            <h2 class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">50</h2>
+                            <p class="flex-shrink-0 text-primary mb-0" data-toggle="counter-up">50</p>
                             <div class="ps-4">
                                 <p class="mb-0">Popular</p>
-                                <h6 class="text-uppercase mb-0">Food Options</h6>
+                                <p class="text-uppercase mb-0">Food Options</p>
                             </div>
                         </div>
                     </div>

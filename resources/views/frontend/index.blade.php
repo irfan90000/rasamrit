@@ -246,9 +246,9 @@
 
                 <!-- Left Side (col-6) -->
                 <div class="col-lg-6 col-md-6 col-sm-9 text-center text-lg-start main-title">
-                    <h2 class="hero_title1 fw-bold animated slideInLeft">
+                    <h1 class="hero_title1 fw-bold animated slideInLeft">
                         {{ websiteSetupValue('title') }}
-                    </h2>
+                    </h1>
                     <p class="hero_subtitle animated slideInLeft" >
                         {{ websiteSetupValue('description') }}
                     </p>

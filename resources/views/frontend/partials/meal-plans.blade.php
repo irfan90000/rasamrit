@@ -30,7 +30,14 @@
         padding: 60px 0;
         height: auto;
     }
-
+    .text-meal {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        color: #0F172B !important;
+        font-family: "Poppins", serif;
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
 </style>
 <section class="main-banner-about">
 <div class="container py-5 day-section">
@@ -60,7 +67,7 @@
             <div class="col-12 col-sm-6 col-lg-4 ">
                 <div class=" h-100 shadow-lg  plan-card rounded-3 p-4 text-center ">
                     <div class="mb-3 text-green fs-1"><i class="fas {{ $plan['icon'] }} plan-icon"></i></div>
-                    <h5 class="fw-bold text-dark ">{{ $plan['title'] }}</h5>
+                    <p class="fw-bold text-meal text-dark ">{{ $plan['title'] }}</p>
                     <p class="text-muted">{{ $plan['desc'] }}</p>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 <section class="py-5 main-banner-about" id="faq">
     <div class="container">
         <div class="text-center wow fadeInUp">
-            <h1 class="section-intro-title">#FAQ's</h1>
-            <h5 class="section-title">Got Questions? We Have the Answers</h5>
+            <h2 class="section-intro-title">#FAQ's</h2>
+            <p class="section-title ">Got Questions? We Have the Answers</p>
         </div>
 
         @php

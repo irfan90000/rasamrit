@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-lg-5 wow fadeInLeft">
-                <h5 class="mb-3 text-green fw-bold">
+                <p class="mb-3 test-test fw-bold">
                     Look How Our Customers Achieved Their Health Goals with
                     <mark class="highlight">{{ config('app.name') }}</mark>
-                </h5>
+                </p>
                 <p class="m-0 text-dark">
                     We stand by our commitment to delivering results. Your transformation is our priority, and we guide
                     you through a journey of weight loss that's not only effective but also enjoyable every step of the
@@ -25,7 +25,7 @@
                                      alt="" src="{{ asset('storage/testimonial/' . $testimonial->image) }}"
                                      style="width: 40px; height: 40px; object-fit:cover">
                                 <div class="ps-3">
-                                    <h6 class="mb-0 text-green">{{ $testimonial->name }}</h6>
+                                    <p class="mb-0 text-test">{{ $testimonial->name }}</p>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,18 @@
     </div>
 </section>
 <style>
-    .text-green{
+    .text-test{
         color: #197241;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 500;
+
+        line-height: 1.5;
+    }
+    .test-test{
+      font-size: 1.25rem;
+        font-family: "Poppins", serif;
+        color: #197241 !important;
+        line-height: 1.5;
     }
 </style>

@@ -48,13 +48,13 @@
 {{--                            <div class="mb-3">--}}
 {{--                                <i class="bi {{ $plan['icon'] }} fs-1 text-dark"></i>--}}
 {{--                            </div>--}}
-                            <h5 class="fw-bold text-dark mb-1">{{ $plan['type'] }}</h5>
+                            <p class="fw-bold text-type text-dark mb-1">{{ $plan['type'] }}</p>
                             <p class="text-muted small mb-3">{{ $plan['ideal'] }}</p>
-                            <h3 class="fw-bold text-green">{{ $plan['price'] }}
+                            <p class="fw-bold text-price">{{ $plan['price'] }}
                                 @if($plan['price'] !== 'Custom')
                                     <small class="fs-6 text-muted">/day</small>
                                 @endif
-                            </h3>
+                            </>
                             <button class="fw-semibold  py-2 rounded-pill border-0 subs_btn animated slideInLeft"
                                     style="padding-right: 36px;padding-left: 36px;">
                                 <a href="/food-pricing" class="fw-semibold text-white" >
@@ -170,6 +170,22 @@
     .bg-color-green{
         background-color: #c3f1d5 !important;
         border-radius: 16px;
+    }
+    .text-type {
+        margin-top: 0;
+        margin-bottom: .5rem;
+
+        font-family: "Poppins", serif;
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+    .text-price {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        color: #197241 !important;
+        font-family: "Poppins", serif;
+        font-size: 1.75rem;
+        line-height: 1.5;
     }
 </style>
 

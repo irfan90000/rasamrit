@@ -12,6 +12,15 @@
     .text-green{
         color: #197241 !important;
     }
+    .text-how{
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
 </style>
 
 <div class="main-banner-about">
@@ -19,7 +28,7 @@
     <div class="container">
         <div class="text-center wow fadeInUp">
             <h2 class="section-intro-title text-green fw-bold">#HOWITWORKS</h2>
-            <h5 class="section-title text-green">1 Lakh Plus Happy Customers Served</h5>
+            <p class="section-title text-how text-green">1 Lakh Plus Happy Customers Served</p>
         </div>
         <div class="row gy-5 gx-4 mb-5">
             <div class="col-lg-4 wow fadeInUp">
@@ -27,14 +36,14 @@
                     <div class="col-lg-12">
                         <div class="text-lg-end">
                             <i class="fas fa-2x fa-cart-plus text-primary text-green mb-3"></i>
-                            <h5>Choose Plan</h5>
+                            <p class="text-how">Choose Plan</p>
                             <p>Sign up for our healthy diet plan and receive a unique login ID and password.</p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="md:text-end text-start">
                             <i class="fas fa-2x fa-notes-medical text-primary text-green mb-3"></i>
-                            <h5>Structure Your Diet</h5>
+                            <p class="text-how">Structure Your Diet</p>
                             <p>You will be assigned a personal nutritionist, and your diet plan will be tailored to your
                                 needs.</p>
                         </div>
@@ -51,7 +60,7 @@
                     <div class="col-lg-12">
                         <div class="text-start">
                             <i class="fas fa-truck fa-2x text-primary text-green mb-3"></i>
-                            <h5>Doorstep Delivery</h5>
+                            <p class="text-how">Doorstep Delivery</p>
                             <p>Healthy meals will be delivered daily across your location, customized to your diet plan.
                             </p>
                         </div>
@@ -59,7 +68,7 @@
                     <div class="col-lg-12">
                         <div class="text-lg-start ">
                             <i class="fas fa-heart fa-2x text-primary text-green mb-3"></i>
-                            <h5>Get Fit</h5>
+                            <p class="text-how">Get Fit</p>
                             <p>Reach your fitness goals with our dedicated support and built-in progress tracker.</p>
                         </div>
                     </div>
@@ -73,11 +82,11 @@
     <div class="container" >
         <div class="row align-items-center gx-4 gy-5">
             <div class="col-lg-5 wow fadeInLeft">
-                <h5 class="mb-3">
+                <p class="mb-3 text-how">
                     Imagine enjoying all of this in your diet while still
                     <mark class="highlight text-green">achieving</mark>
                     your weight loss goals!
-                </h5>
+                </p>
                 <button
                         class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft"
 
@@ -93,7 +102,7 @@
                 <div class="slide_card">
                     @foreach ($goal_list as $goal)
                         <div class="img_card">
-                            <h6>{{ $goal->name }}</h6>
+                            <p class="text-how">{{ $goal->name }}</p>
                             <img src="{{ asset('storage/goal/' . $goal->image) }}" class="img-fluid" alt="" />
                         </div>
                     @endforeach
@@ -103,3 +112,4 @@
     </div>
 </section>
 </div>
+

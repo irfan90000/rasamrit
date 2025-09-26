@@ -68,7 +68,7 @@
                             <div class="col-7">
                                 <div class="p-2">
                                     <small class="fw-bold d-block text-dark">{{ $meal['time'] }}</small>
-                                    <h6 class="fw-bold text-green mb-1">{{ $meal['title'] }}</h6>
+                                    <p class="fw-bold text-aday text-green mb-1">{{ $meal['title'] }}</p>
                                     <p class="small text-muted mb-0">{{ $meal['desc'] }}</p>
                                 </div>
                             </div>
@@ -87,11 +87,17 @@
 
 
 <style>
+    .text-aday {
 
-    .text-green{
-        color: #197241;
+        font-family: "Poppins", serif;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+        .text-green{
+            color: #197241;
 
 
+        }
     }
 
 </style>

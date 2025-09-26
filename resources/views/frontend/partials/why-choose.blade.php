@@ -1,7 +1,7 @@
 <section class="main-banner-about py-5">
     <div class="container text-center">
         <h2 class="fw-bold text-green mb-2">Why Choose Rasamrit?</h2>
-        <h5 class="text-muted mb-4">How we’re different — and better</h5>
+        <p class="text-muted text-why  mb-4">How we’re different — and better</p>
 
         <div class="table-comparison bg-white rounded-12  shadow-lg overflow-hidden mx-auto">
             <table class="table table-bordered mb-0">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="mt-4">
-            <a href="/food-subscription" class="btn btn-success bg-green btn-lg">
+            <a href="/food-menu" class="btn btn-success bg-green btn-lg">
                 Start 3-day trial
             </a>
 
@@ -82,6 +82,15 @@
 
 
 <style>
+    .text-why{
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
     .rounded-12 {
         border-radius: 12px !important;
     }

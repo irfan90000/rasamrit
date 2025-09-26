@@ -1,8 +1,8 @@
 <section class="section-padding bg-white">
     <div class="container">
         <div class="text-center wow fadeInUp">
-            <h1 class="section-intro-title">#FAQ's</h1>
-            <h5 class="section-title">Got Questions? We Have the Answers</h5>
+            <h2 class="section-intro-title">#FAQ's</h2>
+            <p class="section-title">Got Questions? We Have the Answers</p>
         </div>
         <div class="row g-4 align-items-center">
             <div class="col-lg-5">
@@ -22,14 +22,14 @@
                     <div class="accordion" id="faq-details">
                         @foreach ($faq_list as $faq)
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading_{{ $faq->id }}">
+                                <p class="accordion-header" id="heading_{{ $faq->id }}">
                                     <a href="javascript:void(0);" class="accordion-button collapsed"
                                        style="padding-left: 6px; padding-right: 6px;"
                                         data-bs-toggle="collapse" data-bs-target="#collapse_{{ $faq->id }}"
                                         aria-expanded="false" aria-controls="collapse_{{ $faq->id }}">
                                         {{ $faq->title }}
                                     </a>
-                                </h2>
+                                </p>
                                 <div id="collapse_{{ $faq->id }}" class="accordion-collapse collapse"
                                     aria-labelledby="{{ $faq->id }}" data-bs-parent="#faq-details"
                                     style="">

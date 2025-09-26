@@ -31,7 +31,7 @@
                                     <div class="card h-100 border-0 shadow-sm text-center">
                                         <img src="{{ $expert['image'] }}" alt="{{ $expert['name'] }}" class="card-img-top img-fluid rounded-top" style="height: 400px; object-fit: cover;">
                                         <div class="card-body" style="background-color: #f5f5f5">
-                                            <h5 class="fw-bold text-black mb-1">{{ $expert['name'] }}</h5>
+                                            <p class="fw-bold text-meat text-black mb-1">{{ $expert['name'] }}</p>
                                             <a href="{{ $expert['linkedin'] }}" target="_blank" class="text-green small">View LinkedIn</a>
                                         </div>
                                     </div>
@@ -55,9 +55,10 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="#" class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
+            <a href="tel:+917204490402" class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
                 Chat With an Expert Now
             </a>
+
         </div>
     </div>
 </section>
@@ -87,5 +88,13 @@
         background-position: center;
         padding: 60px 0;
         height: auto;
+    }
+    .text-meat {
+        margin-top: 0;
+        margin-bottom: .5rem;
+
+        font-family: "Poppins", serif;
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
 </style>

@@ -39,7 +39,7 @@
                     <div class="circle-gradient mx-auto md:mb-3  mb-1">
                         <img src="{{ $element['image'] }}" alt="{{ $element['title'] }}">
                     </div>
-                    <h5 class="fw-bold fs-6 text-dark mb-1">{{ $element['title'] }}</h5>
+                    <p class="fw-bold fs-6 text-dark mb-1">{{ $element['title'] }}</p>
                 </div>
             @endforeach
         </div>

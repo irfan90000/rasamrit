@@ -24,19 +24,19 @@
                 <div class="row g-4 mb-4 mt-2 md:mx-5 mx-0">
                     <div class="col-6">
                         <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">
-                            <h2 class="flex-shrink-0 text-green mb-0" data-toggle="counter-up">5</h2>
+                            <strong class="flex-shrink-0 text-greeni mb-0" data-toggle="counter-up">5</strong>
                             <div class="sm:ps-4 ps-1">
-                                <p class="mb-0 text-green">Years of</p>
-                                <h6 class="text-uppercase text-green mb-0">Experience</h6>
+                                <p class="mb-0 text-greeni">Years of</p>
+                                <strong class="text-uppercase text-greeni mb-0">Experience</strong>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">
-                            <h2 class="flex-shrink-0  text-green mb-0" data-toggle="counter-up">500</h2>
+                            <strong class="flex-shrink-0   text-greeni mb-0" data-toggle="counter-up">500</strong>
                             <div class="sm:ps-4 ps-1">
-                                <p class="mb-0 text-green">Popular</p>
-                                <h6 class="text-uppercase text-green mb-0">Food Options</h6>
+                                <p class="mb-0 text-greeni">Popular</p>
+                                <strong class="text-uppercase text-greeni mb-0">Food Options</strong>
                             </div>
                         </div>
                     </div>
@@ -91,10 +91,21 @@
             padding: 16px 0 !important;
         }
     }
-    .text-green{
+    .text-greeni{
+        font-weight: bold;
+        font-size: 24px;
         color: #197241;
         border-color: #197241;
-        font-weight: bold;
+
+    }
+    @media (max-width: 768px) {
+        .text-greeni{
+            font-weight: bold;
+            font-size: 17px;
+            color: #197241;
+            border-color: #197241;
+
+        }
     }
     .about-text{
         font-size: 18px;
