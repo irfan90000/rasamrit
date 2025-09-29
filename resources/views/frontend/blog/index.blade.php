@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 @section('content')
     <div class="container py-5">
-        <h2 class="text-success fw-bold mb-4 border-bottom pb-2">Blog Posts</h2>
+        <h1 class="text-success fw-bold mb-4 border-bottom pb-2">Blog Posts</h1>
 
         <div class="row g-4">
             @foreach($posts as $singlePost)

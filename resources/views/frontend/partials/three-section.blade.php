@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <!-- Step 1 -->
             <div class="col-12 col-md-4 mb-5 mb-md-0 p-5 text-start">
-                <h1 class="fw-bold" style="opacity: 0.2;">1.</h1>
+                <h2 class="fw-bold" style="opacity: 0.2;">1.</h2>
                 <h5 class="fw-bold text-success">Pick Your Goal</h5>
                 <p class="small text-black fs-6">Weight loss, muscle gain, diabetic care, or balanced eating.</p>
             </div>
@@ -13,14 +13,14 @@
 
             <!-- Step 2 -->
             <div class="col-12 col-md-4 mb-5 mb-md-0 p-5 text-start">
-                <h1 class="fw-bold" style="opacity: 0.2;">2.</h1>
+                <h2 class="fw-bold" style="opacity: 0.2;">2.</h2>
                 <h5 class="fw-bold text-success">Free Calls With a Certified Nutritionist</h5>
                 <p class="small text-black fs-6">We understand your body, habits, and daily needs.</p>
             </div>
 
             <!-- Step 3 -->
             <div class="col-12 col-md-4 text-start p-5">
-                <h1 class="fw-bold" style="opacity: 0.2;">3.</h1>
+                <h2 class="fw-bold" style="opacity: 0.2;">3.</h2>
                 <h5 class="fw-bold text-success">Get Your Custom Calorie-Based Meal Plan</h5>
                 <p class="small text-black fs-6">Designed using nutritional science and real-world results.</p>
             </div>

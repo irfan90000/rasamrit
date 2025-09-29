@@ -1,3 +1,133 @@
+{{--<section class="section-padding main-banner-about">--}}
+{{--    <div class="container">--}}
+
+{{--        <div class="row gx-4 gy-5 align-items-center">--}}
+{{--            <div class="col-lg-6 order-2 order-lg-1">--}}
+{{--                <div class="row g-3">--}}
+{{--                    <div class="col-6 text-start">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"--}}
+{{--                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/about--2222.jpg') }}">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-6 text-start">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"--}}
+{{--                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-44444.jpg') }}" style="margin-top: 25%;">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-6 text-end">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-75 wow zoomIn"--}}
+{{--                             alt="Bangalore’s Best Prepared Meal" src="{{ asset('frontend/image/breakfast-2.jpg') }}">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-6 text-end">--}}
+{{--                        <img class="img-fluid rounded rounded-3 w-100 wow zoomIn"--}}
+{{--                             alt="Freshly prepared meal" src="{{ asset('frontend/image/about-four.jpg') }}">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="row g-4 mb-4 mt-2 md:mx-5 mx-0">--}}
+{{--                    <div class="col-6">--}}
+{{--                        <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">--}}
+{{--                            <strong class="flex-shrink-0 text-greeni mb-0" data-toggle="counter-up">5</strong>--}}
+{{--                            <div class="sm:ps-4 ps-1">--}}
+{{--                                <p class="mb-0 text-greeni">Years of</p>--}}
+{{--                                <strong class="text-uppercase text-greeni mb-0">Experience</strong>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-6">--}}
+{{--                        <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">--}}
+{{--                            <strong class="flex-shrink-0   text-greeni mb-0" data-toggle="counter-up">500</strong>--}}
+{{--                            <div class="sm:ps-4 ps-1">--}}
+{{--                                <p class="mb-0 text-greeni">Popular</p>--}}
+{{--                                <strong class="text-uppercase text-greeni mb-0">Food Options</strong>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
+{{--            </div>--}}
+
+{{--            <div class="col-lg-6 ps-lg-5 order-1 order-lg-2">--}}
+{{--                <span class="badge_title text-green">About Rasamrit:</span>--}}
+{{--                <h2 class="mb-3  text-black">Know About <span class="mb-3 fw-semibold text-green"> Rasamrit</span></h2>--}}
+{{--                <p class="mb-2 about-text">--}}
+{{--                    We are not a food factory. We are your partner in wellness.--}}
+{{--                </p>--}}
+{{--                <p class="mb-2 about-text">--}}
+{{--                    At Rasamrit, we believe that health is the greatest wealth.--}}
+{{--                    We’re here to simplify your journey toward a healthier,--}}
+{{--                    more fulfilling lifestyle. Inspired by how celebrities transform--}}
+{{--                    their health through personalized diet plans and expert guidance,--}}
+{{--                    Rasamrit brings the same level of dedication and care to everyone.--}}
+{{--                </p>--}}
+{{--                <p class="mb-2 about-text">--}}
+{{--                    We specialize in freshly prepared, diet-tailored meals, cold-pressed juices, exotic fruit bowls,--}}
+{{--                    salads, and more, all delivered right to your doorstep. Our team of certified dieticians, nutritionists, gym,--}}
+{{--                    and yoga trainers work tirelessly to ensure your health goals are met with ease and precision.--}}
+{{--                </p>--}}
+{{--                <p class="mb-2 about-text">--}}
+{{--                    Whether you aim to lose weight, detox, or simply adopt a healthier routine,--}}
+{{--                    Rasamrit is your one-stop solution for all health goals.--}}
+{{--                </p>--}}
+{{--                <button class="fw-semibold px-4 py-2 mt-2 rounded-pill border-0 subs_btn animated slideInLeft">--}}
+{{--                    <a class="fw-semibold text-white" href="{{ route('front.about') }}">--}}
+{{--                        Know More About Us <span><i class="fas fa-arrow-right"></i></span> </a>--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
+{{--</section>--}}
+
+
+{{--<style>--}}
+{{--    .main-banner-about {--}}
+{{--        background-image: url("{{ asset('frontend/image/bg-banner.jpg') }}");--}}
+{{--        background-size: cover;--}}
+{{--        background-repeat: no-repeat;--}}
+{{--        background-position: center;--}}
+{{--        padding: 60px 0;--}}
+{{--        height: auto;--}}
+{{--    }--}}
+{{--    @media (max-width: 768px) {--}}
+{{--        .main-banner-about{--}}
+{{--            padding: 16px 0 !important;--}}
+{{--        }--}}
+{{--    }--}}
+{{--    .text-greeni{--}}
+{{--        font-weight: bold;--}}
+{{--        font-size: 24px;--}}
+{{--        color: #197241;--}}
+{{--        border-color: #197241;--}}
+
+{{--    }--}}
+{{--    @media (max-width: 768px) {--}}
+{{--        .text-greeni{--}}
+{{--            font-weight: bold;--}}
+{{--            font-size: 17px;--}}
+{{--            color: #197241;--}}
+{{--            border-color: #197241;--}}
+
+{{--        }--}}
+{{--    }--}}
+{{--    .about-text{--}}
+{{--        font-size: 18px;--}}
+{{--    }--}}
+{{--    @media (max-width: 768px) {--}}
+{{--        .about-text{--}}
+{{--            font-size: 14px;--}}
+{{--        }--}}
+{{--    }--}}
+{{--</style>--}}
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="section-padding main-banner-about">
     <div class="container">
 
@@ -22,21 +152,22 @@
                     </div>
                 </div>
                 <div class="row g-4 mb-4 mt-2 md:mx-5 mx-0">
-                    <div class="col-6">
-                        <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">
-                            <strong class="flex-shrink-0 text-greeni mb-0" data-toggle="counter-up">5</strong>
+                    <div class="col-6 p-0">
+                        <div class="d-flex align-items-center border-start border-3 text-green border-primary md:px-3 px-1">
+                            <span class="flex-shrink-0 text-count mb-0" data-toggle="counter-up">5</span>
                             <div class="sm:ps-4 ps-1">
-                                <p class="mb-0 text-greeni">Years of</p>
+                                <p class="mb-0 text-green">Years of</p>
                                 <strong class="text-uppercase text-greeni mb-0">Experience</strong>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center border-start border-3 text-green border-primary px-3">
-                            <strong class="flex-shrink-0   text-greeni mb-0" data-toggle="counter-up">500</strong>
+                    <div class="col-6 p-0">
+                        <div class="d-flex align-items-center border-start border-3 text-green border-primary md:px-3 px-1">
+                            <span class="flex-shrink-0 text-count mb-0" data-toggle="counter-up">500</span>
                             <div class="sm:ps-4 ps-1">
-                                <p class="mb-0 text-greeni">Popular</p>
-                                <strong class="text-uppercase text-greeni mb-0">Food Options</strong>
+                                <p class="mb-0 text-green">Popular</p>
+                                <strong class="text-uppercase   text-greeni mb-0 d-block">Food Options</strong>
+
                             </div>
                         </div>
                     </div>
@@ -91,17 +222,26 @@
             padding: 16px 0 !important;
         }
     }
-    .text-greeni{
-        font-weight: bold;
-        font-size: 24px;
+    .text-count{
         color: #197241;
         border-color: #197241;
-
+        font-family: sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
     }
-    @media (max-width: 768px) {
+    .text-greeni{
+        color: #197241;
+        border-color: #197241;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+    }
+        @media (max-width: 768px) {
         .text-greeni{
-            font-weight: bold;
-            font-size: 17px;
+            font-weight: 800;
+            font-size: 16px;
             color: #197241;
             border-color: #197241;
 

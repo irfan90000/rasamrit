@@ -1,12 +1,31 @@
-
-<section>
+<style>
+    .main-price{
+        height: 50vh;
+    }
+    @media (max-width: 768px) {
+        .main-price{
+            height: auto;
+        }
+    }
+    .title-price{
+        font-size: 40px;
+    }
+    @media (max-width: 768px) {
+        .title-price{
+            font-size: 24px;
+        }
+    }
+</style>
+<div>
     @section('title', $page_title)
     @section('description', $description)
-    <div class="breadchrumb" style="height: 50vh; ">
+
+
+    <div class="breadchrumb main-price">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 text-center">
-                    <h1 class="title-pricing text-center fw-bold slideInLeft animated">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>
+                    <h1 class="title-price text-center fw-bold slideInLeft animated">Home-Cooked Food Delivery in Bangalore - Rasamrit Meal Plans</h1>
                     <p class="sub-title1 mt-1">Enjoy delicious, homemade food delivered straight to your doorstep with Rasamrit,
                         the trusted choice for home-cooked food delivery in Bangalore.</p>
                 </div>
@@ -227,5 +246,7 @@
 
         </div>
           @include('frontend.partials.cte-pricing')
-    </section>
+    </div>
+
+
 

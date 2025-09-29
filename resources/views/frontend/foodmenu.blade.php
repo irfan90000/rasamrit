@@ -144,14 +144,30 @@
         .text-green{
             color: #197241;
         }
+        .main-menu{
+            height: 50vh;
+        }
+        @media (max-width: 768px) {
+            .main-menu{
+                height: auto;
+            }
+        }
+        .title-menu{
+            font-size: 40px;
+        }
+        @media (max-width: 768px) {
+            .title-menu{
+                font-size: 24px;
+            }
+        }
     </style>
 
 
-    <div class="breadchrumb" style="height: 50vh;">
+    <div class="breadchrumb main-menu" >
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 text-center">
-                    <h1 class="title-pricing text-center fw-bold animated slideInLeft">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>
+                    <h1 class="title-menu text-center fw-bold animated slideInLeft">Healthy Food Online – Weekly Meal Menu by Rasamrit</h1>
                     <p class="sub-title1 mt-1">
                         Discover Rasamrit's freshly curated healthy food Bangalore online menu with meals crafted for every lifestyle,
                         from vegetarian comfort to low-carb and ketogenic meal boxes.</p>
@@ -177,7 +193,7 @@
                 @if ($diet->getFood->count() > 0)
                     <div class="food_menu_area">
                         <div class="text-center wow fadeInUp">
-                            <h1 class="into-title mb-2 text-color">#{{ $diet->name }} </h1>
+                            <h2 class="into-title mb-2 text-color">#{{ $diet->name }} </h2>
                             <p class="text-dark text-center ">{{ $diet->fooddescription }}</p>
                         </div>
                         @foreach ($diet->getFood as $food)

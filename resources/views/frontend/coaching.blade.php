@@ -1,14 +1,9 @@
-{{--@extends('frontend.layout.app')--}}
-{{--@section('content')--}}
-
-{{--    @extends('layouts.app')--}}
-
-{{--    @section('content')--}}
-        <!-- Hero Section -->
-
 
 @extends('frontend.layout.app')
 @section('content')
+
+        @section('title', $page_title)
+        @section('description', $description)
     @section('styles')
         <style>
             .main-online {
@@ -177,6 +172,7 @@
                 color: white;
                 border-color: #197241;
             }
+
         </style>
     @endsection
     <section class="hero-header main-online position-relative">

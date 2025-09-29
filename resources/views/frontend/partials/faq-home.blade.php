@@ -53,7 +53,7 @@
                     <div class="accordion" id="faq-details">
                         @foreach ($faqs as $index => $faq)
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading_{{ $index }}">
+                                <span class="text-faq accordion-header" id="heading_{{ $index }}">
                                     <a href="javascript:void(0);"
                                        class="accordion-button collapsed"
                                        style="padding-left: 6px; padding-right: 6px;"
@@ -63,7 +63,7 @@
                                        aria-controls="collapse_{{ $index }}">
                                         {{ $faq['q'] }}
                                     </a>
-                                </h2>
+                                </span>
                                 <div id="collapse_{{ $index }}"
                                      class="accordion-collapse collapse"
                                      aria-labelledby="heading_{{ $index }}"
@@ -94,4 +94,12 @@
         padding: 60px 0;
         height: auto;
     }
+   .text-faq{
+       font-family: "Poppins", serif;
+       font-weight: 500;
+       color: #333;
+       line-height: 1.5;
+       font-size: 2rem;
+   }
+
 </style>

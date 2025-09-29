@@ -1,78 +1,30 @@
-{{--<style>--}}
-{{--    .card:hover {--}}
-{{--        transform: translateY(-4px);--}}
-{{--        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);--}}
-{{--        transition: 0.3s ease-in-out;--}}
-{{--    }--}}
 
-
-{{--    .card-body {--}}
-{{--        border-top: 1px solid #dee2e6;--}}
-{{--    }--}}
-
-{{--    .border-gray {--}}
-{{--        border: 1px solid #ccc !important;--}}
-{{--    }--}}
-{{--    table thead th {--}}
-{{--        border-color: #fff !important;--}}
-{{--    }--}}
-{{--    table td, table th {--}}
-{{--        padding: 1rem !important;--}}
-{{--        font-size: 0.95rem;--}}
-{{--        font-weight: 500;--}}
-{{--    }--}}
-{{--    table td:first-child {--}}
-{{--        font-weight: 600;--}}
-{{--        color: #333;--}}
-{{--    }--}}
-{{--    .slideInLeft {--}}
-{{--          animation-name: slideInLeft;--}}
-{{--      }--}}
-{{--    .animated {--}}
-{{--        animation-duration: 1s;--}}
-{{--        animation-fill-mode: both;--}}
-{{--    }--}}
-
-{{--    .title-pricing {--}}
-{{--        font-size: 32px;--}}
-{{--        font-weight: 500;--}}
-{{--        line-height: 1.4;--}}
-
-{{--        font-family: "Poppins", serif;--}}
-{{--        color: #333;--}}
-{{--        margin-top: 60px;--}}
-{{--    }--}}
-
-{{--    @media (max-width: 768px) {--}}
-{{--        .title-pricing {--}}
-{{--            font-size: 18px;--}}
-
-{{--            margin-top: 4px;--}}
-{{--        }--}}
-{{--    }--}}
-{{--    .sub-title2 {--}}
-{{--        font-size: 16px;--}}
-{{--        font-weight: 400;--}}
-{{--        margin-bottom: 30px;--}}
-{{--        color: #333;--}}
-{{--        text-align: center;--}}
-{{--    }--}}
-
-{{--    @media (max-width: 768px) {--}}
-{{--        .sub-title2 {--}}
-
-{{--            font-size: 14px;--}}
-{{--        }--}}
-{{--    }--}}
-{{--</style>--}}
+<style>
+    .main-sub{
+        height: 50vh;
+    }
+    @media (max-width: 768px) {
+        .main-sub{
+            height: auto;
+        }
+    }
+    .title-sub{
+        font-size: 40px;
+    }
+    @media (max-width: 768px) {
+        .title-sub{
+            font-size: 24px;
+        }
+    }
+</style>
 <div>
     @section('title', $page_title)
     @section('description', $description)
-    <div class="breadchrumb" style="height: 50vh;">
+    <div class="breadchrumb main-sub">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 text-center">
-                    <h1 class="title-pricing fw-bold slideInLeft animated">
+                    <h1 class="title-sub fw-bold slideInLeft animated">
                         Healthy Food Subscription in Bangalore – Fresh, Homemade & Affordable
                     </h1>
                     <p class="sub-title2 mt-1">
@@ -451,7 +403,7 @@
                                         {{ $bmistatus ? $bmistatus : 'NA' }}
                                     </mark>
                                 </h4>
-                                <h1 class="bmi">{{ $bmi }}</h1>
+                                <h2 class="bmi">{{ $bmi }}</h2>
                                 <div class="bmi_meter">
                                     <div class="progress
                                         @if ($bmi < 18.5) bg-warning

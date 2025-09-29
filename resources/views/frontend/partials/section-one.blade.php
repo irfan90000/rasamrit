@@ -7,31 +7,37 @@
             $trustElements = [
                 [
                     'image' => asset('frontend/img/food-delivery.png'),
-                    'title' => '100% Homemade ',
-                    'desc'  => 'Every meal is prepared in our own kitchen using family recipes.'
+                    'title' => '100% Homemade',
+                    'desc'  => 'Every meal is prepared in our own kitchen using family recipes.',
+                    'alt'   => 'Homemade food delivery'
                 ],
                 [
                     'image' => asset('frontend/img/Nosalt.jpg'),
                     'title' => 'Zero White Sugar',
-                    'desc'  => 'We use only natural, wholesome ingredients — nothing hidden.'
+                    'desc'  => 'We use only natural, wholesome ingredients — nothing hidden.',
+                    'alt'   => 'No white sugar meal'
                 ],
                 [
                     'image' => asset('frontend/img/frshcook.jpeg'),
-                    'title' => 'Freshly Cooked ',
-                    'desc'  => 'No reheating, no preservatives — your order is made just for you.'
+                    'title' => 'Freshly Cooked',
+                    'desc'  => 'No reheating, no preservatives — your order is made just for you.',
+                    'alt'   => 'Freshly cooked food'
                 ],
                 [
                     'image' => asset('frontend/img/free-plastic.jpeg'),
                     'title' => 'Plastic-Free Packaging',
-                    'desc'  => 'We care for the planet as much as your health with eco-friendly packs.'
+                    'desc'  => 'We care for the planet as much as your health with eco-friendly packs.',
+                    'alt'   => 'Plastic free food packaging'
                 ],
                 [
                     'image' => asset('frontend/img/Meal-Subscription.jpg'),
                     'title' => 'Guaranteed Results',
-                    'desc'  => 'A proven plan backed by our satisfied customers and nutritionists.'
+                    'desc'  => 'A proven plan backed by our satisfied customers and nutritionists.',
+                    'alt'   => 'Meal subscription guaranteed results'
                 ],
             ];
         @endphp
+
 
         <div class="row justify-content-center md:g-4 g-1 custom-five-cols">
             @foreach ($trustElements as $element)

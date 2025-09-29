@@ -1,8 +1,8 @@
 <section>
     <div class="container">
         <div class="text-center wow fadeInUp">
-            <h1 class="section-intro-title">#FAQ's</h1>
-            <h5 class="section-title">Got Questions? We Have the Answers</h5>
+            <h2 class="section-intro-title">#FAQ's</h2>
+            <p class="section-title">Got Questions? We Have the Answers</p>
         </div>
 
         @php
@@ -35,7 +35,7 @@
                     <div class="accordion" id="faq-details">
                         @foreach ($faqs as $index => $faq)
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading_{{ $index }}">
+                                <span class="text-faq-price accordion-header" id="heading_{{ $index }}">
                                     <a href="javascript:void(0);"
                                        class="accordion-button collapsed"
                                        style="padding-left: 6px; padding-right: 6px;"
@@ -45,7 +45,7 @@
                                        aria-controls="collapse_{{ $index }}">
                                         {{ $faq['q'] }}
                                     </a>
-                                </h2>
+                                </span>
                                 <div id="collapse_{{ $index }}"
                                      class="accordion-collapse collapse"
                                      aria-labelledby="heading_{{ $index }}"
@@ -64,6 +64,18 @@
         </div>
     </div>
 </section>
+
+<style>
+    .text-faq-price{
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.5;
+        font-size: 2rem;
+    }
+</style>
+
+
 
 {{--<section class="py-5" id="faq">--}}
 {{--    <div class="container">--}}
