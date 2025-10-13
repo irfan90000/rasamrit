@@ -1,7 +1,12 @@
+@push('meta')
+    <meta content="Healthy Food Online in Bangalore | Rasamrit Weekly Food Menu">
+    <meta name="description" content="Explore Rasamrit’s healthy food Bangalore online menu. Find delicious vegetarian, low-carb, keto, and balanced meals available for home delivery. Subscribe now for fresh, organic food boxes every week!">
+@endpush
+@section('meta_title', $page_title)
+@section('meta_description', $description)
 @extends('frontend.layout.app')
+
 @section('content')
-    @section('title', $page_title)
-    @section('description', $description)
 
     <style>
         .text-color{
@@ -164,6 +169,8 @@
 
 
     <div class="breadchrumb main-menu" >
+        @section('title', $page_title)
+        @section('description', $description)
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 text-center">

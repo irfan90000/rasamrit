@@ -1,4 +1,9 @@
+@push('meta')
+    <meta content="Healthy Food Subscription Bangalore | Monthly Meals by Rasamrit">
+    <meta name="description" content="Try Rasamrit's healthy food subscription in Bangalore. Fresh homemade meals for weight loss or balance. Monthly plans start at just ₹70/day!">
+@endpush
 
+@section('styles')
 <style>
     .main-sub{
         height: 50vh;
@@ -17,9 +22,11 @@
         }
     }
 </style>
+@endsection
 <div>
     @section('title', $page_title)
     @section('description', $description)
+
     <div class="breadchrumb main-sub">
         <div class="container-fluid">
             <div class="row justify-content-center">

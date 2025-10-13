@@ -1,3 +1,7 @@
+@push('meta')
+    <meta content="Healthy Food Bangalore | Best Prepared Meal Delivery Service">
+    <meta name="description" content="Looking for healthy food Bangalore near me? Rasamrit offers the best prepared meal delivery service at an affordable price for weight loss and busy lifestyles.">
+@endpush
 @extends('frontend.layout.app')
 @section('content')
     @section('title', $page_title)
@@ -233,6 +237,23 @@
                 border-color: #197241;
             }
 
+             .main-price{
+                 height: 50vh;
+             }
+            @media (max-width: 768px) {
+                .main-price{
+                    height: auto;
+                }
+            }
+            .title-price{
+                font-size: 40px;
+            }
+            @media (max-width: 768px) {
+                .title-price{
+                    font-size: 24px;
+                }
+            }
+
         </style>
     @endsection
     <section class="hero-header main-bannerr-bg position-relative">
@@ -254,7 +275,7 @@
                     </p>
                     <div class="d-flex flex-column flex-md-row gap-3 md:mt-5 mt-2">
                         <button class="px-4 py-2 rounded-pill button-width border-0 subs_btn animated slideInLeft">
-                            <a class="text-white fw-semibold" href="/food-pricing"> Get My Custom Meal Plan </a>
+                            <a class="text-white fw-semibold" href="/food-subscription"> Get My Custom Meal Plan </a>
                         </button>
                         <a href="tel:+917204490402" class="text-decoration-none " style="text-align: justify;">
                             <button class="fw-bold px-4 py-2 button-width button-bg rounded-pill border-2">

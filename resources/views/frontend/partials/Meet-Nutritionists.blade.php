@@ -55,9 +55,15 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="tel:+917204490402" class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft">
+            <a href="https://api.whatsapp.com/send?phone=917204490402&text=Hi"
+               target="_blank"
+               class="fw-semibold px-4 py-2 rounded-pill border-0 subs_btn animated slideInLeft d-inline-block">
                 Chat With an Expert Now
             </a>
+
+
+
+
 
         </div>
     </div>

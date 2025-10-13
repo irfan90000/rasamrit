@@ -71,7 +71,7 @@
         </div>
 
         <div class="mt-4">
-            <a href="/food-menu" class="btn btn-success bg-green btn-lg">
+            <a href="/food-subscription" class="btn btn-success bg-green btn-lg">
                 Start 3-day trial
             </a>
 

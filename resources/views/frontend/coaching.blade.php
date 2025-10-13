@@ -1,4 +1,7 @@
-
+@push('meta')
+    <meta content="Rasamrit Virtual Meal Plans - Starting at Just ₹99">
+    <meta name="description" content="Get expert online coaching for healthy meal planning from Rasamrit. Ideal for individuals who can't subscribe to meal delivery. Learn to prep balanced meals at home.">
+@endpush
 @extends('frontend.layout.app')
 @section('content')
 

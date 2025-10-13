@@ -1,3 +1,9 @@
+@push('meta')
+    <meta content="Affordable Home-Cooked Food Delivery in Bangalore – Rasamrit ">
+    <meta name="description" content="Get fresh, healthy, and affordable home-cooked food delivery in Bangalore. Choose from 3-day, 14-day, or 30-day monthly food delivery Bangalore plans. Tiffin service starts at just ₹70/day!">
+@endpush
+
+@section('styles')
 <style>
     .main-price{
         height: 50vh;
@@ -16,6 +22,7 @@
         }
     }
 </style>
+@endsection
 <div>
     @section('title', $page_title)
     @section('description', $description)

@@ -84,4 +84,11 @@ class BlogPostController extends Controller
     {
         return view('backend.blog_posts.show', compact('blogPost'));
     }
+    public function home()
+    {
+        $posts = BlogPost::latest()->take(6)->get();
+        return view('frontend.home', compact('posts'));
+    }
+
+
 }

@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Best Prepared Meal Delivery Service in Bangalore – Rasamrit</title>
-    <meta content="Get the best prepared meal delivery service delivered to your door. Budget-friendly, clean eating plans for weight loss, fitness & busy lifestyles." name="description">
+    <title>@yield('title')</title>
+    {{-- Meta tags stack (page specific title/description yahan push honge) --}}
+    @stack('meta')
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta content="" name="keywords"> --}}
 
