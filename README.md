@@ -1,46 +1,64 @@
-Rasamrit — Healthy Meal Subscription & Delivery Platform
+# Rasamrit — Healthy Meal Subscription & Delivery Platform
 
 🌐 Live site: rasamrit.in
 
-Rasamrit is a Bangalore-based healthy food brand offering freshly prepared, diet-tailored meals, cold-pressed juices, fruit bowls and salads delivered to the customer's doorstep. The website works as the brand's main sales channel: it explains the service, presents subscription plans and pricing, helps visitors check their health metrics, and captures subscription leads.
+Rasamrit is a Bangalore-based healthy food brand offering freshly prepared, diet-tailored meals, cold-pressed juices, fruit bowls, and salads delivered to the customer's doorstep. The website is built to present the brand as a wellness-focused meal subscription service, educate visitors about the offering, and convert leads through subscription plans and contact forms.
 
-📌 Project Overview
-	
-Client	Rasamrit (Bangalore, India)
-Industry	Health & wellness / food delivery
-Type	Business website with subscription plans & lead capture
-Audience	People aiming for weight loss, detox, diabetes-friendly or high-protein diets, and busy professionals wanting home-style tiffin meals
-Service area	Major Bengaluru areas — Koramangala, Whitefield, Indiranagar, HSR Layout, Jayanagar and more
-✨ Key Features
-Home page positioning the brand as a wellness partner, with highlights such as 5,000+ customers, an in-house nutritionist team and a 28-day rotating meal plan
-Meal subscription page — 3-day, 14-day and 30-day packages, starting from ₹70/day
-Pricing page with plan breakdowns and veg / non-veg options across all plans
-BMI calculator — interactive tool that computes Body Mass Index from height and weight
-Lead capture forms — visitors pick a plan and submit a form on the Contact or Pricing page; the team confirms the subscription
-Customer testimonials section showing weight-loss and health results
-FAQ sections covering cost, delivery areas, freshness and ordering process
-SEO-focused landing pages targeting searches like healthy food delivery, meal subscription and home-cooked food delivery in Bangalore
-Fully responsive layout for mobile, tablet and desktop
-🗂️ Site Structure
-/                      → Home (brand story, services, highlights, testimonials)
-/food-subscription     → Monthly / multi-day meal subscription plans
-/food-pricing          → Plan pricing, customization options, FAQs
-/contact               → Contact & subscription request form
-🛠️ Tech Stack
+## 📌 Project Overview
 
-⚠️ Update this section with the exact stack used.
+- Client: Rasamrit (Bangalore, India)
+- Industry: Health & wellness / food delivery
+- Type: Business website with subscription plans, e-commerce, and lead capture
+- Audience: People aiming for weight loss, detox, diabetes-friendly eating, high-protein nutrition, and busy professionals seeking healthy home-style meals
+- Service area: Major Bengaluru areas including Koramangala, Whitefield, Indiranagar, HSR Layout, Jayanagar, and nearby neighborhoods
 
-Frontend: e.g. React / Next.js / HTML, CSS, JavaScript / WordPress theme
-Styling: e.g. Tailwind CSS / Bootstrap / custom CSS
-Backend / Forms: e.g. Node.js + Express / PHP / form plugin / email service
-Hosting: e.g. Hostinger / Vercel / cPanel
-SEO: Meta tags, keyword-targeted pages, FAQ content
-🧑‍💻 My Role
+## ✨ Key Features
 
-⚠️ Edit to reflect exactly what you did.
+- Home page positioning the brand as a wellness partner, with highlights such as 5,000+ customers, an in-house nutritionist team, and a 28-day rotating meal plan
+- Food subscription page with 3-day, 14-day, and 30-day packages starting from ₹70/day
+- Pricing page with plan comparisons, veg and non-veg options, and customization details
+- BMI calculator to help visitors estimate body mass index based on height and weight
+- Lead-capture forms on the contact and pricing pages to collect subscription inquiries and convert visitors into customers
+- Customer testimonials and success stories highlighting health results and lifestyle transformation
+- FAQ sections covering pricing, delivery areas, freshness, and ordering process
+- SEO-oriented landing pages for healthy food delivery, meal subscriptions, and home-cooked meal delivery searches in Bangalore
+- Responsive layout optimized for mobile, tablet, and desktop screens
+- Shop, cart, checkout, and order flow for product-based purchases and subscriptions
+- Blog section with comments and likes for content engagement
 
-Designed and developed the complete website
-Built the subscription and pricing pages with plan comparison
-Implemented the interactive BMI calculator
-Set up lead-capture forms connected to the business's inbox
-Optimized pages for local SEO and mobile performance
+## 🗂️ Site Structure
+
+- `/` → Home page with brand story, services, highlights, and testimonials
+- `/food-program` → Program details and healthy eating offerings
+- `/food-pricing` → Plan pricing and plan comparison
+- `/food-subscription` → Meal subscription packages and frequency options
+- `/connect-with-us` → Contact and inquiry form
+- `/shop` → Product catalog
+- `/cart` → Cart summary
+- `/checkout` → Order placement flow
+- `/orders` → Customer orders
+- `/blog` → Educational blog content and engagement
+
+## 🛠️ Tech Stack
+
+- Frontend: Laravel Blade templates + Livewire components
+- Styling: Tailwind CSS
+- Backend: PHP 8.2 + Laravel 11
+- Frontend build tooling: Vite
+- Forms & dynamic interactions: Livewire + custom controllers
+- SEO & structured pages: Blade views with metadata and landing-page content
+- Hosting: Apache / cPanel-compatible hosting with Laravel deployment setup
+- Additional package: Spatie Laravel Sitemap
+
+## 🧑‍💻 My Role
+
+- Planned and developed the full website for the Rasamrit brand
+- Designed pages for subscriptions, pricing, and product offerings
+- Built the interactive BMI calculator and lead-capture journeys
+- Implemented cart, checkout, and order management for the online shopping flow
+- Created responsive frontend components and improved mobile usability
+- Structured the site for local SEO, conversion-focused content, and customer engagement
+
+## 📝 Repository Notes
+
+This repository contains the source code for the Rasamrit website and related business features, including subscription plans, product browsing, checkout flow, and public-facing content pages.
